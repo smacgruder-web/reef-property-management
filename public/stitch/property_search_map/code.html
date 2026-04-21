@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reef Property - Discover</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-surface-variant": "#3c4947",
+                "outline-variant": "#bbcac6",
+                "tertiary": "#006b5e",
+                "surface-variant": "#dce1fb",
+                "surface-container-highest": "#dce1fb",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#d5e0f8",
+                "inverse-surface": "#2a3043",
+                "inverse-on-surface": "#eef0ff",
+                "on-error-container": "#93000a",
+                "on-primary-fixed": "#00201c",
+                "surface-container-low": "#f2f3ff",
+                "primary-fixed-dim": "#4fdbc8",
+                "on-secondary": "#ffffff",
+                "on-background": "#151b2d",
+                "primary-fixed": "#71f8e4",
+                "surface-bright": "#faf8ff",
+                "surface-container-high": "#e3e7ff",
+                "on-tertiary-fixed": "#00201b",
+                "on-primary-container": "#00423b",
+                "surface": "#faf8ff",
+                "primary": "#006b5f",
+                "on-secondary-fixed": "#111c2d",
+                "on-primary-fixed-variant": "#005048",
+                "tertiary-fixed": "#6ef9e2",
+                "surface-dim": "#d4d9f2",
+                "surface-tint": "#006b5f",
+                "on-tertiary-fixed-variant": "#005047",
+                "error": "#ba1a1a",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#151b2d",
+                "on-tertiary-container": "#00423a",
+                "secondary": "#545f73",
+                "primary-container": "#14b8a6",
+                "on-secondary-fixed-variant": "#3c475a",
+                "tertiary-container": "#09b8a4",
+                "secondary-fixed-dim": "#bcc7de",
+                "error-container": "#ffdad6",
+                "surface-container": "#eaedff",
+                "on-secondary-container": "#586377",
+                "secondary-fixed": "#d8e3fb",
+                "on-error": "#ffffff",
+                "inverse-primary": "#4fdbc8",
+                "tertiary-fixed-dim": "#4ddcc6",
+                "background": "#faf8ff",
+                "outline": "#6c7a77"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg docked full-width top-0 sticky z-50 no-border shadow-sm bg-slate-50 dark:bg-slate-900 shadow-xl shadow-slate-200/40 dark:shadow-none transition-colors">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-teal-50/50 dark:hover:bg-teal-900/20 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-teal-600 dark:text-teal-400">search</span>
+</button>
+<h1 class="font-manrope font-bold tracking-tight text-slate-900 dark:text-slate-50 text-xl">Discover</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-teal-50/50 dark:hover:bg-teal-900/20 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-teal-600 dark:text-teal-400">tune</span>
+</button>
+</div>
+</div>
+</header>
+<main class="relative h-[calc(100vh-80px-88px)] overflow-hidden">
+<!-- Interactive Map Background -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale-[0.2] brightness-[1.02] contrast-[0.95]" data-alt="clean minimal stylized city map in light grey and white tones with architectural focus" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtBV30RLTqu_4z_aRLfPoa-lr-iC5YnmCB89Nmgw8eF13F1KvU4GPHxdzPjRt41V78_tF3XabWFrBUQpHtPCiqwbJiXk04w0OiqzqYvCGCX-b3chze5RyRsFQrks9bhp_ud0-VarSrBc_F_j9BCUXMIxo44Y4p1iUh1AOd-ZEhkIglUU5B9Dd2WM2-7LQ3SJ0lossc4x58Mo_JzGAUeqMN5ZZzO54bCS9g-KlTH3pnojM679IuWsHlNFn7Jj99Ba9Lv6j-9M26352b"/>
+<!-- Map Overlay Gradients -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent pointer-events-none opacity-40"></div>
+</div>
+<!-- Floating Search & Filters (On-Map) -->
+<div class="absolute top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-10">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-2xl shadow-on-surface/5 flex items-center p-1.5 border border-outline-variant/10">
+<div class="flex-1 flex items-center px-4 gap-3">
+<span class="material-symbols-outlined text-primary scale-90">location_on</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface text-sm w-full font-medium placeholder:text-on-surface-variant/50" placeholder="Search coastal retreats..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary rounded-full px-5 py-2.5 text-xs font-bold tracking-wider uppercase flex items-center gap-2 hover:bg-primary/90 transition-all active:scale-95">
+<span>Filter</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Custom Price Pins -->
+<div class="absolute top-[35%] left-[25%] z-20 group">
+<div class="bg-primary text-on-primary px-3 py-1.5 rounded-full font-headline font-bold text-sm shadow-xl shadow-primary/20 cursor-pointer transition-all group-hover:scale-110 group-hover:bg-primary-container group-hover:text-on-primary-container active:scale-90">
+                $1,250
+            </div>
+<div class="w-0.5 h-2 bg-primary mx-auto"></div>
+</div>
+<div class="absolute top-[45%] left-[65%] z-20 group">
+<div class="bg-surface-container-lowest text-primary border border-primary/20 px-3 py-1.5 rounded-full font-headline font-bold text-sm shadow-xl shadow-on-surface/5 cursor-pointer transition-all group-hover:scale-110 active:scale-90">
+                $3,400
+            </div>
+<div class="w-0.5 h-2 bg-surface-container-lowest/50 mx-auto"></div>
+</div>
+<div class="absolute top-[20%] left-[55%] z-20 group">
+<div class="bg-surface-container-lowest text-primary border border-primary/20 px-3 py-1.5 rounded-full font-headline font-bold text-sm shadow-xl shadow-on-surface/5 cursor-pointer transition-all group-hover:scale-110 active:scale-90">
+                $2,100
+            </div>
+<div class="w-0.5 h-2 bg-surface-container-lowest/50 mx-auto"></div>
+</div>
+<!-- Map Controls -->
+<div class="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10">
+<div class="flex flex-col bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-lg border border-outline-variant/10 overflow-hidden">
+<button class="p-3 text-on-surface-variant hover:bg-primary/5 transition-colors border-b border-outline-variant/5">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="p-3 text-on-surface-variant hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<button class="bg-surface-container-lowest/90 backdrop-blur-md p-3 rounded-full shadow-lg border border-outline-variant/10 text-primary hover:text-primary-container transition-colors active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">my_location</span>
+</button>
+</div>
+<!-- Property Card Carousel -->
+<div class="absolute bottom-10 left-0 w-full z-20">
+<div class="flex overflow-x-auto gap-5 px-6 pb-4 hide-scrollbar snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="min-w-[300px] bg-surface-container-lowest rounded-full shadow-2xl shadow-on-surface/10 p-2 flex items-center gap-4 snap-center group border border-outline-variant/5">
+<div class="w-24 h-24 rounded-full overflow-hidden shrink-0">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern architectural villa with glass walls and a infinity pool overlooking the ocean at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7EsjdsoP6ESnx4C7qyDo65s6hGh3CjnzbS36Q3CNWQdN3gPOK9WHkMTgPoKjT6uyrQxuHCRDg_sO3xu4ShGndcczfwNO53mNFgE8YUnrvzh5Jiwtr4VmBkjFKqPkcA-AfjIUK5HGHwg0YjyKjrXDD_YSW0HUJ2cFoQ-U57FGSupB8JVwOhlmMcZW_hoHi58Sb1cbDRySMoutXYYJjA-Oqn_v-cwhVE01CB4_GFuocQjU-mkulHl-QgYsKppxQOdKXwFsToEXbg_qc"/>
+</div>
+<div class="pr-6">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.9</span>
+</div>
+<h3 class="font-headline font-extrabold text-on-surface leading-tight mb-1">Azure Cliffside Residence</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-primary font-bold text-sm">$1,250</span>
+<span class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider">/ Night</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[300px] bg-surface-container-lowest rounded-full shadow-2xl shadow-on-surface/10 p-2 flex items-center gap-4 snap-center group border border-outline-variant/5">
+<div class="w-24 h-24 rounded-full overflow-hidden shrink-0">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Luxury coastal estate with white minimalist architecture and palm trees under a bright blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwsx70fKhVOCg8wRetidDda7Mbp_UrP2ws2G2mBKJw0CPRejAIkCagkeY4CWVr_cIxVzt6EJLl9oDAkk5PsgeMMMxZe9rhRt0UsQp-xWUkj_EdSnh1vVChJxkVoyCVOffoBirCTSO2BY6cesJ6u3p9huSwMtsFs5c-dXJ2KP1SZjsqSchUbAaAcWxdTH6qroX0ayDfQ5w2Mygs4e6zTqTECayyLNfViE2ruAjiRyPLuQV0cmJgVQZT8tuP2mIiY5m08vZKqj_BCYP_"/>
+</div>
+<div class="pr-6">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">5.0</span>
+</div>
+<h3 class="font-headline font-extrabold text-on-surface leading-tight mb-1">The Reef Sanctuary</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-primary font-bold text-sm">$2,100</span>
+<span class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider">/ Night</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[300px] bg-surface-container-lowest rounded-full shadow-2xl shadow-on-surface/10 p-2 flex items-center gap-4 snap-center group border border-outline-variant/5 opacity-80 scale-95 transition-all">
+<div class="w-24 h-24 rounded-full overflow-hidden shrink-0">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Contemporary beachfront penthouse with sleek lines and floor-to-ceiling windows showing the coastline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCer7_XDcPPmrHYoTKihkUpgYlAECDJIzXPW0Ebmw4JSJiVVZ-QK-3pC4CzJK6MfDo4HVdoLEa_HWZnUUy7BqEtLtoMV3A6bf-DubP4j7woit-k6niaCz--QnlziKR5Q1VI5Cs-dRueLU1JV1t9-gi4eJgk6rWyOisEiwegchTDvU_D9NEFmd0T5fZd2iwjfwkpz9K-vS5-rkkSAvzzTXXWclcVMd7MfvLdvL-oUn6hrXD1SWcgFRDjhmf2cZMlAS8136leaNwf1-a3"/>
+</div>
+<div class="pr-6">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.8</span>
+</div>
+<h3 class="font-headline font-extrabold text-on-surface leading-tight mb-1">Ethereal Cove Loft</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-primary font-bold text-sm">$3,400</span>
+<span class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider">/ Night</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl fixed bottom-0 w-full z-50 rounded-t-2xl bg-slate-100/50 dark:bg-slate-800/50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] transition-all">
+<!-- Explore (Active) -->
+<a class="flex flex-col items-center justify-center bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-xl px-4 py-1.5 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Explore</span>
+</a>
+<!-- Portfolio -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 dark:hover:text-teal-300 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Portfolio</span>
+</a>
+<!-- Saved -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 dark:hover:text-teal-300 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Saved</span>
+</a>
+<!-- Inbox -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 dark:hover:text-teal-300 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Inbox</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 dark:hover:text-teal-300 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+<!-- Content Safe Area Spacer -->
+<div class="h-[88px] w-full"></div>
+</body></html>

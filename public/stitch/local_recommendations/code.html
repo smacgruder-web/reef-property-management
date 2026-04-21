@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Horizon Suite - Local Tips</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-tint": "#006b5f",
+                        "on-tertiary-container": "#00423a",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "surface-bright": "#faf8ff",
+                        "tertiary-container": "#09b8a4",
+                        "surface-variant": "#dce1fb",
+                        "primary": "#006b5f",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary": "#006b5e",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#586377",
+                        "primary-container": "#14b8a6",
+                        "on-surface": "#151b2d",
+                        "surface": "#faf8ff",
+                        "error-container": "#ffdad6",
+                        "outline": "#6c7a77",
+                        "surface-container-low": "#f2f3ff",
+                        "surface-dim": "#d4d9f2",
+                        "on-surface-variant": "#3c4947",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-primary-fixed": "#00201c",
+                        "surface-container": "#eaedff",
+                        "secondary-container": "#d5e0f8",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#dce1fb",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-primary-fixed-variant": "#005048",
+                        "inverse-surface": "#2a3043",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#71f8e4",
+                        "on-primary-container": "#00423b",
+                        "tertiary-fixed": "#6ef9e2",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-background": "#151b2d",
+                        "background": "#faf8ff",
+                        "surface-container-high": "#e3e7ff",
+                        "inverse-primary": "#4fdbc8",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#00201b",
+                        "secondary": "#545f73"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface leading-relaxed">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-sm" data-icon="property">apartment</span>
+</div>
+<span class="font-headline font-extrabold tracking-tighter text-teal-700">The Horizon Suite</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-200 text-slate-500">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32 px-6 max-w-screen-xl mx-auto">
+<!-- Hero Header Section -->
+<header class="mb-12">
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="h-[1px] w-8 bg-primary"></span>
+<span class="font-label text-[11px] font-semibold tracking-widest uppercase text-primary">Discover the area</span>
+</div>
+<h1 class="font-headline text-5xl md:text-6xl font-bold tracking-tight text-on-surface mb-6 leading-[1.1]">
+                Local <span class="text-primary-container">Insights</span>
+</h1>
+<p class="max-w-2xl text-on-surface-variant text-lg">
+                Hand-picked recommendations to make your stay feel like home. From hidden coastal gems to the best morning espresso.
+            </p>
+</header>
+<!-- Category Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+<!-- Dining: Large Primary Block -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-[2rem] bg-surface-container-low min-h-[400px] shadow-sm">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="interior of a modern sunlit cafe with wooden tables and plants, warm natural lighting, airy architectural digest style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1YdHfHP7R1GavnH4J0qsL9zO0CLCnaTTB9DxcnZ6IhAcSwCClJcwsk_xAh3xQbz52MlThKabnyaUAumw0Mbxkr2HAL0saWueYDWF0OWYy2ZRYGwDHvr52vopdILX8lkuYKYioix1mmAN7zdXS1rCFHVurYEnw4tOyjQIb7YgXn2eS8EOhP-kWc6AAKNK3OlLHnHZiqOGf3RC2ouvF0Plh8vCf_87OUq-KtjBaabI_grU2_fZ_aVyRkRTqVcZqPzgDS3qo0JwltQKa"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="restaurant">restaurant</span>
+<span class="text-on-primary/90 font-label tracking-widest uppercase text-xs font-bold">Recommended</span>
+</div>
+<h2 class="font-headline text-4xl font-bold text-white mb-4">Dining &amp; Gastronomy</h2>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white text-sm border border-white/20">Cafes</span>
+<span class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white text-sm border border-white/20">Restaurants</span>
+<span class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white text-sm border border-white/20">Wine Bars</span>
+</div>
+</div>
+</div>
+<!-- Side Bento Column -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<!-- Activities Card -->
+<div class="flex-1 group relative overflow-hidden rounded-[2rem] bg-surface-container-low shadow-sm">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="serene beach cove with turquoise water and golden sand at sunrise, minimalist aesthetic, wide angle landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJvFugzA7YEkTdw7BLsdOtwBnjOvKzrJXYbj1u6wZPdZKNkI_7UtGilTBRG21wF4MLjFqd6YZe8j8O7kjbvdroDRITQxs83bLHRiAyS6Y7gom-de--HYrZc79omm7Y7B7ZbRW8ELIwGLGVKjgH4ZPKI3WCEKaTIgRnAmU1EDkKYgE_uvq1RqMWMvS2QvvFxoyZ8BQSS2v2za15deMZe39R-9ibI847i4_l5SRmrMOIPSUMAbJyk6ItQG0MId7uBGfNH7e9eZAfU6Er"/>
+<div class="absolute inset-0 bg-on-surface/40"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline text-2xl font-bold text-white mb-1">Activities</h3>
+<p class="text-white/80 text-sm">Beaches &amp; Shopping</p>
+</div>
+</div>
+<!-- Essentials Card -->
+<div class="flex-1 group relative overflow-hidden rounded-[2rem] bg-surface-container-low shadow-sm">
+<div class="absolute inset-0 bg-primary-container/10"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="local_mall">local_mall</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-1">Essentials</h3>
+<p class="text-on-surface-variant text-sm">Grocery &amp; Pharmacy</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Curated List -->
+<section class="space-y-24">
+<!-- Dining Section -->
+<div id="dining">
+<div class="flex justify-between items-end mb-10 border-b border-outline-variant/30 pb-6">
+<div>
+<h3 class="font-headline text-3xl font-bold">Dining Destinations</h3>
+<p class="text-on-surface-variant mt-1">Our favorite spots within walking distance.</p>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 group">
+                        See map <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Spot 1 -->
+<div class="group cursor-pointer">
+<div class="relative mb-4 overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-highest">
+<img alt="" class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500" data-alt="latte art on a wooden table in a minimalist coffee shop, soft natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd3W6e_I74rEV8sVVDFcCwxrl844BTI0GtTlcMg1t7SXptvC8tEBLIVVIwgZnq39j6954g7O5Y_4eUiHWTY00-Jfpm48mzRIDy5LxsA7I9RqIV5mv5WJtjLuYQI5zFqPQUBuEzqUjaffi7SNT8yk-0MjKoyMyhAPNvjsaSpyeRraEREO-16WOhVLPwW3KNiNhNpydeSZ0Su8AB8PkiSMzaSmoU4pB4dl05-67YErzlTFvCFAH_yAldAdBECUu9w9WuTa7m6KINNsSO"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="walking">directions_walk</span>
+<span class="text-[11px] font-bold tracking-tight">4 min</span>
+</div>
+</div>
+<h4 class="font-headline text-xl font-bold mb-1">Coastal Roast</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 italic">The neighborhood's best third-wave coffee and freshly baked sourdough pastries.</p>
+<div class="flex items-center gap-4 text-[11px] font-bold text-outline uppercase tracking-wider">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 4.9</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>$$</span>
+</div>
+</div>
+<!-- Spot 2 -->
+<div class="group cursor-pointer">
+<div class="relative mb-4 overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-highest">
+<img alt="" class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500" data-alt="gourmet plated dish with vibrant vegetables on a minimalist ceramic plate, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPNvLDWcJPExs7u6aSkEoaRRgmW880zDi4-FC4VrKGQtPLHxUF59a3-3QhxsyOLWeQnK7bq5mmWe13T15kSqbPP6gKX1jXit0HkH2mDdZH1bDwhfEwgWzO3fZqn55sP3IgLBCt6NC1HSI1nG3q5sd0kJC7qQAoZZqFkFlAYarF96NwPeBQrbc6tzJQE7iHiTb8S8r2xIOHKADgKMj_qaJEu_VLVoQKnpWTTNMNTEoaj7DwP78fMiYmPMfbwNQhdwKUFVeOkd3LuKy7"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="drive">directions_car</span>
+<span class="text-[11px] font-bold tracking-tight">8 min</span>
+</div>
+</div>
+<h4 class="font-headline text-xl font-bold mb-1">Terra Kitchen</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 italic">Organic farm-to-table dining with a seasonal menu that celebrates local produce.</p>
+<div class="flex items-center gap-4 text-[11px] font-bold text-outline uppercase tracking-wider">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 4.7</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>$$$</span>
+</div>
+</div>
+<!-- Spot 3 -->
+<div class="group cursor-pointer">
+<div class="relative mb-4 overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container-highest">
+<img alt="" class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500" data-alt="elegant upscale restaurant dining room at dusk with dim warm lighting and white tablecloths" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsFxc8HN8qKSbS13qSeuX-RhChFcQa-YtQ1j9z1C5_y5ifm032G4jPh8CVpdpTb-16lR3B23osbWWbeyJU_l_HcMiyO49qNpUQJETb5_ryrqIfrHFTOrmAoPkbxWFCG7K2T-qVLNNK9tS886jG8b1uDYT60LngK962SyZe7s_Kh6qRiERsq48XPxi6y4T3yp29YTejQaeycwsrRciBxND9pAg3gvSiJDiA-RnMutiXw_WWBLxpSToQ4fQBr1R_8TgL1OBsiryolBSm"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="walking">directions_walk</span>
+<span class="text-[11px] font-bold tracking-tight">12 min</span>
+</div>
+</div>
+<h4 class="font-headline text-xl font-bold mb-1">The Blue Anchor</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 italic">Seafood bistro with a harbor view. Try the oysters—delivered fresh every morning.</p>
+<div class="flex items-center gap-4 text-[11px] font-bold text-outline uppercase tracking-wider">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 4.8</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>$$$</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Activities Section -->
+<div id="activities">
+<div class="flex justify-between items-end mb-10 border-b border-outline-variant/30 pb-6">
+<div>
+<h3 class="font-headline text-3xl font-bold">Local Activities</h3>
+<p class="text-on-surface-variant mt-1">Explore the vibrant surroundings.</p>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Activity row 1 -->
+<div class="flex flex-col md:flex-row items-center gap-8 bg-surface-container-lowest p-6 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-full md:w-64 h-40 flex-shrink-0 overflow-hidden rounded-2xl">
+<img alt="" class="w-full h-full object-cover" data-alt="luxury boutique storefront with minimalist display and warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaAFzOKia-D-riCRnZog1xHKmG4Hh1c988BuXOGYwRcyIUu8T2FaOzn0IhBGO4EE-TlowDCFxP7umicAaU8L3AbXAQAg5oywnf7gXBbN_8CkFK4Q6BoAE6r8z9vvhDHNqkAJWmbq3_4ZBMq1SMlt1DocjJa5zaPXzUiDFJsQQNK9eD_h2davKpAxxiIHw8uP7JvJ8gpblOAHI5XoSFoWCLyHQ0Vbf9CkOqQBE0Rs-5H0R2z-YTYLu1rYiJvPU7W6oSSoip4_jBMggU"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold text-on-surface">Harbor Walk Boutique</h4>
+<p class="text-on-surface-variant text-sm mt-2 max-w-xl">A curated selection of local designers, home goods, and unique travel souvenirs.</p>
+</div>
+<div class="text-right">
+<div class="text-primary font-bold text-lg leading-none">1.2 mi</div>
+<div class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Distance</div>
+</div>
+</div>
+<div class="flex gap-4 mt-4">
+<span class="text-[11px] font-bold text-on-tertiary-container bg-tertiary-container/20 px-3 py-1 rounded-full">Shopping</span>
+<span class="text-[11px] font-bold text-on-secondary-container bg-secondary-container px-3 py-1 rounded-full">Open till 8PM</span>
+</div>
+</div>
+</div>
+<!-- Activity row 2 -->
+<div class="flex flex-col md:flex-row items-center gap-8 bg-surface-container-lowest p-6 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-full md:w-64 h-40 flex-shrink-0 overflow-hidden rounded-2xl">
+<img alt="" class="w-full h-full object-cover" data-alt="wide sandy beach with gentle waves and a few beach umbrellas in the distance, bright midday sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr0jCPedyqIm2RCsPfz-bpIMwK_-Bvvem4aB6CU-CecuMic4-qyp0ysHtQhk6ulrjfNUQb-XtjjhAeBfzCO7alKutbgoB5DlUHvxT4AFr7b-9ofAx-fppNtO1DswZbog1ELoCPB_PIeeYt8EOcVFsZPu3t9ZYF2zf9ViTjIxd7uJ2UWjNpVFCX4_zm_4ibSqupK8DxhQ8N6bIqQq0Y-F_8x5-XUILm7EGcFavyADXKzlD7uvSbpJDkdnQjbNU274mc0vFKeXh57Fs3"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold text-on-surface">Golden Bay Beach</h4>
+<p class="text-on-surface-variant text-sm mt-2 max-w-xl">Quiet, family-friendly beach known for its soft sand and shallow crystal-clear water.</p>
+</div>
+<div class="text-right">
+<div class="text-primary font-bold text-lg leading-none">15 min</div>
+<div class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">By Car</div>
+</div>
+</div>
+<div class="flex gap-4 mt-4">
+<span class="text-[11px] font-bold text-on-tertiary-container bg-tertiary-container/20 px-3 py-1 rounded-full">Nature</span>
+<span class="text-[11px] font-bold text-on-secondary-container bg-secondary-container px-3 py-1 rounded-full">Free Entry</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Essentials Section -->
+<div class="pb-12" id="essentials">
+<div class="flex items-center gap-4 mb-10">
+<h3 class="font-headline text-3xl font-bold whitespace-nowrap">The Essentials</h3>
+<div class="h-[1px] w-full bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-6 p-6 rounded-[1.5rem] bg-surface-container-low border border-outline-variant/10">
+<div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-primary-container shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-3xl" data-icon="shopping_cart">shopping_cart</span>
+</div>
+<div>
+<h5 class="font-bold text-on-surface">Whole Foods Market</h5>
+<p class="text-xs text-on-surface-variant">Full grocery selection &amp; deli. 5 min drive.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-6 rounded-[1.5rem] bg-surface-container-low border border-outline-variant/10">
+<div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-primary-container shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-3xl" data-icon="local_pharmacy">local_pharmacy</span>
+</div>
+<div>
+<h5 class="font-bold text-on-surface">CVS Pharmacy</h5>
+<p class="text-xs text-on-surface-variant">24/7 Service. 3 blocks away.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-[0_-10px_40px_rgba(20,184,166,0.08)] rounded-t-[2rem] border-t border-teal-500/10">
+<div class="flex justify-around items-center w-full px-4 pb-6 pt-3 max-w-screen-xl mx-auto">
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase">Guide</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-teal-50 text-teal-700 rounded-2xl px-5 py-2 scale-105 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase">Local</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="contact_support">contact_support</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase">Support</span>
+</a>
+</div>
+</nav>
+<!-- Floating Action Button - Supressed as per rule: Only on Home/Dashboard -->
+<!-- Not rendered -->
+</body></html>

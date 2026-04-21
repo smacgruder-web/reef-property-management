@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-tint": "#006b5f",
+                    "on-tertiary-container": "#00423a",
+                    "tertiary-fixed-dim": "#4ddcc6",
+                    "surface-bright": "#faf8ff",
+                    "tertiary-container": "#09b8a4",
+                    "surface-variant": "#dce1fb",
+                    "primary": "#006b5f",
+                    "primary-fixed-dim": "#4fdbc8",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary": "#006b5e",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#586377",
+                    "primary-container": "#14b8a6",
+                    "on-surface": "#151b2d",
+                    "surface": "#faf8ff",
+                    "error-container": "#ffdad6",
+                    "outline": "#6c7a77",
+                    "surface-container-low": "#f2f3ff",
+                    "surface-dim": "#d4d9f2",
+                    "on-surface-variant": "#3c4947",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-primary-fixed": "#00201c",
+                    "surface-container": "#eaedff",
+                    "secondary-container": "#d5e0f8",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#dce1fb",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-primary-fixed-variant": "#005048",
+                    "inverse-surface": "#2a3043",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#71f8e4",
+                    "on-primary-container": "#00423b",
+                    "tertiary-fixed": "#6ef9e2",
+                    "outline-variant": "#bbcac6",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "on-background": "#151b2d",
+                    "background": "#faf8ff",
+                    "surface-container-high": "#e3e7ff",
+                    "inverse-primary": "#4fdbc8",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#00201b",
+                    "secondary": "#545f73"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -10px rgba(21, 27, 45, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest flex items-center justify-center">
+<img alt="Property logo" class="w-full h-full object-cover" data-alt="Minimalist property brand logo with teal geometric shapes and professional typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPzmamYSSZnc496w1qzSRIexuNEkSXqUyMbFoltcALdn6lQQtQ4vb_Ixyq9wUDnyqRupKu3GgikCP1FuwLBqFOQlSNm6P1shS6-BWWuohLBjhD5haHTS68FUclKiQ0QuB1UM42qM5MHaae7nDVm-I1in58IMTnrxAZ23axyF9WiTWOwjB616vzKDcK9mz-bkgwxaWDeozUXMLYxPNkg1LHrwIo5VLSdbpF6-F9sPBzEXNnMVSYWL_Zsz_VPZHHmR5z9nICqk1dNNZS"/>
+</div>
+<span class="font-manrope font-extrabold tracking-tighter text-teal-700 dark:text-teal-400">The Horizon Suite</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-200 text-slate-500">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-screen-xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-4">Support &amp; Care</h1>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed">We're here to ensure your stay is seamless. Whether it's a quick question or an urgent matter, our team is at your disposal.</p>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Primary Actions Area -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Contact Host Card (Editorial Style) -->
+<div class="relative overflow-hidden rounded-full bg-surface-container-lowest editorial-shadow group transition-all duration-300">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+<div class="w-32 h-32 shrink-0 rounded-full overflow-hidden border-4 border-surface-container-low">
+<img alt="Host portrait" class="w-full h-full object-cover" data-alt="Professional and friendly looking property host smiling in a bright airy office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXQJbIKwX2Zy6rBxz70gVL7hi0E68b9-nLFLsl0LoOLSGSxxd-5JDmQYDrw8hH1QK6CgEVLQeNMkqsKdr9h-gEbL34Am8jUfQHxbFxsh-s4eVP2_NPPEY5aS_-YU4D-GogjcU-nw3z-44nEqjme59EbahHHbxRWzY_0OM7Cvd_DwjiwVPuKAikhAh9x9bGKu_1yCV7xoR8PEZUTWYe6baINWbeIccGIwMVYrDLo0MUkZ4cOVOwJT--zEP_LnsUmOfUVNwtOLTc8Z63"/>
+</div>
+<div class="flex-grow text-center md:text-left">
+<h2 class="font-headline text-2xl font-bold mb-2">Message your host, Elena</h2>
+<p class="text-on-surface-variant mb-6 font-medium">Average response time: 15 minutes</p>
+<button class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-md active:scale-95 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                                Contact Host
+                            </button>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="space-y-6">
+<h3 class="font-headline text-xl font-bold px-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="quiz">quiz</span>
+                        Frequently Asked Questions
+                    </h3>
+<div class="space-y-4">
+<!-- Accordion Items -->
+<div class="bg-surface-container-low p-6 rounded-full group cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex justify-between items-center">
+<h4 class="font-semibold text-on-surface">How do I access the Wi-Fi?</h4>
+<span class="material-symbols-outlined text-outline" data-icon="expand_more">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant leading-relaxed hidden group-focus-within:block">The Wi-Fi network name and password can be found on the physical welcome card in the living room, or under the 'Home' tab in this guide.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-full group cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex justify-between items-center">
+<h4 class="font-semibold text-on-surface">What is the checkout procedure?</h4>
+<span class="material-symbols-outlined text-outline" data-icon="expand_more">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant leading-relaxed hidden group-focus-within:block">Checkout is at 11:00 AM. Please ensure all windows are closed, lights are off, and the key is returned to the lockbox.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-full group cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex justify-between items-center">
+<h4 class="font-semibold text-on-surface">Where is the extra bedding located?</h4>
+<span class="material-symbols-outlined text-outline" data-icon="expand_more">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant leading-relaxed hidden group-focus-within:block">Extra pillows and blankets are stored in the master bedroom closet's top shelf.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Sidebar (Emergency & Stats) -->
+<aside class="lg:col-span-5 space-y-8">
+<!-- Emergency Contacts -->
+<div class="bg-error-container/30 border border-error/10 p-8 rounded-full">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-error" data-icon="emergency">emergency</span>
+<h3 class="font-headline text-xl font-bold text-on-error-container">Emergency Contacts</h3>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold uppercase tracking-wider text-error/70 mb-1">Local Emergency</p>
+<p class="text-2xl font-black text-on-surface">911</p>
+</div>
+<button class="p-3 bg-error text-on-error rounded-full shadow-lg">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+</div>
+<div class="h-px bg-error/10 w-full"></div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold uppercase tracking-wider text-error/70 mb-1">24/7 Security</p>
+<p class="text-xl font-bold text-on-surface">+1 (555) 092-8833</p>
+</div>
+<button class="p-3 bg-error/10 text-error rounded-full hover:bg-error/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Help Bento -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-secondary-container p-6 rounded-full flex flex-col justify-between aspect-square group cursor-pointer hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="cleaning_services">cleaning_services</span>
+<div>
+<p class="font-bold text-on-secondary-container">Report Issue</p>
+<p class="text-xs text-on-secondary-container/70">Housekeeping or repair</p>
+</div>
+</div>
+<div class="bg-tertiary-container p-6 rounded-full flex flex-col justify-between aspect-square group cursor-pointer hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl" data-icon="local_taxi">local_taxi</span>
+<div>
+<p class="font-bold text-on-tertiary-container">Book Transport</p>
+<p class="text-xs text-on-tertiary-container/70">Local shuttle service</p>
+</div>
+</div>
+</div>
+<!-- Location Context -->
+<div class="rounded-full overflow-hidden h-48 relative shadow-inner">
+<div class="absolute inset-0 bg-slate-200">
+<img alt="Local map area" class="w-full h-full object-cover" data-alt="Simplified map view showing neighborhood blocks in a soft minimalist style with teal accents" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmrHm2IQeOtLj_wz7A8295ffSubP1V_sH4iNnwmPVMXdFBhDMrGtRyIl_LEUWR9PVU_TlRuYtUbmBGYtuWQ7VP227GVrOj0_CJIeuGTZ9Usu7pg9gqEGs_uaAQmJuYTWhOu5EEGFSSyWPzmQeqQhaGK_FBxmpny0udE5ySGHNSOLRYZWC4ZyfHz38YjApGyMOAP2xsUFsWuM2oVjlPXgJ5mZdazdrIUUusvmBZ-NGyfhpeyNDEM0OV18mDMQ7ZAiBJ5HnhemKJe43q"/>
+</div>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-sm">
+<p class="text-xs font-bold text-primary flex items-center gap-1 uppercase tracking-tight">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                            Main Office Nearby
+                        </p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[2rem] bg-white/90 backdrop-blur-xl border-t border-teal-500/10 shadow-[0_-10px_40px_rgba(20,184,166,0.08)]">
+<div class="flex justify-around items-center w-full px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Guide</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Local</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-teal-50 text-teal-700 rounded-2xl px-5 py-2 scale-105 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Support</span>
+</a>
+</div>
+</nav>
+</body></html>

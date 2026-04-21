@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e3e7ff",
+                        "surface-tint": "#006b5f",
+                        "on-tertiary-container": "#00423a",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-dim": "#d4d9f2",
+                        "on-surface": "#151b2d",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#6ef9e2",
+                        "primary": "#006b5f",
+                        "surface-bright": "#faf8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#3c4947",
+                        "on-secondary-fixed": "#111c2d",
+                        "outline": "#6c7a77",
+                        "surface": "#faf8ff",
+                        "surface-container": "#eaedff",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#005048",
+                        "surface-container-low": "#f2f3ff",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "inverse-primary": "#4fdbc8",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#00201c",
+                        "primary-fixed": "#71f8e4",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#00423b",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#d5e0f8",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#dce1fb",
+                        "inverse-surface": "#2a3043",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-secondary-container": "#586377",
+                        "secondary": "#545f73",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "primary-container": "#14b8a6",
+                        "surface-container-highest": "#dce1fb",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "tertiary": "#006b5e",
+                        "background": "#faf8ff",
+                        "tertiary-container": "#09b8a4",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#151b2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#faf8ff] dark:bg-[#151b2d] flex justify-between items-center px-6 py-4 w-full h-16 fixed top-0 z-50 shadow-none">
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[#006b5f] dark:text-[#14b8a6]">arrow_back</span>
+</button>
+<h1 class="font-['Manrope'] tracking-tight font-bold text-lg text-[#006b5f] dark:text-[#14b8a6]">Feedback</h1>
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[#006b5f] dark:text-[#14b8a6]">help_outline</span>
+</button>
+</header>
+<main class="pt-20 pb-32 px-6 max-w-lg mx-auto">
+<!-- Hero Editorial Section -->
+<section class="mb-10 mt-4">
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight mb-3">Share Your Experience</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                We hope you enjoyed your stay at <span class="font-semibold text-primary">The Horizon Suite</span>. Your feedback helps us improve.
+            </p>
+</section>
+<!-- Overall Rating -->
+<section class="mb-10 p-8 bg-surface-container-lowest rounded-full shadow-sm text-center">
+<h3 class="text-xs uppercase tracking-widest font-bold text-on-surface-variant mb-4">Overall Rating</h3>
+<div class="flex justify-center gap-2">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-4xl text-outline-variant">star</span>
+</div>
+</section>
+<!-- Bento Grid for Specific Ratings -->
+<section class="grid grid-cols-2 gap-4 mb-10">
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/15">
+<p class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant mb-2">Cleanliness</p>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/15">
+<p class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant mb-2">Location</p>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-outline-variant">star</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/15">
+<p class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant mb-2">Check-in</p>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/15">
+<p class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant mb-2">Value</p>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-outline-variant">star</span>
+<span class="material-symbols-outlined text-sm text-outline-variant">star</span>
+</div>
+</div>
+</section>
+<!-- Review Text Area -->
+<section class="mb-10">
+<label class="block text-sm font-bold text-on-surface mb-3">Tell us more about your stay</label>
+<div class="relative group">
+<textarea class="w-full bg-surface-container-highest border-none rounded-xl p-5 text-on-surface placeholder:text-on-surface-variant/50 focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="What made your stay memorable? Any tips for future guests?" rows="5"></textarea>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 rounded-b-xl"></div>
+</div>
+</section>
+<!-- Photo Upload -->
+<section class="mb-10">
+<h3 class="text-sm font-bold text-on-surface mb-4">Add photos of your experience</h3>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="flex-shrink-0 w-28 h-28 border-2 border-dashed border-outline-variant rounded-xl flex flex-col items-center justify-center text-primary hover:bg-surface-container-low transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-3xl mb-1">add_a_photo</span>
+<span class="text-[10px] font-bold uppercase">Upload</span>
+</button>
+<div class="flex-shrink-0 w-28 h-28 bg-surface-container-highest rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="a bright modern hotel bedroom with crisp white linens and sunlight streaming through floor to ceiling windows with teal accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZpoO93BcdRkVHzU1VBMnMHuN_W_3AA5mBl_xXh8-YUVZ9sf8Y8wnPizJnizj1u0kC7nYaihVe4-MN76eXX843dFXNO9Ffl404OpRzgAoe0G7NCXmPhk0ivtr9p6JHqtIlir-3VxmmqtyE-yeeko31SaN1nY0g0gi3Nh9tPfpLplbtZOhcPWEuJZHRT2VUxg5L3akaUvPJ_mRc34mFrlFwa6i9AMox_mnS5TA_QFPbskJKQc2rMH1GdueGccdUomZyXYaOJ1Zy6nxf"/>
+</div>
+<div class="flex-shrink-0 w-28 h-28 bg-surface-container-highest rounded-xl overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="close-up of a high-end bathroom vanity with designer toiletries and fresh towels in a luxury suite setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoNbBrtuYhq4PM3i8C6gX7Ijr5Fl7UgPC9aDo7rbGUZvU_kX9q_lpi4roBAG7TSAWwJ_3JDA4_1TfsYDkzqvfr4X2VxQziRORpqyL3F8V76JF8mxgNnMFHAzW-xuiaQLFpDmAiKaVOnVcYUYzQUOF9N0dErgMGx5aRYsAgGAuTQCFUsmKnJkt1OH2yhQtj-CTkunMvi0XuvjnFnm2JoIDg2aCXE2YcjabX-0OGcPizBzdTNQn_Bg9If1y_7B38E6EghVhKUYBYBYae"/>
+<button class="absolute top-1 right-1 bg-on-surface/50 backdrop-blur-md rounded-full p-1">
+<span class="material-symbols-outlined text-white text-xs">close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Privacy Toggle -->
+<section class="mb-10 flex items-center justify-between p-5 bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">visibility_off</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Post review anonymously</p>
+<p class="text-[11px] text-on-surface-variant">Hide your name from the public listing</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</section>
+<!-- Submit Button -->
+<button class="w-full h-14 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl active:scale-95 duration-150 shadow-lg shadow-primary/20 flex items-center justify-center gap-2 mb-8">
+            Submit Review
+            <span class="material-symbols-outlined">send</span>
+</button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 pb-safe bg-white/80 dark:bg-[#151b2d]/80 backdrop-blur-xl border-t border-[#bbcac6]/15 shadow-[0_-4px_20px_0_rgba(21,27,45,0.06)] rounded-t-xl md:hidden">
+<a class="flex flex-col items-center justify-center text-[#3c4947] dark:text-[#bbcac6] opacity-60 hover:text-[#14b8a6] transition-colors active:translate-y-0.5 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Stay</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#3c4947] dark:text-[#bbcac6] opacity-60 hover:text-[#14b8a6] transition-colors active:translate-y-0.5 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Guide</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#006b5f] dark:text-[#14b8a6] relative after:content-[''] after:absolute after:bottom-0 after:w-1 after:h-1 after:bg-[#006b5f] after:rounded-full active:translate-y-0.5 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review" style="font-variation-settings: 'FILL' 1;">rate_review</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Feedback</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#3c4947] dark:text-[#bbcac6] opacity-60 hover:text-[#14b8a6] transition-colors active:translate-y-0.5 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Account</span>
+</a>
+</nav>
+</body></html>

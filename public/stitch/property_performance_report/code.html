@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#3c4947",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-secondary-container": "#586377",
+                        "tertiary-fixed": "#6ef9e2",
+                        "surface-container-highest": "#dce1fb",
+                        "on-secondary-fixed": "#111c2d",
+                        "tertiary": "#006b5e",
+                        "surface-tint": "#006b5f",
+                        "tertiary-container": "#09b8a4",
+                        "surface-container": "#eaedff",
+                        "on-surface": "#151b2d",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "secondary-container": "#d5e0f8",
+                        "surface": "#faf8ff",
+                        "secondary-fixed": "#d8e3fb",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "error-container": "#ffdad6",
+                        "primary": "#006b5f",
+                        "outline": "#6c7a77",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-primary-container": "#00423b",
+                        "surface-dim": "#d4d9f2",
+                        "surface-container-low": "#f2f3ff",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-container-high": "#e3e7ff",
+                        "inverse-surface": "#2a3043",
+                        "on-background": "#151b2d",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-primary-fixed": "#00201c",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary-container": "#00423a",
+                        "inverse-primary": "#4fdbc8",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#71f8e4",
+                        "primary-container": "#14b8a6",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#545f73",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-full">
+<span class="material-symbols-outlined text-teal-700 dark:text-teal-400">arrow_back</span>
+</button>
+<h1 class="font-headline tracking-tight font-bold text-lg text-teal-900 dark:text-teal-100">Performance Report</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-6">
+<span class="text-teal-900 dark:text-teal-100 font-semibold cursor-pointer">Portfolio</span>
+<span class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg cursor-pointer">Insights</span>
+<span class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg cursor-pointer">Calendar</span>
+</div>
+<button class="active:scale-95 duration-200 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-full">
+<span class="material-symbols-outlined text-teal-700 dark:text-teal-400">more_vert</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-screen-2xl mx-auto">
+<!-- Hero Property Header -->
+<section class="mb-12 relative rounded-xl overflow-hidden min-h-[300px] flex items-end">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Modern architectural masterpiece property with large glass windows at twilight reflecting soft blue and warm orange interior lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0l-OQOP7IvNZxcj9r_0-gyafnt-_UW4vDBR47IIToeavop0FW_IND-9EOpt5YTfSRz2BVXzoQrPDiGBdnIqLG1TmZ9kYLDV_3IbHyBls_k4XgHO-eqUDjCx-sSsB90mO-QKq590rAeoVjONhcudFIhwCHD-bzlinbiMzqxAdxYhA_QkBPoqMHrfuP7sIA-npJsorLeeskI0pnN9y7-MlfYcnQFGTaGGuL-G-VrN87TDDGDeAyqTdmWt_rxz5M1Ws9lIqstq0g_5Zt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="relative z-10 p-8 md:p-12 w-full flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-white tracking-tighter mb-2">The Glass Pavilion</h2>
+<p class="text-white/80 flex items-center gap-2 font-medium">
+<span class="material-symbols-outlined text-primary-fixed">location_on</span>
+                        1280 Skyline Drive, Hollywood Hills, CA
+                    </p>
+</div>
+<div class="glass-panel p-4 rounded-xl flex items-center gap-4">
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Analysis Period</span>
+<span class="font-headline font-bold text-on-surface">Last 12 Months</span>
+</div>
+<button class="bg-primary text-on-primary p-2 rounded-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+</div>
+</section>
+<!-- KPI Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+<!-- Occupancy Rate -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">bed</span>
+</div>
+<span class="text-primary font-bold text-sm flex items-center">+4.2%</span>
+</div>
+<h3 class="text-on-surface-variant font-label text-xs uppercase tracking-widest font-semibold mb-1">Occupancy Rate</h3>
+<p class="font-headline text-3xl font-bold text-on-surface">94.8%</p>
+</div>
+<!-- RevPAR -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-secondary-container/20 p-2 rounded-lg text-secondary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-primary font-bold text-sm flex items-center">+12.5%</span>
+</div>
+<h3 class="text-on-surface-variant font-label text-xs uppercase tracking-widest font-semibold mb-1">RevPAR</h3>
+<p class="font-headline text-3xl font-bold text-on-surface">$412.50</p>
+</div>
+<!-- ADR -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-tertiary-container/20 p-2 rounded-lg text-tertiary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<span class="text-error font-bold text-sm flex items-center">-1.2%</span>
+</div>
+<h3 class="text-on-surface-variant font-label text-xs uppercase tracking-widest font-semibold mb-1">Average Daily Rate</h3>
+<p class="font-headline text-3xl font-bold text-on-surface">$435.00</p>
+</div>
+<!-- NOI -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container p-2 rounded-lg text-on-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="text-primary font-bold text-sm flex items-center">+8.1%</span>
+</div>
+<h3 class="text-on-surface-variant font-label text-xs uppercase tracking-widest font-semibold mb-1">Net Operating Income</h3>
+<p class="font-headline text-3xl font-bold text-on-surface">$1.2M</p>
+</div>
+</section>
+<!-- Main Analytics Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<!-- Revenue vs Expenses -->
+<div class="lg:col-span-8 bg-surface-container-low rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="font-headline text-2xl font-bold">Revenue vs. Expenses</h3>
+<p class="text-on-surface-variant text-sm">Comparison of monthly cash flow</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs font-semibold">Revenue</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-outline-variant"></div>
+<span class="text-xs font-semibold">Expenses</span>
+</div>
+</div>
+</div>
+<!-- Simulated Bar Chart -->
+<div class="h-64 flex items-end justify-between gap-4 px-4 border-b border-outline-variant/20">
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full flex gap-1 items-end justify-center">
+<div class="w-4 md:w-6 bg-outline-variant/40 rounded-t-sm h-24"></div>
+<div class="w-4 md:w-6 bg-primary rounded-t-sm h-48"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-2">JAN</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full flex gap-1 items-end justify-center">
+<div class="w-4 md:w-6 bg-outline-variant/40 rounded-t-sm h-20"></div>
+<div class="w-4 md:w-6 bg-primary rounded-t-sm h-40"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-2">FEB</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full flex gap-1 items-end justify-center">
+<div class="w-4 md:w-6 bg-outline-variant/40 rounded-t-sm h-28"></div>
+<div class="w-4 md:w-6 bg-primary rounded-t-sm h-56"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-2">MAR</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full flex gap-1 items-end justify-center">
+<div class="w-4 md:w-6 bg-outline-variant/40 rounded-t-sm h-32"></div>
+<div class="w-4 md:w-6 bg-primary rounded-t-sm h-44"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-2">APR</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full flex gap-1 items-end justify-center">
+<div class="w-4 md:w-6 bg-outline-variant/40 rounded-t-sm h-20"></div>
+<div class="w-4 md:w-6 bg-primary rounded-t-sm h-60"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-2">MAY</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full flex gap-1 items-end justify-center">
+<div class="w-4 md:w-6 bg-outline-variant/40 rounded-t-sm h-16"></div>
+<div class="w-4 md:w-6 bg-primary rounded-t-sm h-36"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-2">JUN</span>
+</div>
+</div>
+</div>
+<!-- Guest Satisfaction Card -->
+<div class="lg:col-span-4 bg-primary text-on-primary rounded-xl p-8 relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h3 class="font-headline text-2xl font-bold mb-8">Guest Satisfaction</h3>
+<div class="flex items-center gap-4 mb-10">
+<span class="text-6xl font-extrabold tracking-tighter">4.9</span>
+<div class="flex flex-col">
+<div class="flex text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-sm font-medium opacity-80">Based on 148 reviews</span>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs font-bold uppercase tracking-wider mb-2">
+<span>Cleanliness</span>
+<span>5.0</span>
+</div>
+<div class="h-1 w-full bg-white/20 rounded-full">
+<div class="h-full w-[100%] bg-white rounded-full"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-bold uppercase tracking-wider mb-2">
+<span>Communication</span>
+<span>4.9</span>
+</div>
+<div class="h-1 w-full bg-white/20 rounded-full">
+<div class="h-full w-[98%] bg-white rounded-full"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-bold uppercase tracking-wider mb-2">
+<span>Accuracy</span>
+<span>4.8</span>
+</div>
+<div class="h-1 w-full bg-white/20 rounded-full">
+<div class="h-full w-[96%] bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Occupancy Trend Line Graph -->
+<div class="lg:col-span-12 bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h3 class="font-headline text-2xl font-bold">Occupancy Trend</h3>
+<p class="text-on-surface-variant text-sm">Visualizing seasonal fluctuations over 12 months</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-low rounded-lg text-xs font-bold text-primary">Monthly</span>
+<span class="px-3 py-1 text-xs font-bold text-on-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer rounded-lg">Quarterly</span>
+</div>
+</div>
+<!-- Simulated Line Chart -->
+<div class="relative h-48 w-full">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1000 200">
+<path d="M0,150 C50,140 100,160 150,130 C200,100 250,20 300,30 C350,40 400,120 450,140 C500,160 550,100 600,60 C650,20 700,40 750,70 C800,100 850,150 900,160 C950,170 1000,140 1000,140" fill="none" stroke="#006b5f" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,150 C50,140 100,160 150,130 C200,100 250,20 300,30 C350,40 400,120 450,140 C500,160 550,100 600,60 C650,20 700,40 750,70 C800,100 850,150 900,160 C950,170 1000,140 1000,140 L1000,200 L0,200 Z" fill="url(#trendGradient)"></path>
+<defs>
+<lineargradient id="trendGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006b5f" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#006b5f" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute inset-0 flex justify-between items-end pb-2 opacity-20 pointer-events-none">
+<div class="w-px h-full bg-outline"></div>
+<div class="w-px h-full bg-outline"></div>
+<div class="w-px h-full bg-outline"></div>
+<div class="w-px h-full bg-outline"></div>
+<div class="w-px h-full bg-outline"></div>
+<div class="w-px h-full bg-outline"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 px-2">
+<span class="text-[10px] text-on-surface-variant font-bold">JUL '23</span>
+<span class="text-[10px] text-on-surface-variant font-bold">OCT '23</span>
+<span class="text-[10px] text-on-surface-variant font-bold">JAN '24</span>
+<span class="text-[10px] text-on-surface-variant font-bold">APR '24</span>
+<span class="text-[10px] text-on-surface-variant font-bold">JUN '24</span>
+</div>
+</div>
+<!-- Upcoming Bookings -->
+<div class="lg:col-span-12 bg-surface-container-low rounded-xl overflow-hidden">
+<div class="p-8 pb-4 flex justify-between items-center">
+<h3 class="font-headline text-2xl font-bold">Upcoming Bookings</h3>
+<button class="text-primary font-bold text-sm hover:underline">View All Schedule</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold border-b border-outline-variant/10">
+<th class="px-8 py-4">Guest</th>
+<th class="px-8 py-4">Check-in</th>
+<th class="px-8 py-4">Check-out</th>
+<th class="px-8 py-4">Value</th>
+<th class="px-8 py-4">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<tr class="hover:bg-white/40 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container text-xs">AM</div>
+<span class="font-semibold text-sm">Alexandra Miller</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm">Jul 12, 2024</td>
+<td class="px-8 py-6 text-sm">Jul 18, 2024</td>
+<td class="px-8 py-6 text-sm font-bold">$3,120.00</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-full">Confirmed</span>
+</td>
+</tr>
+<tr class="hover:bg-white/40 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center font-bold text-on-primary-container text-xs">JR</div>
+<span class="font-semibold text-sm">Jordan Ross</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm">Jul 20, 2024</td>
+<td class="px-8 py-6 text-sm">Jul 24, 2024</td>
+<td class="px-8 py-6 text-sm font-bold">$2,450.00</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-full">Confirmed</span>
+</td>
+</tr>
+<tr class="hover:bg-white/40 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center font-bold text-on-tertiary-container text-xs">LW</div>
+<span class="font-semibold text-sm">Liam Wright</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm">Aug 01, 2024</td>
+<td class="px-8 py-6 text-sm">Aug 07, 2024</td>
+<td class="px-8 py-6 text-sm font-bold">$4,890.00</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-[10px] font-bold uppercase rounded-full">Pending</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-white/90 dark:bg-slate-950/90 backdrop-blur-2xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-2xl z-50">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 active:scale-90 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1">domain</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Portfolio</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-xl px-4 py-1.5 active:scale-90 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1">analytics</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 active:scale-90 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1">calendar_month</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Calendar</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 active:scale-90 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1">chat_bubble</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Inbox</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Request Submitted - Maintenance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#dce1fb",
+                        "on-secondary-container": "#586377",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#6ef9e2",
+                        "surface-variant": "#dce1fb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d5e0f8",
+                        "surface-container": "#eaedff",
+                        "primary": "#006b5f",
+                        "on-primary-fixed": "#00201c",
+                        "inverse-primary": "#4fdbc8",
+                        "outline-variant": "#bbcac6",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "surface-container-high": "#e3e7ff",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "primary-fixed": "#71f8e4",
+                        "tertiary": "#006b5e",
+                        "outline": "#6c7a77",
+                        "inverse-on-surface": "#eef0ff",
+                        "background": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2a3043",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#00423a",
+                        "on-surface-variant": "#3c4947",
+                        "on-background": "#151b2d",
+                        "on-surface": "#151b2d",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-primary-container": "#00423b",
+                        "tertiary-container": "#09b8a4",
+                        "surface-dim": "#d4d9f2",
+                        "secondary": "#545f73",
+                        "surface-container-low": "#f2f3ff",
+                        "primary-container": "#14b8a6",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#006b5f",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "surface": "#faf8ff",
+                        "on-secondary-fixed": "#111c2d",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "surface-bright": "#faf8ff",
+                        "on-primary-fixed-variant": "#005048"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col items-center justify-center p-6">
+<!-- The Shell is suppressed per the "Success/Confirmation" rule in the mandate -->
+<main class="w-full max-w-2xl mx-auto space-y-12">
+<!-- Hero Confirmation Section -->
+<section class="relative text-center">
+<!-- Animated-feel Static Illustration -->
+<div class="relative inline-block mb-8">
+<div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full scale-150"></div>
+<div class="relative glass-panel p-10 rounded-full shadow-2xl shadow-primary/10 border border-white/40">
+<div class="bg-gradient-to-br from-primary to-primary-container w-24 h-24 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Asymmetric Floating Element -->
+<div class="absolute -top-4 -right-8 glass-panel py-3 px-5 rounded-full shadow-lg border border-white/50 transform rotate-12">
+<span class="material-symbols-outlined text-tertiary-container align-middle mr-2">verified</span>
+<span class="font-headline font-bold text-on-surface text-sm tracking-tight">Confirmed</span>
+</div>
+</div>
+<div class="space-y-4">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-headline font-extrabold text-on-surface tracking-tight">
+                    Your request has been received!
+                </h1>
+<p class="text-on-surface-variant text-lg md:text-xl font-body max-w-lg mx-auto leading-relaxed">
+                    Thank you for letting us know. Our maintenance team has been notified and is reviewing your ticket.
+                </p>
+</div>
+</section>
+<!-- Ticket Summary Bento-style Card -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(21,27,45,0.04)] flex flex-col justify-between border border-outline-variant/10">
+<div>
+<span class="label-md uppercase tracking-widest text-on-surface-variant font-bold text-xs">Ticket Number</span>
+<h2 class="text-3xl font-headline font-extrabold text-primary mt-2">#MTN-8842</h2>
+</div>
+<div class="mt-8">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container">calendar_today</span>
+<span class="text-sm font-medium">Submitted Oct 24, 2023</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/5 space-y-6">
+<div>
+<span class="label-md uppercase tracking-widest text-on-surface-variant font-bold text-xs">Estimated Response</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-4xl font-headline font-bold text-on-surface">2-4</span>
+<span class="text-lg font-headline font-medium text-on-surface-variant">Business Hours</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest/60 p-4 rounded-lg flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-container mt-0.5">info</span>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                        Priority is assigned based on the urgency of the repair. You will receive an email update once a technician is assigned.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Secondary Information Card (Asymmetric Layout) -->
+<section class="relative bg-surface-container-highest/30 rounded-xl overflow-hidden p-1">
+<div class="flex flex-col md:flex-row items-center bg-surface-container-lowest rounded-lg p-6 gap-8">
+<div class="w-full md:w-1/3 aspect-video md:aspect-square overflow-hidden rounded-lg">
+<img alt="Maintenance professional inspecting equipment" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500" data-alt="Professional maintenance technician in a clean uniform inspecting high-end building systems with specialized tools in a modern residential setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyEwDg_mAGv7LAhL8F5uaOnezFGH5aVzFexB6WGLSWA6YzRoX-EXLheGMHV4vd2rVLi2726RbGwcJLpIJpwJUSswMm7_Plsm4X6_eRCoMLGl-vGkX7ASAChPO2d1J74aTOC0r1zhkCQibI4r39LiBk9za9pTCXMoyRyMAOoutdGCD6D2RtzYULuE9CUhI1NMiCEvDO76jxKypt1SGrmZwv7sDGIWLZBe5iIGnZD4BCM5CtsDvY4Ot7nX-SRcrnlgO7OMBE4b5g_9mF"/>
+</div>
+<div class="flex-1 space-y-4">
+<h3 class="text-xl font-headline font-bold text-on-surface">What's next?</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
+                            A manager will validate the request details.
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
+                            You'll get a notification to schedule a visit time.
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
+                            Track real-time progress in your dashboard.
+                        </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- CTA Actions -->
+<section class="flex flex-col sm:flex-row gap-4 items-center justify-center pt-8">
+<button class="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 active:scale-95 transition-all duration-200">
+                Return to Dashboard
+            </button>
+<button class="w-full sm:w-auto px-10 py-4 bg-transparent border-2 border-outline-variant text-on-surface font-headline font-bold rounded-full hover:bg-surface-container-low active:scale-95 transition-all duration-200">
+                View Ticket Status
+            </button>
+</section>
+</main>
+<!-- Support Footer Link -->
+<footer class="mt-16 text-center">
+<p class="text-sm text-on-surface-variant/60 font-medium">
+            Need urgent assistance? <a class="text-primary hover:underline underline-offset-4 decoration-primary-container/40" href="#">Contact Resident Support</a>
+</p>
+</footer>
+</body></html>

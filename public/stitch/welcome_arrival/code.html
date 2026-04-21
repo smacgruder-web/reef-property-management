@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Horizon Suite - Guest Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-tint": "#006b5f",
+                    "on-tertiary-container": "#00423a",
+                    "tertiary-fixed-dim": "#4ddcc6",
+                    "surface-bright": "#faf8ff",
+                    "tertiary-container": "#09b8a4",
+                    "surface-variant": "#dce1fb",
+                    "primary": "#006b5f",
+                    "primary-fixed-dim": "#4fdbc8",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary": "#006b5e",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#586377",
+                    "primary-container": "#14b8a6",
+                    "on-surface": "#151b2d",
+                    "surface": "#faf8ff",
+                    "error-container": "#ffdad6",
+                    "outline": "#6c7a77",
+                    "surface-container-low": "#f2f3ff",
+                    "surface-dim": "#d4d9f2",
+                    "on-surface-variant": "#3c4947",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-primary-fixed": "#00201c",
+                    "surface-container": "#eaedff",
+                    "secondary-container": "#d5e0f8",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#dce1fb",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-primary-fixed-variant": "#005048",
+                    "inverse-surface": "#2a3043",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#71f8e4",
+                    "on-primary-container": "#00423b",
+                    "tertiary-fixed": "#6ef9e2",
+                    "outline-variant": "#bbcac6",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "on-background": "#151b2d",
+                    "background": "#faf8ff",
+                    "surface-container-high": "#e3e7ff",
+                    "inverse-primary": "#4fdbc8",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#00201b",
+                    "secondary": "#545f73"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface mb-24 md:mb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-black text-xl overflow-hidden">
+<img alt="Logo" class="w-full h-full object-cover" data-alt="minimalist logo for a luxury property brand named Horizon Suite with teal and white geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3AY8iCpNikT3GlaCaXM4yUFTUOqv_oehowLk0TlE23_uSBVUUWQSKGj96XnaGTi69N3fzZZ34Kl1DDL7YTumKoOJsreHFY7hVBHz-iz3ISwMPwH0v800Z005VrsNxgZOCgyqkewZfTVnHu3evR87-i5DT77-p9jRy3p4pU7r8vvKQ7SVHG2RbWyu-mjbYvHVQJJRF6jhWhcAfmvVmqDogYKr0huERf9LgrE4kb75HGmj_eqOdWILo1viiAyv2N8p6zLxrU7ja3kml"/>
+</div>
+<span class="font-manrope font-extrabold tracking-tighter text-teal-700">The Horizon Suite</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-teal-700 font-semibold text-sm" href="#">Home</a>
+<a class="text-slate-500 font-semibold text-sm hover:bg-slate-200/50 transition-colors px-2 py-1 rounded" href="#">Guide</a>
+<a class="text-slate-500 font-semibold text-sm hover:bg-slate-200/50 transition-colors px-2 py-1 rounded" href="#">Local</a>
+<a class="text-slate-500 font-semibold text-sm hover:bg-slate-200/50 transition-colors px-2 py-1 rounded" href="#">Support</a>
+</nav>
+<button class="material-symbols-outlined text-slate-500 hover:bg-slate-200/50 p-2 rounded-full transition-colors active:scale-95">notifications</button>
+</div>
+<div class="md:hidden">
+<button class="material-symbols-outlined text-slate-500">notifications</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-12 px-6 max-w-screen-xl mx-auto">
+<!-- Hero Section: Editorial Style -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-center">
+<div class="lg:col-span-7">
+<span class="inline-block text-primary font-bold tracking-widest uppercase text-xs mb-4">Unit 402 • Penthouse</span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1]">
+                    Welcome to the <br/><span class="text-primary-container">Horizon Suite</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed">
+                    We're delighted to have you. Your sanctuary by the sea is ready. Explore your digital concierge below for a seamless stay.
+                </p>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] rounded-full overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="luxury modern penthouse living room with floor to ceiling windows showing a sunset over the horizon ocean view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABaJ_7zO_j4RVAbSS40thT0ybIbFPWTKIcBkgwS_3z3pbvuc0Z6mGLmaKzpq7HmduCMxlBUjDY8t6hWpIU0rIWkEKXjVB_zI2DgfzWyfazcz3pTS_9BfLX0SXhprItDhX6TQze2WOUdNzOr_NwyFCF6GjJNGaRuoZsfjKc78a4PqbvIBt39tODrzMVnBfBsggelQkDL2TmSZVk3t_9s41ury7bW5F95tZIj-BXe_E-p55sm2Z7b9kLfaTh2I9cB0y5oSyBhh1h1okw"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-8 rounded-full shadow-xl border border-outline-variant/15 max-w-[240px]">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="font-bold text-sm">Safe &amp; Secure</span>
+</div>
+<p class="text-xs text-on-surface-variant">The unit has been professionally sanitized and prepared for your arrival.</p>
+</div>
+</div>
+</section>
+<!-- Bento Grid Info Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Wi-Fi Details (Primary Focus) -->
+<div class="md:col-span-2 lg:col-span-2 bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between shadow-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 opacity-10">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">wifi</span>
+</div>
+<div>
+<h2 class="text-2xl font-bold mb-8">Connectivity</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div>
+<p class="text-primary-fixed text-xs uppercase tracking-widest font-bold mb-2">Network</p>
+<p class="text-3xl font-bold tracking-tight">Horizon_Guest_5G</p>
+</div>
+<div>
+<p class="text-primary-fixed text-xs uppercase tracking-widest font-bold mb-2">Password</p>
+<p class="text-3xl font-bold tracking-tight">StayChill2024</p>
+</div>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-3 bg-on-primary/10 w-fit px-4 py-2 rounded-full border border-on-primary/20">
+<span class="material-symbols-outlined text-sm">qr_code_2</span>
+<span class="text-sm font-medium">Tap to scan QR Code</span>
+</div>
+</div>
+<!-- Times -->
+<div class="bg-surface-container-low rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10">
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                    Your Schedule
+                </h2>
+<div class="space-y-6">
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant/20">
+<span class="text-on-surface-variant font-medium">Check-in</span>
+<span class="text-xl font-bold">3:00 PM</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Check-out</span>
+<span class="text-xl font-bold">11:00 AM</span>
+</div>
+</div>
+<button class="mt-8 w-full py-3 bg-surface-container-highest text-primary font-bold rounded-full transition-all hover:bg-primary hover:text-white">
+                    Request Late Checkout
+                </button>
+</div>
+<!-- Quick Start: House Manual -->
+<div class="lg:col-span-2 bg-surface-container-highest rounded-xl p-8 border border-outline-variant/10 relative group">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<h2 class="text-2xl font-bold mb-3">Quick Start Guide</h2>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Everything you need to know about the smart home controls, kitchen appliances, and building amenities in one digital manual.
+                        </p>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-on-primary font-bold rounded-md shadow-md transition-transform active:scale-95" href="#">
+                            Open House Manual
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-64 h-48 rounded-xl overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="Modern kitchen with high-end appliances and marble countertops, soft morning light hitting the surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0IaxjDaUGJBzNh7iMaEatonNGdKEy_EqZ-t_1hUmQan5v6n4S7mT_h1Cy78l0fmN6CBpaOJbUrKS75NBbQDH-ok0YDULAjlclloec6R57sLUV7wIjg5hQLnJmBBas3Y04UkCN2-LShj7kc-iz_CftOK3PJ24CxC-5GIBYO1DQXt_E8TIBAEwtfQQJuqmWbElz2_Gy-QP-bYYBIajqSr2qTUKq_tDixHvjIW4GVg1AS13CgObnsfHPIyXFSiOTiMYkpkIuw1ASdTzf"/>
+</div>
+</div>
+</div>
+<!-- Weather/Local Context -->
+<div class="bg-secondary-container text-on-secondary-container rounded-xl p-8 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+<p class="text-4xl font-bold mb-1">74°F</p>
+<p class="text-sm font-medium opacity-80 uppercase tracking-tighter">Perfect Beach Day</p>
+<div class="mt-4 pt-4 border-t border-on-secondary-container/10">
+<p class="text-xs font-bold uppercase tracking-widest opacity-60">High of 82°F • Low of 68°F</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-[2rem] bg-white/90 backdrop-blur-xl border-t border-teal-500/10 shadow-[0_-10px_40px_rgba(20,184,166,0.08)]">
+<div class="flex justify-around items-center w-full px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center bg-teal-50 text-teal-700 rounded-2xl px-5 py-2 scale-105 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Guide</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Local</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Support</span>
+</a>
+</div>
+</nav>
+<!-- Floating Action Button: Suppressed for this welcome/guide dashboard as per instructions -->
+</body></html>

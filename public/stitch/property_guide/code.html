@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-tint": "#006b5f",
+                    "on-tertiary-container": "#00423a",
+                    "tertiary-fixed-dim": "#4ddcc6",
+                    "surface-bright": "#faf8ff",
+                    "tertiary-container": "#09b8a4",
+                    "surface-variant": "#dce1fb",
+                    "primary": "#006b5f",
+                    "primary-fixed-dim": "#4fdbc8",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary": "#006b5e",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#586377",
+                    "primary-container": "#14b8a6",
+                    "on-surface": "#151b2d",
+                    "surface": "#faf8ff",
+                    "error-container": "#ffdad6",
+                    "outline": "#6c7a77",
+                    "surface-container-low": "#f2f3ff",
+                    "surface-dim": "#d4d9f2",
+                    "on-surface-variant": "#3c4947",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-primary-fixed": "#00201c",
+                    "surface-container": "#eaedff",
+                    "secondary-container": "#d5e0f8",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#dce1fb",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-primary-fixed-variant": "#005048",
+                    "inverse-surface": "#2a3043",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#71f8e4",
+                    "on-primary-container": "#00423b",
+                    "tertiary-fixed": "#6ef9e2",
+                    "outline-variant": "#bbcac6",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "on-background": "#151b2d",
+                    "background": "#faf8ff",
+                    "surface-container-high": "#e3e7ff",
+                    "inverse-primary": "#4fdbc8",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#00201b",
+                    "secondary": "#545f73"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="minimalist property logo with clean geometric lines and teal accents on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrJgV2tL3TpyVDhXmwpiRBEujzVQ5y8MNdGmTWyYWjyChzp_ANGmy7JF5UJifn3zW7eB5cwVrN07x6LoIumERZD9l2UR1A-qKFspgWFefMiQammD90kPwUKHbuv3jiS5CLmEAZrWWHnUlxZF1wErd79CK1EJeEycEyTYLQphOtFl7GpXX0ldwIQutpP9a9xQ-vrvUa576UG-h_WqWg42d4RQUnEIG4XUGCIzUItvPc2CsFGdmhAHHXcWDGnTWGe4pn3pK68jRjjGh8"/>
+</div>
+<h1 class="font-headline font-extrabold tracking-tighter text-teal-700">The Horizon Suite</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-200 text-slate-500">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-screen-xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="relative rounded-3xl overflow-hidden bg-surface-container-low h-64 md:h-80 shadow-sm">
+<img class="w-full h-full object-cover opacity-90" data-alt="luxury modern villa with floor to ceiling windows and a swimming pool during blue hour with warm interior lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDenU1FwMaBF3pSJ4RzdlTDXOnVTDyf2yWakz96l9VgGrA0L5DT-0wG4ef_ScrOzHNQdnutJXrSPp421urSwFs7Lgue8BzZlN7okTbRPlp6Qh4kgugVOdEY6XqoUg3IGmk888vEMBaq6yGiCuH0XfDz527pz9JXWEfF5jYz86AhyWlURgNYvfJF1UzHGP619cmYDqVxZph3a0giX8dLdKxxbxQfI_byMgRo64hHZtiGoyTr-52OTByatFkN_cPYDoECF32rwkb9uNA7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent flex flex-col justify-end p-8">
+<span class="text-primary-fixed-dim font-headline font-bold tracking-widest uppercase text-xs mb-2">Guest Resource</span>
+<h2 class="text-surface-container-lowest font-headline text-4xl md:text-5xl font-extrabold tracking-tight">Property Guide</h2>
+<p class="text-surface-variant max-w-lg mt-2 text-sm md:text-base">Everything you need to know for a seamless stay at The Horizon Suite.</p>
+</div>
+</div>
+</section>
+<!-- Using the Amenities (Bento Style) -->
+<section class="mb-16">
+<div class="flex items-baseline justify-between mb-8">
+<h3 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Using the Amenities</h3>
+<span class="text-primary font-label text-sm font-semibold border-b-2 border-primary/20">View Schedule</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pool Card -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-full bg-surface-container-lowest p-8 flex flex-col justify-between min-h-[300px] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all">
+<div class="z-10">
+<div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container mb-6">
+<span class="material-symbols-outlined" data-icon="pool">pool</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-3">Infinity Pool &amp; Spa</h4>
+<p class="text-on-surface-variant max-w-sm leading-relaxed">Located on the south wing. Heated to 82°F year-round. Towels provided in the storage chest near the deck entrance.</p>
+</div>
+<div class="z-10 mt-6 flex gap-4">
+<span class="px-4 py-1.5 bg-surface-container-high rounded-full text-xs font-bold text-primary tracking-wide uppercase">Open 7am - 10pm</span>
+</div>
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[15rem] absolute -top-10 -right-10" data-icon="water">water</span>
+</div>
+</div>
+<!-- Gym & Rooftop -->
+<div class="space-y-6">
+<div class="bg-tertiary-container/10 p-6 rounded-full border border-tertiary-container/20 flex items-center gap-4">
+<div class="w-10 h-10 bg-tertiary-container rounded-lg flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+</div>
+<div>
+<h5 class="font-headline font-bold text-on-surface">Fitness Gym</h5>
+<p class="text-xs text-on-surface-variant">Keycard access, Level 2</p>
+</div>
+</div>
+<div class="bg-secondary-container/20 p-6 rounded-full border border-secondary-container/30 flex items-center gap-4">
+<div class="w-10 h-10 bg-secondary-container rounded-lg flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="deck">deck</span>
+</div>
+<div>
+<h5 class="font-headline font-bold text-on-surface">Rooftop Lounge</h5>
+<p class="text-xs text-on-surface-variant">Elevator to PH level</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Appliance Instructions -->
+<section class="mb-16">
+<h3 class="font-headline text-2xl font-bold text-on-surface tracking-tight mb-8">Appliance Instructions</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Smart TV -->
+<div class="bg-surface-container-low rounded-xl p-1 shadow-sm">
+<div class="bg-surface-container-lowest rounded-lg p-6 h-full border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="smart_display">smart_display</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline bg-surface-container-high px-2 py-0.5 rounded">Living Room</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Smart TV &amp; Media</h4>
+<p class="text-sm text-on-surface-variant mb-4 leading-relaxed">Log in with your own accounts. Use the silver remote for Netflix, Disney+, and HBO Max. Please log out before departure.</p>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="wifi">wifi</span>
+<span class="text-xs font-medium">Horizon_Guest_5G</span>
+</div>
+</div>
+</div>
+<!-- Coffee Maker -->
+<div class="bg-surface-container-low rounded-xl p-1 shadow-sm">
+<div class="bg-surface-container-lowest rounded-lg p-6 h-full border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="coffee_maker">coffee_maker</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline bg-surface-container-high px-2 py-0.5 rounded">Kitchen</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Coffee Station</h4>
+<p class="text-sm text-on-surface-variant mb-4 leading-relaxed">Nespresso Vertuo. Fill water tank to line. Place pod, slide lock to the left, and press the top button once.</p>
+<ul class="text-xs space-y-2 text-on-surface/70">
+<li class="flex items-center gap-2">
+<span class="w-1 h-1 bg-primary rounded-full"></span>
+                                Complimentary pods in drawer
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Laundry -->
+<div class="bg-surface-container-low rounded-xl p-1 shadow-sm">
+<div class="bg-surface-container-lowest rounded-lg p-6 h-full border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="local_laundry_service">local_laundry_service</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline bg-surface-container-high px-2 py-0.5 rounded">Hallway</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Laundry Suite</h4>
+<p class="text-sm text-on-surface-variant mb-4 leading-relaxed">High-efficiency stackable unit. Use 'Normal' cycle for most loads. Detergent sheets are provided in the glass jar.</p>
+<div class="bg-error-container/20 p-2 rounded text-[11px] text-error flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="warning">warning</span>
+                            Do not overload the dryer
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Parking & Security -->
+<section class="mb-16">
+<div class="bg-on-surface rounded-[2.5rem] p-8 md:p-12 text-surface overflow-hidden relative">
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="font-headline text-3xl font-extrabold tracking-tight mb-6">Parking &amp; Security</h3>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full border border-surface/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="local_parking">local_parking</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Assigned Spot</h4>
+<p class="text-surface-variant text-sm mt-1">Please use spot #42 in the underground garage. A parking pass is required and can be found on the kitchen counter.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full border border-surface/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="vpn_key">vpn_key</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Gate &amp; Entry Codes</h4>
+<p class="text-surface-variant text-sm mt-1">Building Main Gate: <span class="text-surface font-mono font-bold tracking-widest">#2024</span><br/>Unit Smart Lock: Last 4 digits of your phone.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-3xl overflow-hidden aspect-video shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="underground luxury garage with sleek concrete floors, modern overhead lighting, and clearly numbered parking spots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdVofZbroSDmk9vuuNi16rdJPt2xH5t_Hqv7UG6n8v-YqI92uU4ybCGpV_Afu5lw1da9w-7p5jWNAcbmGQJZWjjNk0GqXm4_Y5tHxgghJ7CUhNiDfhoR4c9xMo1gg5JTxO_ZfFyJf48Kh2fzWn5fMDTqe86E_Lifjb-MsgnEKxrCyCsDYuDo8irfIPGOcR1DqOiGfr2KT2wFvZW37_49oI36kqHTpAsCv66JCJAViwvFapBvGd90bQeKNhugwRutCdt6eO3a16kUqY"/>
+</div>
+</div>
+<!-- Abstract Decorative Element -->
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+</section>
+<!-- Support CTA -->
+<section class="text-center py-12">
+<div class="inline-flex items-center gap-2 px-6 py-3 bg-primary rounded-full text-on-primary font-bold shadow-lg shadow-primary/20 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span>Need help? Message Support</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-[2rem] bg-white/90 backdrop-blur-xl border-t border-teal-500/10 shadow-[0_-10px_40px_rgba(20,184,166,0.08)]">
+<div class="flex justify-around items-center w-full px-4 pb-6 pt-3">
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-teal-50 text-teal-700 rounded-2xl px-5 py-2 scale-105 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Guide</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Local</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Support</span>
+</div>
+</div>
+</nav>
+<!-- Desktop Navigation (Integrated into Shell but hidden on mobile) -->
+<div class="hidden md:flex fixed top-0 right-10 h-16 items-center z-[60] gap-8">
+<a class="font-label text-sm font-semibold text-slate-500 hover:text-teal-600 transition-colors" href="#">Home</a>
+<a class="font-label text-sm font-semibold text-teal-700 border-b-2 border-teal-700 pb-1" href="#">Guide</a>
+<a class="font-label text-sm font-semibold text-slate-500 hover:text-teal-600 transition-colors" href="#">Local</a>
+<a class="font-label text-sm font-semibold text-slate-500 hover:text-teal-600 transition-colors" href="#">Support</a>
+</div>
+</body></html>

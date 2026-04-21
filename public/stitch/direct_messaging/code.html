@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resident Messages | Community</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#dce1fb",
+                    "on-primary-fixed": "#00201c",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#6c7a77",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "tertiary": "#006b5e",
+                    "surface-variant": "#dce1fb",
+                    "inverse-primary": "#4fdbc8",
+                    "inverse-on-surface": "#eef0ff",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#151b2d",
+                    "on-primary-container": "#00423b",
+                    "surface-tint": "#006b5f",
+                    "surface-container-low": "#f2f3ff",
+                    "on-tertiary-container": "#00423a",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#00201b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eaedff",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#3c4947",
+                    "primary": "#006b5f",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "inverse-surface": "#2a3043",
+                    "on-background": "#151b2d",
+                    "tertiary-fixed-dim": "#4ddcc6",
+                    "primary-fixed": "#71f8e4",
+                    "primary-fixed-dim": "#4fdbc8",
+                    "primary-container": "#14b8a6",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "secondary-fixed": "#d8e3fb",
+                    "secondary-container": "#d5e0f8",
+                    "outline-variant": "#bbcac6",
+                    "on-primary-fixed-variant": "#005048",
+                    "tertiary-fixed": "#6ef9e2",
+                    "tertiary-container": "#09b8a4",
+                    "secondary": "#545f73",
+                    "background": "#faf8ff",
+                    "surface-dim": "#d4d9f2",
+                    "surface-bright": "#faf8ff",
+                    "surface": "#faf8ff",
+                    "surface-container-high": "#e3e7ff",
+                    "on-secondary-container": "#586377"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-sm shadow-teal-900/5 docked full-width top-0 z-50 fixed flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-colors scale-95 active:scale-90 transition-transform p-2 rounded-full">
+<span class="material-symbols-outlined text-teal-600 dark:text-teal-400">menu</span>
+</button>
+<h1 class="font-['Manrope'] font-bold tracking-tight text-xl text-teal-600 dark:text-teal-400">Community</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary-container">
+<img alt="User Profile" data-alt="Close up portrait of a smiling professional man with short hair in soft studio lighting with a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBax_swtnKTKHk9jxnkEE6rIVqBGJr-hVoP4-HElhkf_vTZdSwv97vWfkaByVVo5L2I9qZTLz2Ruzt7UkF9eH9ukpW9Zv-tmW4A-UFuzsPdDg43h0am2NqsGOP0lZg307IHxFPJZ-jrKxPqRBNCFrX9xyK1Cw-rSkBBMZtyz8V-uuf54XMhjQXQ8Fdhooz33PNX8LUyrqBKgrFho6AkHVVVz3tvLagLzbIKdrWgb7uPTU1_rblIb_wbqX-3eCg8wf1Y6uPE8hTF-P6O"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-4xl mx-auto min-h-screen">
+<!-- Header Section -->
+<div class="mb-8">
+<h2 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface mb-2">Messages</h2>
+<div class="flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+<span class="px-4 py-1.5 bg-primary text-on-primary text-xs font-bold rounded-full cursor-pointer">All Threads</span>
+<span class="px-4 py-1.5 bg-surface-container-low text-on-surface-variant text-xs font-bold rounded-full hover:bg-surface-container-high transition-colors cursor-pointer">Unread</span>
+<span class="px-4 py-1.5 bg-surface-container-low text-on-surface-variant text-xs font-bold rounded-full hover:bg-surface-container-high transition-colors cursor-pointer">Maintenance</span>
+<span class="px-4 py-1.5 bg-surface-container-low text-on-surface-variant text-xs font-bold rounded-full hover:bg-surface-container-high transition-colors cursor-pointer">Admin</span>
+</div>
+</div>
+<!-- Chat List - Bento Grid Influence / Aquatic Precision -->
+<div class="space-y-3">
+<!-- Message Thread 1: Unread State -->
+<div class="group relative bg-surface-container-lowest p-5 rounded-xl border-l-4 border-primary transition-all hover:shadow-xl hover:shadow-teal-900/5 cursor-pointer flex items-center gap-4">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="Property Manager" data-alt="Professional woman wearing glasses and a blazer looking friendly in a modern bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0S8lGQN8LoF3Cb0_XHY_8ziZ5tLoQLp5kDIS-lZDWIEiQJfy1x4909mrNs5a_Fmr7y3V-Ck71yXhGjSQJYw73BW6VtB9w12WcfC84WpU6mNUPXtaJ2zErqukLeYyFm50iprmgUArfUrlpAdMfLTGmB7M0N6CnMbawVPDLW6rdJKpf7ITQ-ddX12MiYFyx4z2D8JWzn4OaVt__qR_L142cLbbXmygOFMCQyB_jO-HFgIWTrGVyvlgVUSd3xyoPHD9rGAje8BR9huHp"/>
+</div>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-primary border-2 border-surface-container-lowest rounded-full"></div>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline font-bold text-on-surface truncate">Property Manager</h3>
+<span class="text-xs font-semibold text-primary">2:45 PM</span>
+</div>
+<p class="text-sm font-semibold text-on-surface truncate">The scheduled HVAC inspection for your unit is confirmed for tomorrow morning.</p>
+</div>
+<div class="flex-shrink-0 flex flex-col items-end gap-2">
+<div class="w-5 h-5 bg-primary-container text-on-primary-container text-[10px] font-bold rounded-full flex items-center justify-center">1</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Message Thread 2 -->
+<div class="group relative bg-surface-container-low/50 p-5 rounded-xl transition-all hover:bg-surface-container-lowest hover:shadow-xl hover:shadow-teal-900/5 cursor-pointer flex items-center gap-4">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="Maintenance Team" data-alt="Close up of a maintenance technician in a clean blue uniform with a focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZWkJIKNf3iSDfAwhndDG3uG6j1zO7C-MvvwlSjkvNUq422-fRFEu5Ek8Ff6IVv8emgdWeb-22WtA7R9DyzZcxTtkcbjYrQu0hDviibv1tQNH1vMWRxWnQWmEWpmc6IMwzd8JaICEd8_wkNI9NsqWWQMEa8jWxRIT35zwbTCh9yLkGR1BKF9vjRe2z_5qFNaT01l73d4HJb9vmwz7udN-FpGQKevnCThXPYoRJUE-_caSoCKhD-Ts7lCoD43e5g1vLO_RVhXVbmhKG"/>
+</div>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline font-bold text-on-surface truncate">Maintenance Team</h3>
+<span class="text-xs text-on-surface-variant font-medium">11:20 AM</span>
+</div>
+<p class="text-sm text-on-surface-variant truncate">Work order #4492 has been marked as complete. Please let us know if you need anything else.</p>
+</div>
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Message Thread 3 -->
+<div class="group relative bg-surface-container-low/50 p-5 rounded-xl transition-all hover:bg-surface-container-lowest hover:shadow-xl hover:shadow-teal-900/5 cursor-pointer flex items-center gap-4">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="Front Desk" data-alt="Concierge standing at a minimalist marble counter in a luxury residential lobby with warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrNGCLLpF287oiwpeeLx8Oprc1Xn0LG6-ijHkw8xdJEHj_OHYNWNVji_fvWunAjvLhrROqKsh-l-hJ3P5gbUonvj4FVEXtQsV1zQeDSMu55Bq-lo3Jj5K3B46lFSHRJ4TPG6bujQLdlxq_Xd4bHieC3frxsxT3oDmuiBtYChAh4iSiDK6f6Umfx2l-9mYpr0CisP2sgoJtexYTvNWngHcXVcv_zdeQYxgNQafcNlsn66eqHoFM62mBzPIXj4cERtxPoBKRDViqvuu2"/>
+</div>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline font-bold text-on-surface truncate">Front Desk</h3>
+<span class="text-xs text-on-surface-variant font-medium">Yesterday</span>
+</div>
+<p class="text-sm text-on-surface-variant truncate">Hello! A package from 'Global Express' has been delivered to the parcel locker for you.</p>
+</div>
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Message Thread 4 -->
+<div class="group relative bg-surface-container-low/50 p-5 rounded-xl transition-all hover:bg-surface-container-lowest hover:shadow-xl hover:shadow-teal-900/5 cursor-pointer flex items-center gap-4">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">groups</span>
+</div>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline font-bold text-on-surface truncate">Resident Council</h3>
+<span class="text-xs text-on-surface-variant font-medium">Oct 24</span>
+</div>
+<p class="text-sm text-on-surface-variant truncate">Reminder: The rooftop garden community meeting is starting in 30 minutes. See you there!</p>
+</div>
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-lg">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Empty State Hint (Subtle Architectural Detail) -->
+<div class="mt-12 p-8 border-2 border-dashed border-outline-variant/30 rounded-2xl text-center">
+<span class="material-symbols-outlined text-outline-variant text-4xl mb-2">archive</span>
+<p class="text-on-surface-variant text-sm font-medium">Looking for older conversations?<br/><span class="text-primary cursor-pointer hover:underline">View archived threads</span></p>
+</div>
+</main>
+<!-- Floating Action Button (FAB) -->
+<button class="fixed bottom-28 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg shadow-teal-900/30 flex items-center justify-center hover:scale-110 active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-2xl">edit_square</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl rounded-t-xl border-t border-teal-500/10 shadow-[0_-4px_20px_rgba(20,184,166,0.08)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-2xl px-5 py-2 transition-all transform translate-y-[-2px]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold mt-1">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">quiz</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold mt-1">FAQ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold mt-1">Help</span>
+</a>
+</nav>
+</body></html>

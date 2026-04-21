@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Host Portfolio Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#71f8e4",
+                        "outline-variant": "#bbcac6",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-primary-fixed": "#00201c",
+                        "on-secondary-container": "#586377",
+                        "surface-bright": "#faf8ff",
+                        "on-background": "#151b2d",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#09b8a4",
+                        "surface-tint": "#006b5f",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "secondary-container": "#d5e0f8",
+                        "surface": "#faf8ff",
+                        "on-surface-variant": "#3c4947",
+                        "secondary": "#545f73",
+                        "outline": "#6c7a77",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#4fdbc8",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "secondary-fixed": "#d8e3fb",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "surface-container-low": "#f2f3ff",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#00423b",
+                        "inverse-surface": "#2a3043",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#dce1fb",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-primary-fixed-variant": "#005048",
+                        "tertiary": "#006b5e",
+                        "primary-container": "#14b8a6",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e3e7ff",
+                        "primary": "#006b5f",
+                        "surface-container-highest": "#dce1fb",
+                        "on-tertiary-container": "#00423a",
+                        "surface-dim": "#d4d9f2",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-surface": "#151b2d",
+                        "background": "#faf8ff",
+                        "on-tertiary-fixed": "#00201b",
+                        "surface-container": "#eaedff",
+                        "tertiary-fixed": "#6ef9e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Owner profile photo" class="w-full h-full object-cover" data-alt="Professional headshot of a middle-aged property owner smiling, soft studio lighting, neutral background, sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIHZ-9w66Jl1ujJnHrmzoQv6a3uF2-4eFBAIJlmXjFac9vjnKIA7JvKVa6fRwtHYDwAil_VjU70GPE4FRPkd_6k9NpqZ0wtsrnpli4yJIr56AJwQAmPKp3UUTqnJU_auXMv33vXud_pIUonj5Y_Z009Ta2gFfFMxsO0oThAN5jPP5ex6dso_X847xFWZpzmRfOiHlJcGqotm8ZHRTVp1VYJTya_1tAHOBGg7sLmAKj2uCY1B0M_s9YGJhT0_6t2QEavI5HprLcWR5J"/>
+</div>
+<span class="text-xl font-bold tracking-tighter text-teal-800 dark:text-teal-300 font-manrope tracking-tight">Host Portfolio</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-teal-700">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto space-y-8">
+<!-- Quick Actions & Welcome -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<p class="text-on-surface-variant font-label uppercase tracking-widest text-[11px] mb-1">Performance Dashboard</p>
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface">Portfolio Overview</h1>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-highest text-primary font-semibold px-5 py-2.5 rounded-xl hover:bg-surface-container-high transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">receipt_long</span>
+                    View Statements
+                </button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">add_home</span>
+                    Add Property
+                </button>
+</div>
+</section>
+<!-- Bento Grid Portfolio Stats -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex flex-col justify-between border-b-2 border-transparent hover:border-primary-container transition-all">
+<div class="flex justify-between items-start">
+<div class="p-2 bg-primary-container/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-primary font-bold text-xs bg-primary-container/20 px-2 py-1 rounded-md">+12.5%</span>
+</div>
+<div class="mt-6">
+<p class="text-on-surface-variant text-sm font-medium">Total Revenue (MTD)</p>
+<p class="text-3xl font-bold text-on-surface mt-1">$42,850.00</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex flex-col justify-between border-b-2 border-transparent hover:border-primary-container transition-all">
+<div class="flex justify-between items-start">
+<div class="p-2 bg-primary-container/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<span class="text-on-surface-variant font-bold text-xs bg-surface-container-high px-2 py-1 rounded-md">Stable</span>
+</div>
+<div class="mt-6">
+<p class="text-on-surface-variant text-sm font-medium">Avg. Occupancy</p>
+<p class="text-3xl font-bold text-on-surface mt-1">94.2%</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex flex-col justify-between border-b-2 border-transparent hover:border-primary-container transition-all">
+<div class="flex justify-between items-start">
+<div class="p-2 bg-primary-container/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">star_rate</span>
+</div>
+<span class="text-primary font-bold text-xs bg-primary-container/20 px-2 py-1 rounded-md">Top Rated</span>
+</div>
+<div class="mt-6">
+<p class="text-on-surface-variant text-sm font-medium">Guest Rating</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-3xl font-bold text-on-surface">4.92</p>
+<div class="flex text-primary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Revenue Trend Visual -->
+<section class="bg-surface-container-low rounded-full p-8">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-xl font-bold text-on-surface">Revenue Trend</h2>
+<p class="text-on-surface-variant text-sm">Monthly income projection vs. actual earnings</p>
+</div>
+<div class="flex bg-surface-container-lowest p-1 rounded-lg">
+<button class="px-4 py-1 text-xs font-semibold bg-primary text-on-primary rounded-md">6 Months</button>
+<button class="px-4 py-1 text-xs font-semibold text-on-surface-variant">Yearly</button>
+</div>
+</div>
+<div class="h-64 w-full flex items-end justify-between gap-2 md:gap-4 relative">
+<!-- Simple Decorative Bar Chart Representation -->
+<div class="flex-1 bg-primary/20 hover:bg-primary-container/40 transition-all rounded-t-lg relative group h-[40%]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-on-surface text-surface text-[10px] py-1 px-2 rounded">$22k</div>
+<span class="absolute bottom-[-24px] left-1/2 -translate-x-1/2 text-[10px] font-bold text-on-surface-variant">JAN</span>
+</div>
+<div class="flex-1 bg-primary/20 hover:bg-primary-container/40 transition-all rounded-t-lg relative group h-[55%]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-on-surface text-surface text-[10px] py-1 px-2 rounded">$28k</div>
+<span class="absolute bottom-[-24px] left-1/2 -translate-x-1/2 text-[10px] font-bold text-on-surface-variant">FEB</span>
+</div>
+<div class="flex-1 bg-primary/20 hover:bg-primary-container/40 transition-all rounded-t-lg relative group h-[45%]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-on-surface text-surface text-[10px] py-1 px-2 rounded">$24k</div>
+<span class="absolute bottom-[-24px] left-1/2 -translate-x-1/2 text-[10px] font-bold text-on-surface-variant">MAR</span>
+</div>
+<div class="flex-1 bg-primary/40 hover:bg-primary-container/40 transition-all rounded-t-lg relative group h-[70%] border-t-4 border-primary">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-on-surface text-surface text-[10px] py-1 px-2 rounded">$35k</div>
+<span class="absolute bottom-[-24px] left-1/2 -translate-x-1/2 text-[10px] font-bold text-on-surface-variant">APR</span>
+</div>
+<div class="flex-1 bg-primary/40 hover:bg-primary-container/40 transition-all rounded-t-lg relative group h-[85%] border-t-4 border-primary">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-on-surface text-surface text-[10px] py-1 px-2 rounded">$42k</div>
+<span class="absolute bottom-[-24px] left-1/2 -translate-x-1/2 text-[10px] font-bold text-on-surface-variant">MAY</span>
+</div>
+<div class="flex-1 bg-primary-container hover:bg-primary transition-all rounded-t-lg relative group h-[95%]">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-100 bg-primary text-on-primary text-[10px] py-1 px-2 rounded font-bold">LIVE: $43k</div>
+<span class="absolute bottom-[-24px] left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary">JUN</span>
+</div>
+</div>
+</section>
+<!-- Active Properties Editorial List -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold text-on-surface">Active Properties</h2>
+<button class="text-primary font-semibold text-sm hover:underline">See all 12 properties</button>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Property Card 1 -->
+<div class="group bg-surface-container-lowest rounded-full p-4 flex flex-col md:flex-row items-center gap-6 hover:shadow-xl hover:shadow-primary/5 transition-all cursor-pointer">
+<div class="w-full md:w-48 h-32 rounded-xl overflow-hidden shrink-0">
+<img alt="Modern villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Ultra-modern glass luxury villa nestled in a pine forest at dusk with warm interior lighting reflecting on a private pool." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKnTNSeXhE5XJ59ppffRbk7VVgr79i7JXuCSMLouSzQiis3jmWCXDXxdvvKBSxevCDv_qr9AeJnnijEWHSsHrErkkff9kPTgvfbqqPffXXiBBGaNsKWF9rRhWY7QwM3fWIzuKE5Yya2lIivXNBiaoHlkWe4ysF2ZW23C2GE_ODtsW2--dtr8undP6SHvQhgmo3YRqbD84g_LnJbWJY_vIqZsmmPUjOsJVcuLb1R40Cve4WkkY9Ir8TxORcNiL5w3C0FlD6W31KoSX1"/>
+</div>
+<div class="flex-1 w-full">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div>
+<h3 class="text-lg font-bold text-on-surface">The Glass Pavilion • Joshua Tree</h3>
+<div class="flex items-center gap-4 mt-1">
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-sm">group</span>
+                                        2 guests
+                                    </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                        California, USA
+                                    </div>
+</div>
+</div>
+<div class="flex items-center gap-8 text-right">
+<div>
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Occupancy</p>
+<p class="text-primary font-bold text-lg">98% Full</p>
+</div>
+<div>
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Monthly Earnings</p>
+<p class="text-on-surface font-bold text-lg">$14,200</p>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden md:block pr-4">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group bg-surface-container-lowest rounded-full p-4 flex flex-col md:flex-row items-center gap-6 hover:shadow-xl hover:shadow-primary/5 transition-all cursor-pointer">
+<div class="w-full md:w-48 h-32 rounded-xl overflow-hidden shrink-0">
+<img alt="Loft apartment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Industrial chic loft apartment with exposed brick walls, high ceilings, large factory windows, and designer minimalist furniture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl74k9srNa47E5JNICXswNFifNgJUVeKzP2K4iV7VwhfgAetPTg_9TUCNW5jnWAk_p0guK1qOjhEd8mIXe-AX8U5ME9ZamxH0FGLyh1DwK0kODNNdp54aykPvQsgkwOJGeqq8GHDIbXf4POO6a9IyIEuqIwdwxrd2KFWSiN0e9f-VJqBgXxtRlZucPqCi3Ft2rfHrGrt6oCWogoO_1qs-QtSwHODHFNv5JZU7VBjbHPo2PSrpKgzFzEC9gLItR9Tqu-mxBnp7CE8IS"/>
+</div>
+<div class="flex-1 w-full">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div>
+<h3 class="text-lg font-bold text-on-surface">Industrial Loft • SoHo</h3>
+<div class="flex items-center gap-4 mt-1">
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-sm">group</span>
+                                        4 guests
+                                    </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                        New York, USA
+                                    </div>
+</div>
+</div>
+<div class="flex items-center gap-8 text-right">
+<div>
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Occupancy</p>
+<p class="text-primary font-bold text-lg">82% Full</p>
+</div>
+<div>
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Monthly Earnings</p>
+<p class="text-on-surface font-bold text-lg">$9,850</p>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden md:block pr-4">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group bg-surface-container-lowest rounded-full p-4 flex flex-col md:flex-row items-center gap-6 hover:shadow-xl hover:shadow-primary/5 transition-all cursor-pointer">
+<div class="w-full md:w-48 h-32 rounded-xl overflow-hidden shrink-0">
+<img alt="Coastal cottage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Luxury beachfront cottage with white cedar shingles, turquoise shutters, overlooking a serene white sand beach and calm blue ocean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPpZED5QlZjOx8qmqNiZAO61PevHQ3QjT65hOHEG81wR0-0L0CvnzE5ySQ8ggi6Q4oMNYxQGEP3z6tn2nIcfYwHDtjC3Cr_V5GVM3FysR3hhnOeuAsztZPDINjHAkEYpc0DsSGzqggVjH80rKGJHpBZ_xTq2Nzhv-9_jaoMN_xDjU-XWqg94tqr5Ko0_pobMB6kQpPftkYA-VOulpoDVf9ADKNFs5LpiwjN5619yQ-X_Lq3M_7s8WMTv5pjMMKKiQI5R4qNWINgjvo"/>
+</div>
+<div class="flex-1 w-full">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div>
+<h3 class="text-lg font-bold text-on-surface">Azure Bay Cottage • Malibu</h3>
+<div class="flex items-center gap-4 mt-1">
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-sm">group</span>
+                                        6 guests
+                                    </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                        California, USA
+                                    </div>
+</div>
+</div>
+<div class="flex items-center gap-8 text-right">
+<div>
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Occupancy</p>
+<p class="text-primary font-bold text-lg">91% Full</p>
+</div>
+<div>
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Monthly Earnings</p>
+<p class="text-on-surface font-bold text-lg">$18,800</p>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden md:block pr-4">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg rounded-t-2xl z-50 no-border shadow-[0_-1px_10px_rgba(0,0,0,0.05)] shadow-2xl">
+<a class="flex flex-col items-center justify-center bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-xl py-1 px-3 active:scale-90 duration-150 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Overview</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 py-1 px-3 hover:text-teal-500 dark:hover:text-teal-200 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Revenue</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 py-1 px-3 hover:text-teal-500 dark:hover:text-teal-200 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Properties</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 py-1 px-3 hover:text-teal-500 dark:hover:text-teal-200 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Messages</span>
+</a>
+</nav>
+</body></html>

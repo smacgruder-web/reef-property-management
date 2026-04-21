@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reef Property Management | Portfolio Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary-container": "#00423a",
+                        "inverse-primary": "#4fdbc8",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-primary-fixed": "#00201c",
+                        "on-background": "#151b2d",
+                        "surface-container-high": "#e3e7ff",
+                        "inverse-surface": "#2a3043",
+                        "secondary": "#545f73",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#71f8e4",
+                        "primary-container": "#14b8a6",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#00423b",
+                        "on-primary-fixed-variant": "#005048",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-dim": "#d4d9f2",
+                        "surface-container-low": "#f2f3ff",
+                        "outline": "#6c7a77",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "error-container": "#ffdad6",
+                        "primary": "#006b5f",
+                        "surface": "#faf8ff",
+                        "secondary-fixed": "#d8e3fb",
+                        "surface-variant": "#dce1fb",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-secondary-container": "#586377",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#3c4947",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "secondary-container": "#d5e0f8",
+                        "tertiary": "#006b5e",
+                        "surface-tint": "#006b5f",
+                        "tertiary-container": "#09b8a4",
+                        "surface-container": "#eaedff",
+                        "on-surface": "#151b2d",
+                        "surface-container-highest": "#dce1fb",
+                        "on-secondary-fixed": "#111c2d",
+                        "tertiary-fixed": "#6ef9e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Sidebar Navigation Shell -->
+<aside class="fixed left-0 top-0 h-full w-72 z-[60] flex flex-col bg-slate-50 dark:bg-slate-900 shadow-2xl transition-all duration-300 md:flex hidden border-r border-outline-variant/10">
+<div class="px-8 py-10">
+<h1 class="text-teal-900 dark:text-white font-black text-xl tracking-tighter">REEF MGMT.</h1>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<!-- Dashboard Active -->
+<a class="bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-200 rounded-lg mx-2 flex items-center px-4 py-3 gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-sm font-semibold">Dashboard</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 hover:bg-teal-50/50 dark:hover:bg-slate-800 flex items-center px-4 py-3 gap-3 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-manrope text-sm font-semibold">Properties</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 hover:bg-teal-50/50 dark:hover:bg-slate-800 flex items-center px-4 py-3 gap-3 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-manrope text-sm font-semibold">Bookings</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 hover:bg-teal-50/50 dark:hover:bg-slate-800 flex items-center px-4 py-3 gap-3 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="build">build</span>
+<span class="font-manrope text-sm font-semibold">Maintenance</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 hover:bg-teal-50/50 dark:hover:bg-slate-800 flex items-center px-4 py-3 gap-3 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-manrope text-sm font-semibold">Financials</span>
+</a>
+</nav>
+<div class="p-6 mt-auto border-t border-outline-variant/10">
+<div class="flex items-center gap-4 px-2">
+<img class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20" data-alt="Professional headshot of an executive manager in a sharp suit with a confident expression in a bright modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWB8DWSvGW2ooeZgjgHbA2MPkWsuQpMc56iudcUqAWoi3_JnBsjRiGUooVbJmQfCANHYUL4fXE0u-_6V7afnKfkuqF9wDEW2_E6uXKuqG2yClTK_r_hmpJJF227mdS0NGZRjP3MtLLpOjGBTCmB3k8qhk31il09jSRqawHyjHU9WSOmlX3HY9mB9kZRKUN7Kx2n1tJ3fSZkf0ND7vwzbCsnoK7Jp9qcLe55pJMfdXejBydMTVg-c5gb8NlSrV7NLcnjehB68uG09g9"/>
+<div class="flex flex-col">
+<p class="font-manrope text-sm font-bold text-on-background">Alex Sterling</p>
+<p class="text-xs text-on-surface-variant">Senior Partner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="md:ml-72 min-h-screen">
+<!-- TopAppBar Navigation Shell -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_8px_30px_rgb(21,27,45,0.04)] flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-teal-700 dark:text-teal-400">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h2 class="font-manrope tracking-tight font-bold text-2xl text-teal-700 dark:text-teal-400">Portfolio Overview</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<img class="w-8 h-8 rounded-full border border-primary/20 cursor-pointer" data-alt="Close-up avatar of a professional manager, Alex Sterling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAJcU9kCohGmNVOGRNP8Ez5vANrCRHgdalEVya8T718oXPvTXN-N1mEq6nRzhMGc7gUr8EcSpMSP90f0ZVcIZVOvbZ31tmKDMq9X-FjyvmluFWIwZtyQ1IpKKl6Fa2wlzNkh3uIA2iYK5pLenaBGjxhb0sSBvBGaLnWAT0wtEvnGeoAM_2tfyUPnCwpWYyncBggjXAWjXqUjLW_jLnsGQcbu0gm3KLZ9RnBajtsR-SrwGhF__VdFe25tLbh1A5AUtNmUnyFxizP2wo"/>
+</div>
+</header>
+<div class="p-8 max-w-7xl mx-auto space-y-12">
+<!-- Welcome Header Section -->
+<section class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div class="space-y-1">
+<p class="font-inter text-[10px] uppercase tracking-widest font-bold text-primary">System Dashboard</p>
+<h3 class="font-headline text-4xl font-extrabold tracking-tight text-on-background">Good morning, Alex</h3>
+<p class="text-on-surface-variant max-w-md">Your properties are currently performing at peak efficiency. Here is the daily summary for Reef Property Management.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-3 bg-surface-container-lowest text-primary font-semibold rounded-xl shadow-sm border border-outline-variant/20 hover:bg-surface-container-low transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="add_task">add_task</span>
+                        Create Task
+                    </button>
+<button class="px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary font-semibold rounded-xl shadow-lg shadow-primary/10 hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="add_home">add_home</span>
+                        Add New Listing
+                    </button>
+</div>
+</section>
+<!-- Summary Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Occupancy Rate -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_8px_30px_rgb(21,27,45,0.02)] border border-outline-variant/10 group hover:border-primary/30 transition-all">
+<div class="flex items-center justify-between mb-6">
+<div class="p-3 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="pie_chart">pie_chart</span>
+</div>
+<span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded-full">+2.4%</span>
+</div>
+<p class="text-on-surface-variant font-medium mb-1">Occupancy Rate</p>
+<h4 class="text-4xl font-headline font-extrabold text-on-background tracking-tighter">94%</h4>
+<div class="mt-6 h-1 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[94%]"></div>
+</div>
+</div>
+<!-- Active Bookings -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_8px_30px_rgb(21,27,45,0.02)] border border-outline-variant/10 group hover:border-primary/30 transition-all">
+<div class="flex items-center justify-between mb-6">
+<div class="p-3 bg-tertiary-container/10 rounded-lg text-tertiary group-hover:bg-tertiary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+</div>
+<span class="text-xs font-bold text-tertiary px-2 py-1 bg-tertiary-container/10 rounded-full">Steady</span>
+</div>
+<p class="text-on-surface-variant font-medium mb-1">Active Bookings</p>
+<h4 class="text-4xl font-headline font-extrabold text-on-background tracking-tighter">12</h4>
+<p class="text-xs text-on-surface-variant mt-2">Across 8 properties today</p>
+</div>
+<!-- Pending Maintenance -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_8px_30px_rgb(21,27,45,0.02)] border border-outline-variant/10 group hover:border-error/30 transition-all">
+<div class="flex items-center justify-between mb-6">
+<div class="p-3 bg-error/10 rounded-lg text-error group-hover:bg-error group-hover:text-on-error transition-colors">
+<span class="material-symbols-outlined" data-icon="engineering">engineering</span>
+</div>
+<span class="text-xs font-bold text-error px-2 py-1 bg-error-container rounded-full">Priority</span>
+</div>
+<p class="text-on-surface-variant font-medium mb-1">Pending Maintenance</p>
+<h4 class="text-4xl font-headline font-extrabold text-on-background tracking-tighter">3</h4>
+<p class="text-xs text-on-surface-variant mt-2">2 urgent requests remaining</p>
+</div>
+</section>
+<!-- Upcoming Check-ins: Horizontal Scroll Section -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-2xl font-bold text-on-background">Upcoming Check-ins</h3>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                        View Schedule <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="flex gap-6 overflow-x-auto hide-scrollbar pb-4 snap-x">
+<!-- Guest Card 1 -->
+<div class="min-w-[320px] snap-start bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-outline-variant/10">
+<div class="h-32 bg-slate-200 relative">
+<img class="w-full h-full object-cover" data-alt="Luxury modern beach villa with large glass windows and infinity pool overlooking the ocean at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI7cERxbueW4gjqckd0z-m_gtEyBykM2abZiMrL6zdS9bmfSzM8xHY7p8azK56MwTAjpOxZoVQ_8gq97Qpq-ealyzVpycCqU1itTV-J83it7Rg1N0k4-KmmmWE8limfSJ-3dbeGdplPwgfqEG-nQqdsP-yArB-hJCaicXePZ8ZErgozjJ8v6WR03af8pVAbWORJ7J3ONG6my9fkWPMJ-ghbQaJ6vs6wzF9JZUdrQHwhJt9tljeqmHWeWnNlWQPIttcMAA5btOjN_oI"/>
+<div class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-[10px] font-bold text-primary uppercase">Tomorrow</div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<h5 class="font-bold text-on-background text-lg">Julianne Moore</h5>
+<p class="text-on-surface-variant text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    Sea Breeze Villa, Unit 4
+                                </p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-4">
+<div class="text-xs">
+<p class="text-on-surface-variant font-medium">Check-in</p>
+<p class="font-bold text-on-background">Oct 24, 2023</p>
+</div>
+<button class="p-2 bg-primary/5 text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="chat_bubble">chat_bubble</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Guest Card 2 -->
+<div class="min-w-[320px] snap-start bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-outline-variant/10">
+<div class="h-32 bg-slate-200 relative">
+<img class="w-full h-full object-cover" data-alt="Interior of a luxury contemporary penthouse apartment with high ceilings and minimalist decor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE7biFQN-MLHfddfF0SDLb5u9-0xghRLacBgFQc3KWNXPxPE5Xu-4eTnewoFUJumkcfapYH5Z46yRJi0A9VXJodIbOh0ljCkWqwW3JncIIyfXhHu6OZGM_75aTEJTlZDX0wRsAbLEN95vxCFTogEJhJwtdkjgkuf9brOPaltenL-rxyRCXOCKteF-vuxTqp8sQOZqgD0XJIhk8BWPwdl0xFLYjmixJplkVhaXgQGJaWJPYzTPXyPIMnd5qLEuXWValfDvWnWykAmYl"/>
+<div class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-[10px] font-bold text-on-surface-variant uppercase">Oct 26</div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<h5 class="font-bold text-on-background text-lg">Marcus Holloway</h5>
+<p class="text-on-surface-variant text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    Coral Suite, Loft 2
+                                </p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-4">
+<div class="text-xs">
+<p class="text-on-surface-variant font-medium">Check-in</p>
+<p class="font-bold text-on-background">Oct 26, 2023</p>
+</div>
+<button class="p-2 bg-primary/5 text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="chat_bubble">chat_bubble</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Guest Card 3 -->
+<div class="min-w-[320px] snap-start bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-outline-variant/10">
+<div class="h-32 bg-slate-200 relative">
+<img class="w-full h-full object-cover" data-alt="Modern geometric architectural design of a luxury villa with sharp angles and integrated landscaping" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD57_k7t9ecqkCrOJ1fhNAjxVHe0PTBeIrqLW9mhJwjWoRTtI-1VPpdU1IKL6r_Gkp8lYwsHzohVwxL7DeHeEb7gX0ZJH_IPCU0YPFSzKFs5dJ-MeqNbxKJnkw8lDSAotMg74BndVCwIbT7AXw2GgcAbG4UBnyy51CmRJlBN3nLnScf2KxTedh833iceo28g_-BX_0JF_rHFAIb-jN3kBknXXw-Ba_2T6vFQyumLyFPq7ohDzlcv0jnzS8Rus9jPbQkhqTARsejv56U"/>
+<div class="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur rounded-full text-[10px] font-bold text-on-surface-variant uppercase">Oct 28</div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<h5 class="font-bold text-on-background text-lg">Elena Rodriguez</h5>
+<p class="text-on-surface-variant text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                    The Azure Estate
+                                </p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-4">
+<div class="text-xs">
+<p class="text-on-surface-variant font-medium">Check-in</p>
+<p class="font-bold text-on-background">Oct 28, 2023</p>
+</div>
+<button class="p-2 bg-primary/5 text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="chat_bubble">chat_bubble</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Section: Recent Activity & Property Map -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<!-- Recent Activity Feed -->
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold text-on-background">Recent Activity</h3>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/10">
+<div class="space-y-8 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container-high">
+<!-- Activity Item 1 -->
+<div class="flex gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-primary shrink-0 border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-xl" data-icon="description">description</span>
+</div>
+<div class="pt-1">
+<p class="text-on-background font-semibold">New lease signed for Sea Breeze Villa</p>
+<p class="text-on-surface-variant text-xs mt-1">Confirmed by Digital Signature • 2 hours ago</p>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-xl" data-icon="task_alt">task_alt</span>
+</div>
+<div class="pt-1">
+<p class="text-on-background font-semibold">Maintenance request completed for Coral Suite</p>
+<p class="text-on-surface-variant text-xs mt-1">Handled by Sterling Repairs Team • 5 hours ago</p>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0 border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-xl" data-icon="warning">warning</span>
+</div>
+<div class="pt-1">
+<p class="text-on-background font-semibold">Plumbing alert: The Azure Estate</p>
+<p class="text-on-surface-variant text-xs mt-1">Smart sensor detected leak in basement • 8 hours ago</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 text-sm font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors border border-transparent hover:border-primary/20">
+                            View Full Audit Log
+                        </button>
+</div>
+</div>
+<!-- Featured Portfolio Insight -->
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold text-on-background">Portfolio Insights</h3>
+<div class="relative rounded-2xl overflow-hidden h-[400px] group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic wide shot of an upscale coastal residential neighborhood with clean architecture and lush palm trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXJ1ECyWklHu35ZN4QRy4gwwmPzNGqAnEBaV5IMzGlxoNT6F8dhMWDF5sHD6KUa-1AQQufrx0G7XdMRm1SYM-wysI9n8wNijGJYIkNIAVDLVKqxmdmEKFMWUak2wrkSKPxYJrda93aPpMJCpNMgnr58kdyDoANd9RmNJpnAvBP0OubClno-iwJWTk-jNX9pw2gnSH1tcSrV1khkVWkn7ef9Ua1CUFrVQEwd_shuDNkztWqZzzKWLvB07Yqgk2VHoA9_41TFSeZdLir"/>
+<div class="absolute inset-0 bg-gradient-to-t from-teal-950/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 text-white space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl font-bold">Annual Yield Forecast</h4>
+<p class="text-white/80 text-sm">Coastal Property Segment</p>
+</div>
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-3xl font-bold">14.2%</span>
+<span class="text-sm text-tertiary-fixed-dim pb-1">Projected increase vs LY</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Spacer for mobile nav -->
+<div class="h-24 md:hidden"></div>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg rounded-t-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-teal-600 dark:text-teal-400 scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home_work">home_work</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-600 hover:text-teal-500" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Lease</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-600 hover:text-teal-500" href="#">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Service</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-600 hover:text-teal-500" href="#">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">More</span>
+</a>
+</nav>
+</body></html>

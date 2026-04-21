@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Architectural Horizon | Premium Property Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#151b2d",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#006b5e",
+                        "background": "#faf8ff",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "tertiary-container": "#09b8a4",
+                        "primary-container": "#14b8a6",
+                        "secondary": "#545f73",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "surface-container-highest": "#dce1fb",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-secondary-container": "#586377",
+                        "secondary-container": "#d5e0f8",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#00423b",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dce1fb",
+                        "inverse-surface": "#2a3043",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#00201c",
+                        "primary-fixed": "#71f8e4",
+                        "inverse-primary": "#4fdbc8",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-primary-fixed-variant": "#005048",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f3ff",
+                        "surface": "#faf8ff",
+                        "outline": "#6c7a77",
+                        "surface-container": "#eaedff",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#3c4947",
+                        "on-secondary-fixed": "#111c2d",
+                        "primary": "#006b5f",
+                        "surface-bright": "#faf8ff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#6ef9e2",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-dim": "#d4d9f2",
+                        "on-surface": "#151b2d",
+                        "surface-tint": "#006b5f",
+                        "surface-container-high": "#e3e7ff",
+                        "on-tertiary-container": "#00423a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -10px rgba(21, 27, 45, 0.08);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm shadow-teal-900/5 transition-all duration-300">
+<nav class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-600 text-3xl" data-icon="domain">domain</span>
+<span class="text-2xl font-black text-teal-800 dark:text-teal-200 tracking-tighter font-headline">Architectural Horizon</span>
+</div>
+<div class="hidden md:flex gap-8 items-center font-manrope tracking-tight font-semibold">
+<a class="text-teal-700 dark:text-teal-300 border-b-2 border-teal-600 hover:text-teal-500 transition-colors duration-300 py-1" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-500 transition-colors duration-300 py-1" href="#">Portfolio</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-500 transition-colors duration-300 py-1" href="#">Management</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-500 transition-colors duration-300 py-1" href="#">Investments</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold hover:scale-95 transition-transform duration-300 shadow-md">
+                List Property
+            </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[795px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Coastal Living" class="w-full h-full object-cover" data-alt="luxury modern white coastal villa with turquoise infinity pool overlooking the Mediterranean sea at bright noon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4wwTLAkWuy6NXofOotwiEk4nJeGANvsGr6hWvoDAwn7UW5zOJRFZ_4SEwg1UWwUc3RVYe5bbbJSTYBcJyU3rlL9_AjTRzFtb2rB4zv9dHPFlX_0nS7uOqBW1V_seG9DT9dd3pc0PsFmdvA9TE-nxG9V_7u-XQBx3j89tb4kDe4RU66iYAGnADFrQ6rPcgr0CiFiqqI6cQhJQhcvOr3uRL-uzhIP2W8A6KaI7HhEtU3khdW533t3BsQXnp8a6ydeC4mn7Z1DzDTJY-"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-2xl">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Redefining Coastal Living</span>
+<h1 class="text-7xl font-black text-on-background leading-[1.1] tracking-tighter mb-8 font-headline">
+                        Where Architecture <br/>Meets the <span class="text-primary italic">Horizon</span>.
+                    </h1>
+<p class="text-xl text-on-surface-variant mb-10 max-w-lg leading-relaxed font-body">
+                        Expert property management and curation for the world's most breathtaking coastal residences. We bridge the gap between investment and experience.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all">
+                            Explore Portfolio
+                        </button>
+<button class="glass-panel border border-outline-variant/20 text-on-background px-10 py-4 rounded-lg font-bold text-lg hover:bg-white transition-all">
+                            Our Services
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Properties -->
+<section class="py-32 bg-surface-container-low">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-4xl font-black text-on-background font-headline tracking-tight mb-4">Curated Portfolios</h2>
+<p class="text-on-surface-variant max-w-md">Signature stays selected for their architectural significance and unparalleled vistas.</p>
+</div>
+<a class="text-primary font-bold group flex items-center gap-2" href="#">
+                        View All Listings 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Property Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-full p-2 transition-all duration-500 hover:-translate-y-2 editorial-shadow">
+<div class="aspect-[4/5] overflow-hidden rounded-full mb-6">
+<img alt="Malibu Glass House" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="contemporary glass front beach house in malibu with wood deck and sunset lighting on the facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQnASe3PtVbJ13hz7QaHsdIzwo2r8L625eNtRyeKSB3et_9BbePhEGAivdr2wG7YbkNqJQzQEO_kl0V6fNbaSt2WJSndAJNzjGeh86rvqA-W_jRsZcVZyMDBN5MuAq7HKUJ3k5UPLOMcSP3XYD1MJX_W3sgmpMiRPcS8NnZMyT4ByL3S6btGB-rTZM_ZxxxtXJ6MREQhCCsW6Idsgmks7o_6FKW-KUpXjbXfFCjUdgLXC-SLhSPqziIa8gNJTQC9dsF7PpOCE0KL9C"/>
+</div>
+<div class="px-6 pb-8 text-center">
+<div class="flex justify-center gap-1 mb-2">
+<span class="material-symbols-outlined text-amber-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.98</span>
+</div>
+<h3 class="text-xl font-bold mb-1">Azure Cliffside Residence</h3>
+<p class="text-on-surface-variant text-sm mb-4">Amalfi Coast, Italy</p>
+<p class="text-primary font-black text-lg">$1,250 <span class="text-xs font-normal text-on-surface-variant">/ night</span></p>
+</div>
+</div>
+<!-- Property Card 2 (Asymmetric Shift) -->
+<div class="group relative bg-surface-container-lowest rounded-full p-2 transition-all duration-500 hover:-translate-y-2 editorial-shadow md:mt-12">
+<div class="aspect-[4/5] overflow-hidden rounded-full mb-6">
+<img alt="Santorini Villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="minimalist white cubic architecture villa in santorini with deep blue sky and private plunge pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXHCiH784UpzSwVVgtIw4potgCzBQK4icGjmepaYWtUisQzxzVUhJFO9rz_Pp-JTryoo2aU5WIRiiYHztPNjr7c-fqBNt0nEg7IkVyDyzaWvyRfJWF9B9kuPolHUk7zsV4zLjr3jrIouLQFmcLlxlEYco3RPVO4BrpOXJB5pDuyZlJ8F9vnIhQLW7YRQMjSta8GaURcvtKoxETEyBH5uYxX8MJm9tZfC1OuuI-woKzFVID-V05-Xs-cUBmPK0aZ_Wr8zELMflIKZHs"/>
+</div>
+<div class="px-6 pb-8 text-center">
+<div class="flex justify-center gap-1 mb-2">
+<span class="material-symbols-outlined text-amber-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.95</span>
+</div>
+<h3 class="text-xl font-bold mb-1">The White Obsidian</h3>
+<p class="text-on-surface-variant text-sm mb-4">Oia, Santorini</p>
+<p class="text-primary font-black text-lg">$890 <span class="text-xs font-normal text-on-surface-variant">/ night</span></p>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-full p-2 transition-all duration-500 hover:-translate-y-2 editorial-shadow">
+<div class="aspect-[4/5] overflow-hidden rounded-full mb-6">
+<img alt="Bali Beachfront" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="expansive beachfront estate in bali with thatched roof and tropical gardens at golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAccJpugtNbbwVV-AI22KZwPKdF_1CEEDpBpk5RnDFDtuhExnrtjlKqNHk_K8IGcJprldAtoBI8blMyvGgPCEOe0tMzqnTXQRdjBlH1dBpZucy5wp2fNFRIDf3ezHqHtopPSjVbpHIuf7Ury6-B2-IxgUaYwUq1w5l5zFmg5zbJ8bHow8rkM0dVZ9eAdwV5N2_rP6Ngiv5aZSQxHdEPQZ0IrY0ByFrVPqzXzQKIJrVvxLnGuoqFXnUJToWHT3gakYGGApHd_NG7clr"/>
+</div>
+<div class="px-6 pb-8 text-center">
+<div class="flex justify-center gap-1 mb-2">
+<span class="material-symbols-outlined text-amber-400 text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">5.00</span>
+</div>
+<h3 class="text-xl font-bold mb-1">Manta Ray Estate</h3>
+<p class="text-on-surface-variant text-sm mb-4">Uluwatu, Bali</p>
+<p class="text-primary font-black text-lg">$2,100 <span class="text-xs font-normal text-on-surface-variant">/ night</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Services -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-5xl font-black text-on-background font-headline tracking-tighter mb-6 italic">Holistic Management</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">We don't just manage keys; we curate environments where property owners thrive and guests discover the exceptional.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="p-12 rounded-full border border-outline-variant/30 hover:border-primary transition-all duration-300 group">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="real_estate_agent">real_estate_agent</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 font-headline">Property Management</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Full-spectrum care including maintenance, financial reporting, and localized concierge services.</p>
+<a class="text-primary font-bold uppercase text-xs tracking-widest hover:underline underline-offset-8" href="#">Learn More</a>
+</div>
+<!-- Service 2 -->
+<div class="p-12 rounded-full border border-outline-variant/30 hover:border-primary transition-all duration-300 group bg-surface-container-high/20">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="beach_access">beach_access</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 font-headline">Vacation Rentals</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">End-to-end booking management, marketing on global platforms, and bespoke guest vetting.</p>
+<a class="text-primary font-bold uppercase text-xs tracking-widest hover:underline underline-offset-8" href="#">Learn More</a>
+</div>
+<!-- Service 3 -->
+<div class="p-12 rounded-full border border-outline-variant/30 hover:border-primary transition-all duration-300 group">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="monitoring">monitoring</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 font-headline">Investment Support</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Data-driven insights for acquiring high-yield coastal properties and optimizing revenue streams.</p>
+<a class="text-primary font-bold uppercase text-xs tracking-widest hover:underline underline-offset-8" href="#">Learn More</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-32 bg-on-background text-white overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/10 -skew-x-12 transform translate-x-1/2"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-5xl font-black font-headline tracking-tighter mb-10 leading-tight">The Horizon <br/>Standard of Trust.</h2>
+<div class="space-y-12">
+<div class="flex gap-6 items-start">
+<span class="text-primary text-5xl font-black font-headline">500+</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Properties Managed</h4>
+<p class="text-slate-400">A diverse portfolio spanning three continents and the world's most exclusive coastlines.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-primary text-5xl font-black font-headline">4.9</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Average Guest Rating</h4>
+<p class="text-slate-400">Consistent excellence reflected in thousands of verified guest and owner reviews.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-primary text-5xl font-black font-headline">24/7</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Architectural Care</h4>
+<p class="text-slate-400">Dedicated specialists ensuring every structure maintains its integrity and aesthetic value.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-slate-800 rounded-full overflow-hidden border-[16px] border-slate-900 shadow-2xl">
+<img alt="Property Performance" class="w-full h-full object-cover opacity-80" data-alt="night shot of a modern luxury house with warm interior lighting reflecting on a dark pool surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACR_ti1OcaaSBe-Pr2IC1k54GGhnNGjd3XJfPk_4iw5mWIN8AdT68FbERA2_CaEP52Lyc_K0ZcM7BA874JHo9m2_-TVzPpXF1UP6R1OT9u_ecPebJ_G20qpsxeXIHxqepEDMJ5UEUftZ4gAnHUiBF3sJzlnWk70y-iuojR7oOSPAT1T54nuTBvU4JfO6jL7Uu8DJXYmKQDV1Xowfpj0Du6avsLBAuh_phlkvl3vvlMFQeP-va1D9VdRLryH3BPLX-YTv3FS99cAPJ4"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-primary p-8 rounded-xl shadow-xl max-w-[200px]">
+<p class="text-white font-black text-3xl mb-1">98%</p>
+<p class="text-teal-100 text-sm font-bold leading-tight">Occupancy Rate Average in Peak Season</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Testimonial 1 -->
+<div class="glass-panel p-16 rounded-[4rem] relative editorial-shadow">
+<span class="material-symbols-outlined text-primary/20 text-8xl absolute top-10 right-10" data-icon="format_quote">format_quote</span>
+<p class="text-2xl italic font-manrope leading-relaxed text-on-surface mb-12 relative z-10">
+                            "Architectural Horizon took our vintage beach cottage and transformed its management. Our revenue has doubled, and the property has never looked better. They truly understand the art of hospitality."
+                        </p>
+<div class="flex items-center gap-4">
+<img alt="Owner" class="w-16 h-16 rounded-full object-cover" data-alt="portrait of a middle-aged professional man smiling warmly with ocean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMh3N6jxj-YMdXK4pN-tfRCpFylUMUC8W4Xu0eaJeePfkbsMvAeW8h7Gjpb4PDqcUbJzafjcZNSjjLJ93szmpTfKK2RUS40kneS2LFG-DsAs_YBRl2oR7OELa63zBWBVNGj6di3yuYMthD2e4aq-OQ0gQTcmr39EHa1oT76KYuV_BB4DMqSpN0C2XoCEHD9MXhRhDKPAjHXTxnVirvJXZgFhQngAPeXouPzcrkqt8TgpB3bipGT-ESsqSHLx-2G0C2HE4JMz69mPZq"/>
+<div>
+<p class="font-bold">Julian Vane</p>
+<p class="text-on-surface-variant text-sm">Property Owner, Maui</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-low p-16 rounded-[4rem] relative mt-12 md:mt-24">
+<span class="material-symbols-outlined text-primary/20 text-8xl absolute top-10 right-10" data-icon="format_quote">format_quote</span>
+<p class="text-2xl italic font-manrope leading-relaxed text-on-surface mb-12 relative z-10">
+                            "As a traveler, the difference is in the details. From the curated welcome scents to the architectural guides provided, Architectural Horizon makes every stay feel like a private gallery experience."
+                        </p>
+<div class="flex items-center gap-4">
+<img alt="Guest" class="w-16 h-16 rounded-full object-cover" data-alt="portrait of a young woman traveler with a joyful expression in a sunlit setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3h-_eGkpkXmrUpF9uoQMLysBK0iukaixnmGTzafDpHHsyWiPl1L3hRvqILkYvfQ0VgiBGFIePbK-p8tXFeyICw4YkOECUoKkeOPqJbge53q5oDvt7_A8yrojexKPe2mYUXZn2qz3EEEtq26WHctijF5rZ7ZV9UhpxSy04X9UXMK3XrU2GsBOz08AwsRetwFPWelM9EZzWlbWJIb_PdS1HjO9j2WPsYOw5JW_QsshaA2oJ1GRmVhQuWpAoZLDNspF5fiQhplf27T79"/>
+<div>
+<p class="font-bold">Elena Rossi</p>
+<p class="text-on-surface-variant text-sm">Guest, Amalfi Coast</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32">
+<div class="container mx-auto px-8">
+<div class="relative bg-primary rounded-[3rem] p-20 overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img alt="Texture" class="w-full h-full object-cover" data-alt="abstract architectural lines of a modern building facade against a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYfC4CyAVNXyx7c1gmWVsGsy4kEjAhoWEoYCHT3tJQEVEispS4Nl3PYhBL7IZohutv3esOHt61iQEnlmfMXrvjqNabQvXLTX-GmvBcbg4AB6xtxuITvE5oDXT5RHYP1Ak25bM4CyxNbhJDTRIglXXKSwTBwUcMxNbd5Z7RSu8BkdFvvvCCOCSjKAPMtlGv28or3UZm4eMQeAT6wr9wIIwz8Xt1N-JIhhtcUKk_o_RwUMlEk1XMyKoaHSxgGcKFDmDJSriHDntX6cHF"/>
+</div>
+<div class="relative z-10 text-center max-w-3xl mx-auto">
+<h2 class="text-6xl font-black text-white font-headline tracking-tighter mb-8 leading-tight">Your Asset, <br/>Our Horizon.</h2>
+<p class="text-xl text-teal-50 mb-12 opacity-90 leading-relaxed">Whether you are looking to list your premier property or find your next architectural retreat, we are here to bridge the gap.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-white text-primary px-12 py-5 rounded-lg font-black text-lg hover:bg-teal-50 transition-all shadow-xl">
+                                List Your Property
+                            </button>
+<button class="border-2 border-white/40 text-white px-12 py-5 rounded-lg font-black text-lg hover:bg-white/10 transition-all">
+                                Find Your Next Stay
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full rounded-t-3xl mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-teal-600" data-icon="domain">domain</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white font-headline">Architectural Horizon</span>
+</div>
+<p class="text-slate-500 font-inter text-sm max-w-xs">© 2024 Architectural Horizon. All rights reserved. Built for the Editorial Eye.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-10 font-inter text-sm uppercase tracking-widest">
+<a class="text-slate-500 hover:underline decoration-teal-500 decoration-2 underline-offset-4 transition-all duration-200 ease-in-out" href="#">Portfolio</a>
+<a class="text-slate-500 hover:underline decoration-teal-500 decoration-2 underline-offset-4 transition-all duration-200 ease-in-out" href="#">Management</a>
+<a class="text-slate-500 hover:underline decoration-teal-500 decoration-2 underline-offset-4 transition-all duration-200 ease-in-out" href="#">Investments</a>
+<a class="text-slate-500 hover:underline decoration-teal-500 decoration-2 underline-offset-4 transition-all duration-200 ease-in-out" href="#">Privacy</a>
+<a class="text-slate-500 hover:underline decoration-teal-500 decoration-2 underline-offset-4 transition-all duration-200 ease-in-out" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="language">language</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

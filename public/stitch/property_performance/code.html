@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Performance | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#006b5e",
+                        "surface-tint": "#006b5f",
+                        "tertiary-container": "#09b8a4",
+                        "surface-container": "#eaedff",
+                        "on-surface": "#151b2d",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "secondary-container": "#d5e0f8",
+                        "tertiary-fixed": "#6ef9e2",
+                        "surface-container-highest": "#dce1fb",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-secondary-container": "#586377",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#3c4947",
+                        "surface-variant": "#dce1fb",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "error-container": "#ffdad6",
+                        "primary": "#006b5f",
+                        "outline": "#6c7a77",
+                        "surface": "#faf8ff",
+                        "secondary-fixed": "#d8e3fb",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-dim": "#d4d9f2",
+                        "surface-container-low": "#f2f3ff",
+                        "on-primary-container": "#00423b",
+                        "on-primary-fixed-variant": "#005048",
+                        "background": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#545f73",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#71f8e4",
+                        "primary-container": "#14b8a6",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-primary-fixed": "#00201c",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary-container": "#00423a",
+                        "inverse-primary": "#4fdbc8",
+                        "surface-container-high": "#e3e7ff",
+                        "inverse-surface": "#2a3043",
+                        "on-background": "#151b2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm docked full-width top-0 sticky z-40">
+<div class="flex items-center justify-between px-6 h-20 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-teal-700 dark:text-teal-400 text-3xl">analytics</span>
+<h1 class="font-['Manrope'] font-bold tracking-tight text-3xl text-teal-800 dark:text-teal-300">Portfolio</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="font-['Manrope'] font-semibold text-teal-700 dark:text-teal-400 hover:opacity-80 transition-opacity" href="#">Properties</a>
+<a class="font-['Manrope'] font-semibold text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity" href="#">Health</a>
+<a class="font-['Manrope'] font-semibold text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity" href="#">Docs</a>
+</nav>
+<img alt="Executive Owner" class="w-10 h-10 rounded-full object-cover border-2 border-primary-container" data-alt="Professional headshot of a corporate executive in a light blue suit with a soft office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbArEDefM1uLrMtqjrGoGzHpNC1bLTy023DowOBt1YcvDYHxKV5JrEWEabMHiuJRmvR1DRMyKQBojnn-XQ8SO--BzQoUxnQ7FjH4yVgR18jCnWo4Utgg9NXpSEfg0MoyixaKszXVWyKO7mTZscpJ8yKH6-NCsAHn3tKaqevykkkswxrlHCXcvPC80M-gzDmP_32t5xuB4OyqZWdvxG3j4fOBr6nGxP8RXzGWa-Jcxr6KmJ11Y9Y0gcVXRk_Nj9V7bVhWin3BVP-Vs_"/>
+</div>
+</div>
+<div class="bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-900 h-px w-full"></div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-6 py-12 pb-32">
+<!-- Editorial Header -->
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<span class="text-primary font-['Inter'] font-medium text-[11px] uppercase tracking-[0.2em] mb-3 block">Performance Oversight</span>
+<h2 class="font-headline font-extrabold text-5xl tracking-tight text-on-surface leading-tight">Property Assets</h2>
+<p class="mt-4 text-on-surface-variant text-lg leading-relaxed font-body">Detailed performance metrics across your global hospitality portfolio, balancing yield and occupancy with precision.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-highest px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-xl">ios_share</span>
+<span class="font-['Inter'] font-semibold text-sm">Export Report</span>
+</button>
+</div>
+</div>
+<!-- Search & Filter Bar -->
+<div class="flex flex-col md:flex-row gap-4 mb-12">
+<div class="relative flex-1 group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-on-surface-variant/50 transition-all" placeholder="Search portfolio..." type="text"/>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar">
+<button class="whitespace-nowrap bg-primary-container text-on-primary-container px-6 py-4 rounded-xl font-semibold text-sm transition-all hover:shadow-md">All Properties</button>
+<button class="whitespace-nowrap bg-surface-container-lowest text-on-surface-variant px-6 py-4 rounded-xl font-semibold text-sm border border-outline-variant/10 hover:bg-surface-container-low transition-all">Luxury Villas</button>
+<button class="whitespace-nowrap bg-surface-container-lowest text-on-surface-variant px-6 py-4 rounded-xl font-semibold text-sm border border-outline-variant/10 hover:bg-surface-container-low transition-all">Urban Lofts</button>
+<button class="whitespace-nowrap bg-surface-container-lowest text-on-surface-variant px-6 py-4 rounded-xl font-semibold text-sm border border-outline-variant/10 hover:bg-surface-container-low transition-all">Beachfront</button>
+</div>
+</div>
+<!-- Bento Grid Portfolio -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Property Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Sea Breeze Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern architectural masterpiece villa with infinity pool overlooking the turquoise Mediterranean sea at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQfXsse6xrTaR3ZQfI5PImD9u1_eFe7ZrMKchQEOZLiR3mnunWB8Vzb-SOE7pThV6DSZuxzyjo9ZH2jY8g0g6rAwYsUiJUHoCJP838srAxgRKdKfd7IFTFRw0pPzkDlobW9LDsas0lQwkDd4TSSC_g3SrCiCRZybf5Ws7jHnOD-zevHCuXNUc5ad-WYiaEg1Q8fPeshkkTpY3yFaYKxTgHlF-RvvMaZw9JodlyrFuiVrn1ysi-_Qs4ygcYuEq5g5s-gQ2LQGGQGkdq"/>
+<div class="absolute top-6 left-6 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface">Occupied</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+<h3 class="text-white font-headline font-bold text-2xl">Sea Breeze Villa</h3>
+<p class="text-white/80 font-body text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Amalfi Coast, Italy
+                        </p>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-on-surface-variant text-[11px] uppercase tracking-widest font-bold mb-1">Monthly Revenue</p>
+<p class="text-3xl font-headline font-extrabold text-primary">$42,500</p>
+</div>
+<div class="text-right">
+<p class="text-on-surface-variant text-[11px] uppercase tracking-widest font-bold mb-1">ROI Growth</p>
+<p class="text-tertiary-container font-bold flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12.4%
+                            </p>
+</div>
+</div>
+<div class="h-16 w-full flex items-end gap-1 pt-2">
+<div class="flex-1 bg-primary/10 h-1/3 rounded-sm"></div>
+<div class="flex-1 bg-primary/20 h-1/2 rounded-sm"></div>
+<div class="flex-1 bg-primary/30 h-3/4 rounded-sm"></div>
+<div class="flex-1 bg-primary/40 h-2/3 rounded-sm"></div>
+<div class="flex-1 bg-primary/60 h-5/6 rounded-sm"></div>
+<div class="flex-1 bg-primary h-full rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Azure Horizon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Luxury penthouse apartment with floor-to-ceiling windows overlooking a modern city skyline and a harbor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu1CLx9DzISNwvZwO8pkCThEHfHXV7XwEi4tJQINJup9MbHx3T4pJp6Yu7MtXVPMe_Wi5AecZX5hiodgXHv8FoHnzAD8PVjxR5NO4kP8MyUHf2BtdtEbZ9omst4m8U3zQz1fyl5KZlu1AdwBmXLMTs-6kLoF3UHgSIsPosIbA9XzhahvEXLF43IQ4EgOOuN7Jc3o1QsmCbOmDHkUxITuHElPDO7LbHSq9S7ttyT1O6V1p1Fo30RncHN9Lm4Cm27y_ArkkUJK7CtNDN"/>
+<div class="absolute top-6 left-6 flex items-center gap-2 bg-slate-100/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-slate-400"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Vacant</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+<h3 class="text-white font-headline font-bold text-2xl">Azure Horizon</h3>
+<p class="text-white/80 font-body text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Dubai Marina, UAE
+                        </p>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-on-surface-variant text-[11px] uppercase tracking-widest font-bold mb-1">Monthly Revenue</p>
+<p class="text-3xl font-headline font-extrabold text-primary">$38,000</p>
+</div>
+<div class="text-right">
+<p class="text-on-surface-variant text-[11px] uppercase tracking-widest font-bold mb-1">ROI Growth</p>
+<p class="text-error font-bold flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-sm">trending_down</span> -2.1%
+                            </p>
+</div>
+</div>
+<div class="h-16 w-full flex items-end gap-1 pt-2">
+<div class="flex-1 bg-primary/60 h-5/6 rounded-sm"></div>
+<div class="flex-1 bg-primary/40 h-2/3 rounded-sm"></div>
+<div class="flex-1 bg-primary/50 h-3/4 rounded-sm"></div>
+<div class="flex-1 bg-primary/30 h-1/2 rounded-sm"></div>
+<div class="flex-1 bg-primary/20 h-1/3 rounded-sm"></div>
+<div class="flex-1 bg-error h-1/4 rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Emerald Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Stately colonial manor house surrounded by manicured lawns and ancient oak trees in a misty countryside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT7aI3_GlQWWonwT0VVUDgQbXAMkw2TZINHBB39TYaIZPaRHV_CXdyLQgNoJttPWQUZ9lBlG_1Sczk8k4gVSnNFXKxUPEd1IFEy5ue2eJVWYUZnTzknq2-BiWNgjfVuW60e8rdtb3xktGo-lsq2smm0S1nTz4JaYvF7xb3l-fu8X_AYsllKh0TMQ0xwmbES5c5iHOmGu8NWUIICWvOK5OY86HuxuMqUFNEX3T5jVD6Uf9MUfG6TxkzIP6EQFcGT5T2Kll6ejfCLupr"/>
+<div class="absolute top-6 left-6 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface">Occupied</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+<h3 class="text-white font-headline font-bold text-2xl">Emerald Estate</h3>
+<p class="text-white/80 font-body text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Oxfordshire, UK
+                        </p>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-on-surface-variant text-[11px] uppercase tracking-widest font-bold mb-1">Monthly Revenue</p>
+<p class="text-3xl font-headline font-extrabold text-primary">$19,200</p>
+</div>
+<div class="text-right">
+<p class="text-on-surface-variant text-[11px] uppercase tracking-widest font-bold mb-1">ROI Growth</p>
+<p class="text-tertiary-container font-bold flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +5.8%
+                            </p>
+</div>
+</div>
+<div class="h-16 w-full flex items-end gap-1 pt-2">
+<div class="flex-1 bg-primary/20 h-1/4 rounded-sm"></div>
+<div class="flex-1 bg-primary/30 h-1/3 rounded-sm"></div>
+<div class="flex-1 bg-primary/40 h-2/3 rounded-sm"></div>
+<div class="flex-1 bg-primary/30 h-1/2 rounded-sm"></div>
+<div class="flex-1 bg-primary/50 h-3/4 rounded-sm"></div>
+<div class="flex-1 bg-primary h-2/3 rounded-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Performance Summary Section (Bento Grid Style) -->
+<div class="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 bg-surface-container-low rounded-[2.5rem] p-10 relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline font-bold text-2xl mb-8">Yield Distribution</h4>
+<div class="flex items-end gap-4 h-48 mb-8">
+<div class="flex-1 bg-primary rounded-t-xl h-[40%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[65%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[85%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[60%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[95%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[75%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[50%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[90%]"></div>
+<div class="flex-1 bg-primary rounded-t-xl h-[100%]"></div>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label text-[10px] uppercase tracking-widest">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div class="flex-1 bg-primary p-10 rounded-[2.5rem] text-on-primary">
+<p class="uppercase tracking-[0.2em] font-bold text-[10px] mb-2 opacity-80">Portfolio Health</p>
+<p class="text-4xl font-headline font-extrabold mb-4">98.4%</p>
+<div class="w-full bg-white/20 h-1 rounded-full overflow-hidden">
+<div class="bg-white h-full w-[98%]"></div>
+</div>
+<p class="mt-4 text-sm opacity-80 leading-relaxed">Your portfolio is currently performing at peak capacity with minimal overhead.</p>
+</div>
+<div class="flex-1 bg-surface-container-highest p-10 rounded-[2.5rem]">
+<p class="uppercase tracking-[0.2em] font-bold text-[10px] mb-2 text-on-surface-variant">Active Guests</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-extrabold">1,240</span>
+<span class="text-primary font-bold text-sm">+82 this week</span>
+</div>
+<div class="flex mt-6 -space-x-3">
+<img alt="Guest" class="w-10 h-10 rounded-full border-4 border-surface-container-highest object-cover" data-alt="Portrait of a smiling young traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF03DFWB5fVP9fICIT6lZzVdAC0UIacR3lYMA4ImWqY1iaSM7JH7EU2ZXWzvEX50at7M8b8UV6TTqNmd5MYPMsr-Q1hHqMNxWw9RFDoHckClEFGRhns00_rxG2ts-M7DqLALeG9wGRqbjvbPiyHRnizUfbaPEVewEi8LYvFK1-eiiOBR22ehjNYzKPWFMVQPGt8fY3KEUCA45img3aiXada9UxSdSiS0t9RCtAHaYelu7nVurPRGfIuKuNaMmuRO2hqcyres1iLxTj"/>
+<img alt="Guest" class="w-10 h-10 rounded-full border-4 border-surface-container-highest object-cover" data-alt="Portrait of a woman on vacation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3RQZIsTEzf6BT_ru8ieoDeVEuTFDwxqHwf4zuI9Hv_2lvCfdAdOS0mQFi0xnb_d0kpnAexJLVFic9Hy3LvY_YLPuBihhG1v7S19Nb1qJW107Ry072dGAzsjRZ7TD91FHzT7n8EQgCHBTpTgi8lLidmP2FYZwkBfoG3P6UORK6QuDKkfrpkQzyifNuGl3QIXhfbMlX_XfRGpWeZVe15s1o1rQ4Cw4FCrUngS4WhYb-hGhONxOA94RT_CLyqP6AvDYQdoicSwG6zJ7"/>
+<img alt="Guest" class="w-10 h-10 rounded-full border-4 border-surface-container-highest object-cover" data-alt="Close up portrait of a middle aged man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX0vBdEqwNxtrFpSzzK6-kLsJEQacGV3a_qzF1rNvaQECMqPpYzCxfS5-NUj4VcY0Ws94ziDNBE9-zcF7wYZxpwjSjcEckNdN2Qg5ailA39gTrq8pFQkjPhBsrGl0fVHoPVQAVuQLIrxBC7-fsf5wXbxrn3bcuRpAuHjxLECJIvbAiSs3DW0TWE-Y4kUIOrKEPpu-rc4M1vzn_etIv_VzfyaZI5rQ2_ZKksAt1JTFZAhqcNE_uzPTommt-pEphCQMmUcyiwtQZwYiG"/>
+<div class="w-10 h-10 rounded-full border-4 border-surface-container-highest bg-primary-container text-on-primary-container flex items-center justify-center text-xs font-bold font-headline">+1k</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-teal-500/10 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 md:hidden">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 font-['Inter'] font-medium text-[11px] uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Overview</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 font-['Inter'] font-medium text-[11px] uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">payments</span>
+<span>Health</span>
+</div>
+<div class="flex flex-col items-center justify-center text-teal-700 dark:text-teal-300 bg-teal-50/50 dark:bg-teal-900/20 rounded-xl px-4 py-1.5 font-['Inter'] font-medium text-[11px] uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">domain</span>
+<span>Properties</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 font-['Inter'] font-medium text-[11px] uppercase tracking-wider scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">folder_open</span>
+<span>Docs</span>
+</div>
+</nav>
+</body></html>

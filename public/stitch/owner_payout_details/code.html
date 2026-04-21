@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Owner Payout Details | Reef Property</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#545f73",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "surface-container-high": "#e3e7ff",
+                        "inverse-primary": "#4fdbc8",
+                        "background": "#faf8ff",
+                        "on-background": "#151b2d",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2a3043",
+                        "on-primary-fixed-variant": "#005048",
+                        "tertiary-fixed": "#6ef9e2",
+                        "primary-fixed": "#71f8e4",
+                        "on-primary-container": "#00423b",
+                        "surface-dim": "#d4d9f2",
+                        "on-surface-variant": "#3c4947",
+                        "surface-container-low": "#f2f3ff",
+                        "surface-container-highest": "#dce1fb",
+                        "on-secondary-fixed": "#111c2d",
+                        "secondary-container": "#d5e0f8",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-primary-fixed": "#00201c",
+                        "error-container": "#ffdad6",
+                        "surface": "#faf8ff",
+                        "on-surface": "#151b2d",
+                        "outline": "#6c7a77",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#006b5e",
+                        "primary-container": "#14b8a6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#586377",
+                        "surface-variant": "#dce1fb",
+                        "primary": "#006b5f",
+                        "tertiary-container": "#09b8a4",
+                        "surface-bright": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "surface-tint": "#006b5f",
+                        "on-tertiary-container": "#00423a",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "inverse-on-surface": "#eef0ff",
+                        "tertiary-fixed-dim": "#4ddcc6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -10px rgba(21, 27, 45, 0.08);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(21,27,45,0.04)] flex justify-between items-center px-6 py-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary/10">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man in his 40s with a warm smile, wearing a casual linen shirt in a bright office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9aXUTyL89NGt8K8BOm9s_GXduy1gOH48m8C76gE5mN_1MFaRysVvNdXZllLD_wb2erLxGI-xNnlcRV2BnOS0IofuMLIMRrCaWdGiW1t34x26-D18YwTZA8EUJpiWoE_JrNaMwdaQ9R8B5i2lGcv80nxMhkf7z1lND4SWDKTlzaYtvVLsHy8fr4gIjQ9gfhhHwiPIELTr0V_KCeb6UV6Os40HjCTGC-JjGY2fet7mmgp_DtJZ8sIUjBJZN-UCJIY5JCsL5oOTGOgow"/>
+</div>
+<span class="text-teal-700 dark:text-teal-500 font-manrope font-extrabold tracking-tighter text-xl">Reef Property</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-500 hover:bg-slate-100/50 p-2 rounded-full transition-colors">notifications</button>
+</div>
+</header>
+<main class="max-w-5xl mx-auto px-6 pt-12 pb-32">
+<!-- Hero Section: Editorial Layout -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end mb-16">
+<div class="md:col-span-7">
+<span class="text-primary font-label font-semibold uppercase tracking-[0.2em] text-xs mb-4 block">Transaction Receipt</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight text-on-surface mb-6">
+                    Payout Details
+                </h1>
+<div class="flex items-center gap-4 text-on-surface-variant font-medium">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-lg">October 15, 2023</span>
+</div>
+</div>
+<div class="md:col-span-5 relative group">
+<div class="bg-surface-container-lowest p-8 rounded-xl editorial-shadow relative z-10 overflow-hidden border border-outline-variant/10">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16"></div>
+<p class="text-sm font-label font-bold text-on-surface-variant uppercase tracking-widest mb-2">Net Payout</p>
+<p class="text-5xl font-headline font-extrabold text-primary tracking-tighter">$4,285.50</p>
+<div class="mt-8 flex justify-between items-center">
+<span class="text-xs text-on-surface-variant/70 font-medium">Status: Settled</span>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-md font-semibold text-sm flex items-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Download PDF
+                        </button>
+</div>
+</div>
+<!-- Asymmetric background image block -->
+<div class="absolute -bottom-6 -right-6 w-full h-full bg-surface-container rounded-xl -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+</div>
+</section>
+<!-- Details Breakdown: Architectural List -->
+<section class="space-y-12">
+<div>
+<h2 class="text-2xl font-headline font-bold text-on-surface mb-8 flex items-center gap-3">
+<span class="w-8 h-1 bg-primary rounded-full"></span>
+                    Revenue Summary
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Revenue Side -->
+<div class="space-y-6">
+<div class="p-6 bg-surface-container-lowest rounded-xl editorial-shadow flex justify-between items-start group">
+<div>
+<h3 class="font-bold text-lg text-on-surface">Gross Rental Income</h3>
+<p class="text-sm text-on-surface-variant max-w-[200px] mt-1">Total collected from 12 residential units and 2 storefronts.</p>
+</div>
+<span class="text-xl font-headline font-bold text-on-surface">$5,400.00</span>
+</div>
+<div class="h-64 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Modern Property" class="w-full h-full object-cover" data-alt="contemporary architectural facade of a luxury apartment building with glass balconies and sleek grey panels under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk_DVJv4SRc1VhRoq3ELtvLdFCXmfe1bgDrWmwiNFS9tDWefrLS3aroazFs1pICW3K1yGS5U6YSy9a2-fGVkqhgztJMHDpN4BeDUPAvorv3w2dpMy_RsjvmZamYjc4u03sTS-V6mHrTH6sia6ScwoCXuF4CvlGOHM1Hqx3S368HSWJF_46ioKSOBTkKqwPMgcVS2ZK3KXMGM3Qsr-2ybsA7m7ZGpzyky31k4xR7AUdwIVorlBVXob0bFcY4mW6lktfToVuYxuVsJiR"/>
+</div>
+</div>
+<!-- Deductions Side -->
+<div class="space-y-6">
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+<h3 class="text-xs font-bold text-on-surface-variant uppercase tracking-[0.2em] mb-6">Operating Expenses</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<span class="font-medium text-on-surface">Management Fees (8%)</span>
+</div>
+<span class="font-bold text-error">-$432.00</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">build</span>
+</div>
+<span class="font-medium text-on-surface">Maintenance Expenses</span>
+</div>
+<span class="font-bold text-error">-$682.50</span>
+</div>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-6 mt-6">
+<span class="font-bold text-on-surface">Total Deductions</span>
+<span class="font-bold text-error">-$1,114.50</span>
+</div>
+</div>
+</div>
+<!-- Info Card -->
+<div class="p-6 bg-primary-container/10 rounded-xl border border-primary/10 flex gap-4">
+<span class="material-symbols-outlined text-primary">info</span>
+<p class="text-sm text-on-primary-container leading-relaxed">
+                                Maintenance expenses this month include emergency HVAC repair on Unit 4B and routine landscaping services for the courtyard.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Breakdown Table (Ghost Style) -->
+<div class="mt-20">
+<h2 class="text-xl font-headline font-bold text-on-surface mb-6">Unit Breakdown</h2>
+<div class="overflow-hidden bg-surface-container-low rounded-xl">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-xs font-bold text-on-surface-variant uppercase tracking-widest border-b border-outline-variant/10">
+<th class="px-8 py-5">Property Unit</th>
+<th class="px-8 py-5">Occupancy</th>
+<th class="px-8 py-5 text-right">Revenue</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-white/50 transition-colors">
+<td class="px-8 py-4 font-medium">Unit 4A - Penthouse Suite</td>
+<td class="px-8 py-4"><span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Active</span></td>
+<td class="px-8 py-4 text-right font-headline font-bold">$2,100.00</td>
+</tr>
+<tr class="hover:bg-white/50 transition-colors">
+<td class="px-8 py-4 font-medium">Unit 2C - Studio Loft</td>
+<td class="px-8 py-4"><span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Active</span></td>
+<td class="px-8 py-4 text-right font-headline font-bold">$1,450.00</td>
+</tr>
+<tr class="hover:bg-white/50 transition-colors">
+<td class="px-8 py-4 font-medium">Retail 1 - Ocean View Café</td>
+<td class="px-8 py-4"><span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Active</span></td>
+<td class="px-8 py-4 text-right font-headline font-bold">$1,850.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-3xl z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-2xl flex justify-around items-center px-4 pt-3 pb-8">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">forum</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">event_available</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">Booking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">domain</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-teal-600 dark:text-teal-400 bg-teal-50/50 dark:bg-teal-900/20 rounded-xl px-3 py-1 transform scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">Payouts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

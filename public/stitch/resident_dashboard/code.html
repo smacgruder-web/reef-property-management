@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resident Dashboard | REEF PROPERTY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-fixed": "#d8e3fb",
+                "secondary-fixed-dim": "#bcc7de",
+                "tertiary-fixed": "#6ef9e2",
+                "on-primary": "#ffffff",
+                "inverse-primary": "#4fdbc8",
+                "surface-dim": "#d4d9f2",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#71f8e4",
+                "on-surface-variant": "#3c4947",
+                "tertiary-fixed-dim": "#4ddcc6",
+                "secondary": "#545f73",
+                "on-secondary-fixed-variant": "#3c475a",
+                "on-secondary-container": "#586377",
+                "secondary-container": "#d5e0f8",
+                "on-secondary-fixed": "#111c2d",
+                "on-background": "#151b2d",
+                "tertiary-container": "#09b8a4",
+                "on-tertiary-fixed": "#00201b",
+                "on-tertiary-container": "#00423a",
+                "on-error": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-surface": "#151b2d",
+                "on-tertiary": "#ffffff",
+                "primary": "#006b5f",
+                "outline-variant": "#bbcac6",
+                "on-primary-container": "#00423b",
+                "outline": "#6c7a77",
+                "background": "#faf8ff",
+                "surface-container-high": "#e3e7ff",
+                "primary-fixed-dim": "#4fdbc8",
+                "on-primary-fixed-variant": "#005048",
+                "surface-tint": "#006b5f",
+                "surface": "#faf8ff",
+                "primary-container": "#14b8a6",
+                "surface-container-highest": "#dce1fb",
+                "error": "#ba1a1a",
+                "tertiary": "#006b5e",
+                "surface-variant": "#dce1fb",
+                "inverse-surface": "#2a3043",
+                "surface-container-low": "#f2f3ff",
+                "on-primary-fixed": "#00201c",
+                "inverse-on-surface": "#eef0ff",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#005047",
+                "on-error-container": "#93000a",
+                "surface-container": "#eaedff",
+                "surface-bright": "#faf8ff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-font { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#faf8ff]/80 backdrop-blur-xl shadow-[0_20px_40px_-15px_rgba(21,27,45,0.08)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary/10">
+<img alt="Resident Profile Photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly young man with short dark hair in a bright, modern interior setting, soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnxqCAcKwkwiQMv2DfvhShWbDDfS-Kj8r6_1IQNAD8_TC7mNlWTkGiC4M-KSdQJfOntGhvPNf0Vfz5b3n373XIHfWuDqNTl8SMTuTEeBaLlLl5196XnWDpkOJzkSQjZ3rJX1aVJvoc5KqLO0oYHog-mSSeAqZA75NYMFtLrz6GjL_BeR3yuAGPB_S8-V1qwYeQ2KVsa7mnC-LUGjDu9hE2AebwPUErwqws3eFHvqIURrZwQroPb0-G2k91LQv248yH7PsU4_-iJLmO"/>
+</div>
+<span class="text-lg font-black tracking-[0.1em] text-teal-800 brand-font">REEF PROPERTY</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-teal-50/50 transition-colors text-teal-700">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-28 px-6 max-w-7xl mx-auto space-y-12">
+<!-- Header Section -->
+<header class="space-y-2">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">Welcome home, Jordan</h1>
+<div class="flex items-center text-on-surface-variant gap-2">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<p class="font-medium tracking-wide text-sm md:text-base">Apt 402, Azure Horizon Residences • Miami Beach</p>
+</div>
+</header>
+<!-- Bento Grid: Main Actions & Status -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pay Rent Card -->
+<div class="md:col-span-2 group relative overflow-hidden bg-surface-container-lowest rounded-xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all hover:translate-y-[-4px]">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-6xl text-primary/10 transition-transform group-hover:scale-110">payments</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="space-y-1">
+<p class="text-primary font-bold tracking-widest text-[11px] uppercase font-label">Financial Status</p>
+<h2 class="text-3xl font-bold text-on-surface">Paid for November</h2>
+</div>
+<div class="flex flex-wrap items-end gap-8">
+<div>
+<p class="text-on-surface-variant text-xs mb-1">Next Payment Due</p>
+<p class="text-xl font-bold text-on-surface">Dec 01, 2023</p>
+</div>
+<div>
+<p class="text-on-surface-variant text-xs mb-1">Amount Due</p>
+<p class="text-xl font-bold text-on-surface">$3,450.00</p>
+</div>
+</div>
+<button class="mt-4 px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-md shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity flex items-center gap-2">
+<span>Pay Rent Now</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Service Request Quick Access -->
+<div class="bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between shadow-xl shadow-primary/10 relative overflow-hidden">
+<div class="absolute -bottom-6 -right-6">
+<span class="material-symbols-outlined text-9xl text-white/10" style="font-variation-settings: 'FILL' 1;">handyman</span>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold mb-2">Something need fixing?</h3>
+<p class="text-white/80 text-sm leading-relaxed">Our maintenance team is on standby 24/7 for your comfort.</p>
+</div>
+<button class="relative z-10 w-full py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-md font-bold hover:bg-white/20 transition-all text-center">
+                    Request Service
+                </button>
+</div>
+<!-- Active Tickets -->
+<div class="bg-surface-container-low rounded-xl p-8 space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-lg text-on-surface">Active Tickets</h3>
+<span class="px-3 py-1 bg-primary-container/20 text-primary-container text-[10px] font-bold rounded-full uppercase tracking-tighter">1 Pending</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border-l-4 border-primary shadow-sm space-y-3">
+<div class="flex justify-between items-start">
+<span class="font-bold text-on-surface leading-tight">Kitchen Tap Repair</span>
+<span class="material-symbols-outlined text-primary text-xl">event</span>
+</div>
+<p class="text-on-surface-variant text-xs leading-relaxed">Status: <span class="text-on-surface font-semibold">Scheduled for Tuesday, Nov 14</span></p>
+<div class="flex items-center gap-2 pt-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high"></div>
+<span class="text-[10px] text-on-surface-variant">Assigned: Tech Alex R.</span>
+</div>
+</div>
+<button class="w-full text-primary font-bold text-sm hover:underline flex justify-center items-center gap-1">
+                    View History
+                </button>
+</div>
+<!-- Building Announcements Feed -->
+<div class="md:col-span-2 space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-2xl font-bold text-on-surface tracking-tight">Community Updates</h3>
+<button class="text-sm font-semibold text-primary">Mark all read</button>
+</div>
+<div class="space-y-4">
+<!-- Announcement 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex gap-6 items-start transition-all hover:bg-surface-container-high">
+<div class="w-12 h-12 shrink-0 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-surface">New parcel in locker #12</h4>
+<span class="text-[10px] font-medium text-on-surface-variant/60 uppercase">2 hours ago</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">A delivery from "Luxe Living Decor" has been placed in your smart locker. Use code 8829 to retrieve it.</p>
+</div>
+</div>
+<!-- Announcement 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex gap-6 items-start transition-all hover:bg-surface-container-high">
+<div class="w-12 h-12 shrink-0 rounded-full bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">elevator</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-surface">Elevator maintenance on Friday</h4>
+<span class="text-[10px] font-medium text-on-surface-variant/60 uppercase">Yesterday</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">The East Wing elevators will be offline for routine safety inspections between 10:00 AM and 2:00 PM this Friday.</p>
+</div>
+</div>
+<!-- Announcement 3 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex gap-6 items-start transition-all hover:bg-surface-container-high">
+<div class="w-12 h-12 shrink-0 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">pool</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-surface">Poolside Yoga Session</h4>
+<span class="text-[10px] font-medium text-on-surface-variant/60 uppercase">3 days ago</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Join us this Saturday at 8:00 AM for a complimentary sunrise yoga session on the rooftop deck. Mats provided.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Lease Management Card -->
+<div class="md:col-start-3 md:row-start-2 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col border border-outline-variant/10">
+<div class="h-32 w-full overflow-hidden relative">
+<img alt="Building Interior" class="w-full h-full object-cover" data-alt="Interior of a luxury modern apartment lobby with clean architectural lines, minimalist furniture, and large windows with garden view." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFf7BDlOJ3107DroderEQHl7JgTueoUf1EE2Vzd2NYcnsTpICLU2FwNBgqgZWmhoHJS1lHs-7mhW8aPOFE7oYNhxCkFkiWtNGRhtrwVy9-F0sbcoaGpmPIBL7yzNgb32noRlbPujIj46cIRCEF689E016dJONBN2qzt2AZVrmnzmDhDkEIKVLfMAIkworc-5Scljw_VgXG2v5on0WF980_Ae2LtWPKG3yb6xL8UIFmjrYdECdrOI37kxbrC2sbjOumxUKVEW6L_80F"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+</div>
+<div class="p-6 flex-grow space-y-4">
+<h4 class="font-bold text-on-surface">Lease Details</h4>
+<div class="space-y-3">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Lease Expires</span>
+<span class="font-bold text-on-surface">Oct 31, 2024</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Notice Period</span>
+<span class="font-bold text-on-surface">60 Days</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%] rounded-full"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant text-center italic">11 months remaining on current term</p>
+</div>
+<button class="w-full py-3 text-primary border border-primary/20 rounded-md font-bold text-sm hover:bg-primary/5 transition-colors">
+                        View Agreement Details
+                    </button>
+</div>
+</div>
+</section>
+<!-- Featured Amenities Section (Editorial Layout) -->
+<section class="py-12 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Rooftop Gym" class="w-full h-full object-cover" data-alt="A premium rooftop fitness center with state-of-the-art equipment overlooking a coastal city skyline at dusk with deep teal sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2B2P13Mz9Y8G1H2oH-KOGYgl3y9af-2qLsVa1ndc8MSxCIe4KPS8TCaNb-Nd3qywkZ6ZQZn0A5pbs0gfETl8nq9pMUdOxbsJH5e2bNYiDPOipDoasHLW61VzmElv_TH9EYuZXyz95bpMkfePoTL62dEVDx8HMvrpgS0dUjrd0i7BBzEgedINL6JJOu1HC4wzKtMMMcPUTZ9xIeNAS7DPHKsgX_iOpqlFkAijeSLya_oahMflQenCzZxNqHiceezK5vZM-jP7khGlP"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-surface-container-lowest p-8 rounded-xl shadow-xl max-w-xs hidden lg:block">
+<p class="text-primary font-bold tracking-widest text-[10px] uppercase mb-2">Amenity of the month</p>
+<h4 class="text-xl font-bold text-on-surface mb-3">Reef Sky-Deck Fitness Center</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Exclusively for residents, our 24/7 fitness center now features new Peloton bikes and cold-press juice bar.</p>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<h3 class="text-4xl font-extrabold tracking-tight text-on-surface">Live your best life by the coast.</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed">From the infinity pool to the co-working lounge, every space at Azure Horizon is designed to elevate your daily routine into a curated experience.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-low rounded-xl text-center">
+<span class="material-symbols-outlined text-primary mb-2">wifi</span>
+<p class="text-xs font-bold">Fiber Optic WiFi</p>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl text-center">
+<span class="material-symbols-outlined text-primary mb-2">local_parking</span>
+<p class="text-xs font-bold">Smart Parking</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 backdrop-blur-2xl shadow-[0_-10px_30px_rgba(0,107,95,0.05)] rounded-t-[2rem] md:hidden">
+<a class="flex flex-col items-center justify-center bg-teal-50 text-teal-700 rounded-2xl px-5 py-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home_work</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Rent</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">handyman</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Service</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-teal-500 transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Lease</span>
+</a>
+</nav>
+<!-- Desktop Sidebar/Nav (Ghost visibility) -->
+<div class="hidden md:flex fixed bottom-12 left-1/2 -translate-x-1/2 z-50 bg-white/90 backdrop-blur-xl rounded-full px-8 py-4 shadow-2xl gap-8 items-center border border-primary/5">
+<a class="text-primary font-bold text-sm tracking-widest uppercase flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">home_work</span>
+            Home
+        </a>
+<a class="text-on-surface-variant font-bold text-sm tracking-widest uppercase hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-xl">payments</span>
+            Rent
+        </a>
+<a class="text-on-surface-variant font-bold text-sm tracking-widest uppercase hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-xl">handyman</span>
+            Service
+        </a>
+<a class="text-on-surface-variant font-bold text-sm tracking-widest uppercase hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+            Lease
+        </a>
+</div>
+</body></html>

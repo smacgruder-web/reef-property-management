@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Flow - Architectural Horizon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#4fdbc8",
+                        "on-surface-variant": "#3c4947",
+                        "on-primary-container": "#00423b",
+                        "primary-container": "#14b8a6",
+                        "surface-tint": "#006b5f",
+                        "outline": "#6c7a77",
+                        "surface-variant": "#dce1fb",
+                        "surface-bright": "#faf8ff",
+                        "on-background": "#151b2d",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-primary-fixed": "#00201c",
+                        "outline-variant": "#bbcac6",
+                        "secondary": "#545f73",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d4d9f2",
+                        "on-tertiary-fixed": "#00201b",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-container": "#eaedff",
+                        "on-secondary-container": "#586377",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#71f8e4",
+                        "on-surface": "#151b2d",
+                        "tertiary": "#006b5e",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2a3043",
+                        "inverse-primary": "#4fdbc8",
+                        "surface-container-highest": "#dce1fb",
+                        "secondary-container": "#d5e0f8",
+                        "on-tertiary-container": "#00423a",
+                        "surface": "#faf8ff",
+                        "on-primary-fixed-variant": "#005048",
+                        "tertiary-fixed": "#6ef9e2",
+                        "tertiary-container": "#09b8a4",
+                        "surface-container-high": "#e3e7ff",
+                        "background": "#faf8ff",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "surface-container-low": "#f2f3ff",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "primary": "#006b5f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-slate-950/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-xl shadow-slate-900/5">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-teal-700 dark:text-teal-400 hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-lg font-black tracking-tighter text-teal-800 dark:text-teal-300 font-headline uppercase">ARCHITECTURAL HORIZON</h1>
+</div>
+<button class="text-teal-700 dark:text-teal-400 hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto min-h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Editorial Heading & Intent -->
+<div class="lg:col-span-4 space-y-6">
+<div class="space-y-2">
+<span class="text-xs font-bold tracking-[0.2em] uppercase text-primary font-headline">Step 01</span>
+<h2 class="text-5xl font-extrabold tracking-tight text-on-surface font-headline leading-tight">Define your stay.</h2>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-xs">
+                    Choose your window of presence and the scale of your party. Our properties respond to the rhythm of your schedule.
+                </p>
+<div class="pt-8 hidden lg:block">
+<div class="h-[400px] w-full bg-surface-container-low rounded-xl overflow-hidden relative">
+<img alt="Luxury Architecture" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern architectural villa with sharp lines and floor to ceiling windows overlooking a calm turquoise ocean at midday" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNosp86esLur76_2Zw1mATr8G73Ax1pKIDyQkwh5za5jdqByDG6jkHcs0hxB7lGOR61gmOGI5UkL82spq5atVXPrSK7rfAJdaOa_Iggyp11KexpTbF6afuY-daJ7W07godY0ffEAASpFK0MrLZ_tjoj2D5Dlj8HvER2KPmul15i_2zbBS8pz_48TAdYcsnerCWw5bpzBXMIQugHN1QF_hAhm2g94KMkQ9kOlnkILsV0mKumZItDXUH4PVCXMCpTe3Jabcssa6wAYMM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="text-sm font-label uppercase tracking-widest">Aquatic Precision</p>
+<p class="text-xl font-headline font-bold">The Horizon Suite</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Canvas -->
+<div class="lg:col-span-8">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)] p-8 md:p-12 space-y-12">
+<!-- Date Selection Section -->
+<section class="space-y-8">
+<div class="flex items-center justify-between">
+<div class="space-y-1">
+<h3 class="text-sm font-bold uppercase tracking-widest text-primary font-headline">Select Dates</h3>
+<p class="text-2xl font-bold font-headline">October 2023</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full border border-outline-variant hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">chevron_left</span>
+</button>
+<button class="p-2 rounded-full border border-outline-variant hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Minimalist Calendar -->
+<div class="space-y-4">
+<div class="calendar-grid text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-widest pb-4 border-b border-surface-container">
+<span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+</div>
+<div class="calendar-grid gap-y-2">
+<!-- Previous Month -->
+<span class="h-12 flex items-center justify-center text-outline-variant font-medium">24</span>
+<span class="h-12 flex items-center justify-center text-outline-variant font-medium">25</span>
+<span class="h-12 flex items-center justify-center text-outline-variant font-medium">26</span>
+<span class="h-12 flex items-center justify-center text-outline-variant font-medium">27</span>
+<span class="h-12 flex items-center justify-center text-outline-variant font-medium">28</span>
+<span class="h-12 flex items-center justify-center text-outline-variant font-medium">29</span>
+<span class="h-12 flex items-center justify-center text-outline-variant font-medium">30</span>
+<!-- Current Month -->
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">1</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">2</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">3</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">4</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">5</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">6</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">7</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">8</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">9</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">10</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">11</span>
+<!-- Selected Range Start -->
+<span class="h-12 flex items-center justify-center bg-primary text-on-primary rounded-l-xl font-bold relative z-10">12</span>
+<span class="h-12 flex items-center justify-center bg-primary-container/20 text-primary-container font-bold">13</span>
+<span class="h-12 flex items-center justify-center bg-primary-container/20 text-primary-container font-bold">14</span>
+<span class="h-12 flex items-center justify-center bg-primary-container/20 text-primary-container font-bold">15</span>
+<span class="h-12 flex items-center justify-center bg-primary-container/20 text-primary-container font-bold">16</span>
+<span class="h-12 flex items-center justify-center bg-primary-container/20 text-primary-container font-bold">17</span>
+<span class="h-12 flex items-center justify-center bg-primary text-on-primary rounded-r-xl font-bold relative z-10">18</span>
+<!-- Rest of month -->
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">19</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">20</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">21</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">22</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">23</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">24</span>
+<span class="h-12 flex items-center justify-center hover:bg-primary-container/10 rounded-lg cursor-pointer transition-colors">25</span>
+</div>
+</div>
+</section>
+<!-- Divider via whitespace and tonal shift -->
+<div class="h-px bg-surface-container-high w-full"></div>
+<!-- Guest Selection Section -->
+<section class="space-y-8">
+<div class="space-y-1">
+<h3 class="text-sm font-bold uppercase tracking-widest text-primary font-headline">Guest Composition</h3>
+<p class="text-on-surface-variant">Adjust your group size for tailored service.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Adults Counter -->
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-xl border border-transparent hover:border-primary-container/30 transition-all">
+<div class="space-y-0.5">
+<p class="font-bold text-on-surface font-headline">Adults</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Ages 13+</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-lowest transition-colors active:scale-90">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-6 text-center font-bold text-xl font-headline">02</span>
+<button class="w-10 h-10 rounded-full border border-primary flex items-center justify-center bg-primary text-on-primary hover:opacity-90 transition-all active:scale-90">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Children Counter -->
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-xl border border-transparent hover:border-primary-container/30 transition-all">
+<div class="space-y-0.5">
+<p class="font-bold text-on-surface font-headline">Children</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Ages 2 - 12</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-lowest transition-colors active:scale-90">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-6 text-center font-bold text-xl font-headline">00</span>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-lowest transition-colors active:scale-90">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Button -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">info</span>
+<p class="text-xs font-medium text-on-surface-variant">Stay total: <span class="text-on-surface font-bold">6 Nights</span></p>
+</div>
+<button class="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg shadow-primary-container/20 hover:shadow-primary-container/40 active:scale-[0.98] transition-all flex items-center justify-center gap-3 uppercase tracking-widest text-sm">
+                            Continue
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-[0_-8px_30px_rgb(0,0,0,0.04)] rounded-t-3xl border-t border-teal-50 dark:border-slate-800 md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-teal-500 transition-colors active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-xl px-5 py-2 hover:text-teal-500 transition-colors active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-teal-500 transition-colors active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-teal-500 transition-colors active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

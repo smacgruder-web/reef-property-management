@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Financial Statements | Estate Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#006b5e",
+                    "surface-tint": "#006b5f",
+                    "tertiary-container": "#09b8a4",
+                    "surface-container": "#eaedff",
+                    "on-surface": "#151b2d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "secondary-container": "#d5e0f8",
+                    "tertiary-fixed": "#6ef9e2",
+                    "surface-container-highest": "#dce1fb",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-tertiary-fixed": "#00201b",
+                    "on-secondary-container": "#586377",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#3c4947",
+                    "surface-variant": "#dce1fb",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "primary-fixed-dim": "#4fdbc8",
+                    "error-container": "#ffdad6",
+                    "primary": "#006b5f",
+                    "outline": "#6c7a77",
+                    "surface": "#faf8ff",
+                    "secondary-fixed": "#d8e3fb",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-dim": "#d4d9f2",
+                    "surface-container-low": "#f2f3ff",
+                    "on-primary-container": "#00423b",
+                    "on-primary-fixed-variant": "#005048",
+                    "background": "#faf8ff",
+                    "on-primary": "#ffffff",
+                    "secondary": "#545f73",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#71f8e4",
+                    "primary-container": "#14b8a6",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-primary-fixed": "#00201c",
+                    "tertiary-fixed-dim": "#4ddcc6",
+                    "outline-variant": "#bbcac6",
+                    "on-tertiary-container": "#00423a",
+                    "inverse-primary": "#4fdbc8",
+                    "surface-container-high": "#e3e7ff",
+                    "inverse-surface": "#2a3043",
+                    "on-background": "#151b2d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -10px rgba(21, 27, 45, 0.05);
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.85);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm docked full-width top-0 sticky z-40">
+<div class="flex items-center justify-between px-6 h-20 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-700 dark:text-teal-400 text-2xl">analytics</span>
+<h1 class="font-['Manrope'] font-bold tracking-tight text-3xl text-teal-800 dark:text-teal-300">Portfolio</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-8 px-8">
+<button class="text-teal-700 dark:text-teal-400 font-['Manrope'] font-semibold transition-opacity hover:opacity-80">Statements</button>
+<button class="text-slate-500 dark:text-slate-400 font-['Manrope'] font-semibold transition-opacity hover:opacity-80">Properties</button>
+<button class="text-slate-500 dark:text-slate-400 font-['Manrope'] font-semibold transition-opacity hover:opacity-80">Insights</button>
+</div>
+<div class="h-10 w-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary/10">
+<img class="h-full w-full object-cover" data-alt="professional headshot of a mature businessman in a navy suit with confident expression and soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADkWi34GJhkLJr10T9YnfCwtpJpanWhrIxdriRSzgkzZIjnp-ygbgQOygfW89H7XpHrUQzr6IfV568dJ5eN5kjvg8OitVlaLtuOL_fKT3qyQ3pz1R6yvjb-NT5NWdOKOv6a4-Rx-N38sRjKtWwWA4JgDbDxi-WVuYXlWyVooeBfJ6Zrdeq4b87atjUBxTN5Iq_rE-xFu-wKyjRlFl6jgjan2C2IFMFddunoqiDVd6jnPza4io35vx2sv0JmUFy3jOWn6reabHeEerM"/>
+</div>
+</div>
+</div>
+<div class="h-[1px] w-full bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-900"></div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-6 py-12 md:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24">
+<!-- Hero Editorial Section -->
+<div class="lg:col-span-12 mb-4">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-2 block">Premium Tier Asset Management</span>
+<h2 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tighter text-on-surface">Financial <span class="text-primary-container">Flow</span></h2>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-low px-6 py-4 rounded-xl editorial-shadow">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Fiscal Year Payout</p>
+<p class="font-headline text-2xl font-bold text-primary">$442,850.00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Left Column: Detailed Breakdown (Asymmetric Bento) -->
+<div class="lg:col-span-7 space-y-8">
+<section class="bg-surface-container-lowest rounded-full p-8 editorial-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="flex justify-between items-start mb-10 relative">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-1">Current Month Summary</h3>
+<p class="text-on-surface-variant font-medium">October 2023 • 12 Managed Units</p>
+</div>
+<span class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold">Active Statement</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12 relative">
+<div class="space-y-1">
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Gross Rental Income</p>
+<p class="font-headline text-3xl font-bold text-on-surface">$52,400.00</p>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mt-4">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+<div class="space-y-1">
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Management Fees (8%)</p>
+<p class="font-headline text-3xl font-bold text-on-surface-variant">-$4,192.00</p>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mt-4">
+<div class="h-full bg-secondary-container w-[8%]"></div>
+</div>
+</div>
+<div class="space-y-1">
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Maintenance Expenses</p>
+<p class="font-headline text-3xl font-bold text-on-surface-variant">-$2,845.00</p>
+<p class="text-xs text-error font-medium mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">warning</span> HVAC Repair: Unit 402
+                        </p>
+</div>
+<div class="bg-primary-container text-on-primary-container p-6 rounded-xl space-y-1 shadow-lg shadow-primary/10">
+<p class="font-label text-xs uppercase tracking-widest opacity-80">Net Monthly Payout</p>
+<p class="font-headline text-4xl font-extrabold">$45,363.00</p>
+<p class="text-xs font-medium pt-4 opacity-90">Scheduled for Oct 31, 2023</p>
+</div>
+</div>
+</section>
+<!-- Visualization Card -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-low p-8 rounded-full">
+<h4 class="font-headline font-bold text-lg mb-6">Income vs Expenses</h4>
+<div class="flex items-end gap-3 h-32">
+<div class="flex-1 bg-primary rounded-t-lg h-[90%]"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[85%]"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[95%]"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[88%]"></div>
+<div class="flex-1 bg-primary-container rounded-t-lg h-[100%] shadow-lg shadow-primary/20"></div>
+<div class="w-2 h-full bg-transparent"></div>
+<div class="flex-1 bg-secondary rounded-t-lg h-[15%]"></div>
+</div>
+<div class="mt-4 flex justify-between font-label text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold">
+<span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Exp</span>
+</div>
+</div>
+<div class="relative rounded-full overflow-hidden h-full min-h-[200px] group cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="low angle architectural shot of a modern glass skyscraper reflecting a clear blue sky with crisp clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB68npecmt9Qc4w5tOBOt51QlUQUG4T8Vqkz5aWS4iJ94unZrTYAAYzdBMCfkDJ9uDUxz3UadMe3LruYU0l_8zUXduYAWOUUNaXSo1IR0Xd8UbO8Zh40erRjN2iyta8TfPfuLjrerOFFGd9SIQEZ3XgBXCvoKR1ISF-CQKmOkhFnuJoQAZ67VsINQQDyIQrcx8kWOru9Q0czy-jGlSH6dBYlW_8V7XqcXOO7Wm4ubegf1yEag4CFH5hyCo7p73VLgPsXrmXNmcELlXI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-label text-[10px] uppercase tracking-widest mb-1 opacity-80">Portfolio Highlight</p>
+<p class="font-headline font-bold text-lg">The Glass Pavilion</p>
+<p class="text-sm opacity-70">100% Occupancy reached this month</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Historical Statements -->
+<div class="lg:col-span-5">
+<div class="bg-white/40 backdrop-blur-md rounded-full p-8 border border-white/20 editorial-shadow">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline text-2xl font-bold">Monthly Statements</h3>
+<button class="text-primary hover:bg-primary/5 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+<div class="space-y-2">
+<!-- Statement Item -->
+<div class="flex items-center justify-between p-5 rounded-full hover:bg-white transition-all group">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">September 2023</p>
+<p class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Released Oct 02 • $42,120.00</p>
+</div>
+</div>
+<button class="flex items-center gap-2 font-label text-[10px] font-bold uppercase tracking-widest text-primary border border-primary/20 px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">
+                            PDF <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-5 rounded-full hover:bg-white transition-all group">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">August 2023</p>
+<p class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Released Sep 01 • $39,840.00</p>
+</div>
+</div>
+<button class="flex items-center gap-2 font-label text-[10px] font-bold uppercase tracking-widest text-primary border border-primary/20 px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">
+                            PDF <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-5 rounded-full hover:bg-white transition-all group">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">July 2023</p>
+<p class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Released Aug 03 • $41,500.00</p>
+</div>
+</div>
+<button class="flex items-center gap-2 font-label text-[10px] font-bold uppercase tracking-widest text-primary border border-primary/20 px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">
+                            PDF <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-5 rounded-full hover:bg-white transition-all group">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">June 2023</p>
+<p class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Released Jul 02 • $38,200.00</p>
+</div>
+</div>
+<button class="flex items-center gap-2 font-label text-[10px] font-bold uppercase tracking-widest text-primary border border-primary/20 px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">
+                            PDF <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-5 rounded-full hover:bg-white transition-all group">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">May 2023</p>
+<p class="text-xs font-medium text-on-surface-variant uppercase tracking-widest">Released Jun 01 • $40,110.00</p>
+</div>
+</div>
+<button class="flex items-center gap-2 font-label text-[10px] font-bold uppercase tracking-widest text-primary border border-primary/20 px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">
+                            PDF <span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="mt-10 p-6 bg-surface-container-high rounded-full border border-teal-500/5">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-teal-600">contact_support</span>
+<div>
+<p class="font-headline font-bold text-sm">Questions about your payout?</p>
+<p class="text-xs text-on-surface-variant mt-1">Contact your dedicated portfolio manager available 24/7 for premium tier owners.</p>
+<button class="mt-4 font-label text-[10px] font-extrabold text-primary hover:underline uppercase tracking-[0.1em]">Open Support Ticket</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-teal-500/10 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 md:hidden">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider">Overview</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider">Health</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider">Properties</span>
+</div>
+<div class="flex flex-col items-center justify-center text-teal-700 dark:text-teal-300 bg-teal-50/50 dark:bg-teal-900/20 rounded-xl px-4 py-1.5 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder_open</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider">Docs</span>
+</div>
+</nav>
+<!-- Contextual FAB - Restricted context but useful here for statement requests -->
+<button class="fixed bottom-24 right-6 md:bottom-12 md:right-12 h-16 w-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 active:scale-95 z-40 group">
+<span class="material-symbols-outlined text-3xl">add</span>
+<span class="absolute right-20 bg-on-surface text-white px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Request Custom Report</span>
+</button>
+</body></html>

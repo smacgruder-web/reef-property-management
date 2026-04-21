@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Rate Predictor | Market Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#dce1fb",
+                        "primary-fixed": "#71f8e4",
+                        "outline": "#6c7a77",
+                        "secondary-fixed": "#d8e3fb",
+                        "surface-bright": "#faf8ff",
+                        "tertiary-container": "#09b8a4",
+                        "surface": "#faf8ff",
+                        "on-surface": "#151b2d",
+                        "surface-container": "#eaedff",
+                        "primary-container": "#14b8a6",
+                        "primary": "#006b5f",
+                        "inverse-surface": "#2a3043",
+                        "tertiary": "#006b5e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "on-primary-fixed-variant": "#005048",
+                        "outline-variant": "#bbcac6",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d4d9f2",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "secondary-container": "#d5e0f8",
+                        "surface-container-low": "#f2f3ff",
+                        "surface-container-high": "#e3e7ff",
+                        "on-primary-container": "#00423b",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#6ef9e2",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#dce1fb",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-primary-fixed": "#00201c",
+                        "on-surface-variant": "#3c4947",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#151b2d",
+                        "on-secondary-container": "#586377",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "inverse-on-surface": "#eef0ff",
+                        "secondary": "#545f73",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#4fdbc8",
+                        "background": "#faf8ff",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "surface-tint": "#006b5f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#00423a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Professional portrait of a male real estate investor in a clean lit studio background wearing a navy blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOPOsA35R-LaRZVfNfSSis9-SohXCgVvtq2MjE2VCrrmXtvK5QxpsHwiOk3Y0_w-FBkcHz-teD4X_3z-7uaI7iOxW6mCB3ylDR6qMyjAdH4rRXSPOIv1lrRrerIJXxO2Kr1EWR6yASqrau_eNyjKlhrSDLoU39jPBqNX5bcVtM_9JGe8mNu6xfcBBrs3S8wlroOagryO7VErsWZmXJCgw5goLV1XuxPhbyueWIqExg6l2OtCeej-mG2Z7ycdZHAqhqGA_2YCl33aHP"/>
+</div>
+<span class="font-manrope tracking-tight font-bold text-lg text-teal-700 dark:text-teal-400">Market Insights</span>
+</div>
+<button class="material-symbols-outlined text-slate-500 hover:opacity-80 transition-opacity active:scale-95 duration-200" data-icon="notifications">notifications</button>
+</div>
+</nav>
+<main class="pt-24 px-6 max-w-5xl mx-auto">
+<!-- Header & Property Selector -->
+<header class="mb-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<span class="font-label text-sm font-semibold uppercase tracking-widest text-primary">Revenue Optimization</span>
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">AI-Powered Recommendations</h1>
+</div>
+<div class="relative min-w-[240px]">
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10 cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="domain">domain</span>
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant">Active Property</span>
+<span class="font-semibold text-sm">Azure Bay Penthouse</span>
+</div>
+</div>
+<span class="material-symbols-outlined" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Visualization Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-full p-8 shadow-sm border border-outline-variant/10 overflow-hidden relative">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="font-headline text-xl font-bold mb-1">Rate Forecast</h3>
+<p class="text-on-surface-variant text-sm">Comparison of current vs. predicted optimal rates</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-slate-300"></div>
+<span class="text-xs font-medium">Current</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs font-medium">Predicted</span>
+</div>
+</div>
+</div>
+<!-- Custom Chart Visualization (SVG) -->
+<div class="w-full h-64 relative mt-4">
+<svg class="w-full h-full drop-shadow-lg" viewbox="0 0 800 300">
+<!-- Grid Lines -->
+<line stroke="#eaedff" stroke-width="1" x1="0" x2="800" y1="250" y2="250"></line>
+<line stroke="#eaedff" stroke-width="1" x1="0" x2="800" y1="175" y2="175"></line>
+<line stroke="#eaedff" stroke-width="1" x1="0" x2="800" y1="100" y2="100"></line>
+<!-- Area Gradient Current -->
+<path d="M0 250 L100 230 L200 240 L300 210 L400 220 L500 235 L600 225 L700 245 L800 240 L800 300 L0 300 Z" fill="rgba(203, 213, 225, 0.1)"></path>
+<!-- Path Current -->
+<path d="M0 250 L100 230 L200 240 L300 210 L400 220 L500 235 L600 225 L700 245 L800 240" fill="none" stroke="#94a3b8" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Area Gradient Predicted -->
+<path d="M0 250 L100 210 L200 180 L300 140 L400 110 L500 130 L600 90 L700 110 L800 95 L800 300 L0 300 Z" fill="url(#grad1)" opacity="0.2"></path>
+<defs>
+<lineargradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#14b8a6;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<!-- Path Predicted -->
+<path d="M0 250 L100 210 L200 180 L300 140 L400 110 L500 130 L600 90 L700 110 L800 95" fill="none" stroke="#006b5f" stroke-linecap="round" stroke-width="4"></path>
+<!-- Highlight Point -->
+<circle cx="600" cy="90" fill="#006b5f" r="6"></circle>
+<circle cx="600" cy="90" fill="#006b5f" opacity="0.2" r="12"></circle>
+</svg>
+<div class="absolute top-[30px] right-[160px] bg-primary text-on-primary px-3 py-1 rounded-lg text-xs font-bold shadow-xl">
+                        Peak Night: $442
+                    </div>
+</div>
+<div class="flex justify-between mt-6 px-2 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">
+<span>Oct 12</span>
+<span>Oct 14</span>
+<span>Oct 16</span>
+<span>Oct 18</span>
+<span>Oct 20</span>
+<span>Oct 22</span>
+<span>Oct 24</span>
+</div>
+</div>
+<!-- Insights Section -->
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low rounded-full p-6 border border-primary/10 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5">
+<span class="material-symbols-outlined text-8xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="lightbulb">lightbulb</span>
+                        Strategic Insights
+                    </h4>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-lowest rounded-xl border-l-4 border-primary shadow-sm">
+<div class="flex justify-between items-start mb-1">
+<span class="font-bold text-sm">Peak Season Demand</span>
+<span class="text-primary font-bold text-sm">+15%</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Booking velocity for beachfront units has increased by 12% in the last 48h.</p>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-xl border-l-4 border-tertiary-container shadow-sm">
+<div class="flex justify-between items-start mb-1">
+<span class="font-bold text-sm">Upcoming Jazz Festival</span>
+<span class="text-tertiary-container font-bold text-sm">+22%</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Local events on Oct 18-20 are driving higher average daily rates in your area.</p>
+</div>
+</div>
+</div>
+<!-- Metrics Bento -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container rounded-xl p-4 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="trending_up">trending_up</span>
+<div>
+<div class="text-2xl font-extrabold font-headline">88%</div>
+<div class="text-[10px] font-bold uppercase text-on-surface-variant tracking-wider">Target Occupancy</div>
+</div>
+</div>
+<div class="bg-primary text-on-primary rounded-xl p-4 flex flex-col justify-between aspect-square shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-xl" data-icon="payments">payments</span>
+<div>
+<div class="text-2xl font-extrabold font-headline">+$1.2k</div>
+<div class="text-[10px] font-bold uppercase text-on-primary/80 tracking-wider">Est. Revenue Lift</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Property Preview (Asymmetric Editorial Style) -->
+<section class="mt-12 relative">
+<div class="grid grid-cols-1 md:grid-cols-2 items-center gap-0">
+<div class="z-10 order-2 md:order-1">
+<div class="bg-surface-container-lowest p-8 md:p-12 shadow-2xl rounded-xl -mr-0 md:-mr-20 border border-outline-variant/10">
+<span class="text-primary font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Recommended Update</span>
+<h2 class="font-headline text-3xl font-extrabold mb-6 leading-tight">Apply New Seasonal Rates</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">Based on current market volatility and competitor positioning, we recommend adjusting your weekend rates for the next 4 weeks to maximize yield without sacrificing occupancy.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-xl font-bold flex items-center justify-center gap-3 shadow-xl shadow-primary/25 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="magic_button">magic_button</span>
+                                Apply Recommended Rates
+                            </button>
+<button class="px-8 py-4 bg-surface text-on-surface border border-outline-variant/30 rounded-xl font-bold hover:bg-surface-container-low transition-colors">
+                                Review Details
+                            </button>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 h-64 md:h-[450px] w-full overflow-hidden rounded-xl shadow-inner">
+<img alt="Luxury Property" class="w-full h-full object-cover" data-alt="Modern luxury penthouse living room with floor to ceiling windows overlooking a teal ocean at dusk with designer furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYfkw_LDwaZeEVkG7fHJH5r9S515kr2zzO-7ojBV4qsGjrFsANLRN1yewyruKGpRIXjFQUXX5Dtd3VAo9F49tRHNZZeiTPUcFnRNkPu3DFXPWLnp-NNk2KdcqMOZ5g-6QeEXjZTEAzjR5p946itCBgBJeHOgy8rlPfGIyQoq_G09VMjcb518uGAtiiMQ38ZHvm_Ap4zmErqk1za63VyuyQB7stxfTCQMGWRfutjaNoZuR_R7g9E5vH9RcHSSHg_gX23bx7LS38z0Dl"/>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-t border-teal-500/10 shadow-[0_-4px_20px_0_rgba(20,184,166,0.05)] md:hidden">
+<div class="flex justify-around items-center w-full px-4 pb-6 pt-2">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-teal-500 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Portfolio</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-xl px-3 py-1.5 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Predictor</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-teal-500 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Boost</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-teal-500 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Desktop Navigation (Integrated into layout as per UI rules) -->
+<div class="hidden md:flex fixed right-8 top-1/2 -translate-y-1/2 flex-col gap-6 z-50">
+<div class="p-3 bg-surface-container-lowest border border-outline-variant/10 rounded-full shadow-2xl flex flex-col gap-4">
+<button class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" title="Portfolio">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+</button>
+<button class="w-12 h-12 rounded-full flex items-center justify-center bg-primary text-on-primary shadow-lg shadow-primary/30" title="Predictor">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</button>
+<button class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" title="Marketplaces">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</button>
+<button class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" title="Settings">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</div>
+</body></html>

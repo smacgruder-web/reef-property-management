@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Estate Portfolio | Documents &amp; Tax Center</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#006b5e",
+                    "surface-tint": "#006b5f",
+                    "tertiary-container": "#09b8a4",
+                    "surface-container": "#eaedff",
+                    "on-surface": "#151b2d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "secondary-container": "#d5e0f8",
+                    "tertiary-fixed": "#6ef9e2",
+                    "surface-container-highest": "#dce1fb",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-tertiary-fixed": "#00201b",
+                    "on-secondary-container": "#586377",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#3c4947",
+                    "surface-variant": "#dce1fb",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "primary-fixed-dim": "#4fdbc8",
+                    "error-container": "#ffdad6",
+                    "primary": "#006b5f",
+                    "outline": "#6c7a77",
+                    "surface": "#faf8ff",
+                    "secondary-fixed": "#d8e3fb",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-dim": "#d4d9f2",
+                    "surface-container-low": "#f2f3ff",
+                    "on-primary-container": "#00423b",
+                    "on-primary-fixed-variant": "#005048",
+                    "background": "#faf8ff",
+                    "on-primary": "#ffffff",
+                    "secondary": "#545f73",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#71f8e4",
+                    "primary-container": "#14b8a6",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-primary-fixed": "#00201c",
+                    "tertiary-fixed-dim": "#4ddcc6",
+                    "outline-variant": "#bbcac6",
+                    "on-tertiary-container": "#00423a",
+                    "inverse-primary": "#4fdbc8",
+                    "surface-container-high": "#e3e7ff",
+                    "inverse-surface": "#2a3043",
+                    "on-background": "#151b2d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm docked full-width top-0 sticky z-40 bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-900 transition-all duration-300 ease-in-out">
+<div class="flex items-center justify-between px-6 h-20 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-700 dark:text-teal-400 text-2xl">analytics</span>
+<span class="font-['Manrope'] font-extrabold text-teal-800 dark:text-teal-300 text-xl">Portfolio</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity font-medium" href="#">Overview</a>
+<a class="text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity font-medium" href="#">Health</a>
+<a class="text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity font-medium" href="#">Properties</a>
+<a class="text-teal-700 dark:text-teal-400 hover:opacity-80 transition-opacity font-bold" href="#">Docs</a>
+</nav>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-white shadow-sm">
+<img class="w-full h-full object-cover" data-alt="professional portrait of an executive property owner in a sharp suit with a confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIkG8t7XMEIJBGxWv-8W_tcVpLmwhws4S2o8rm4ZtSMdE77iBhxSqKXYMh_YzQv1djnOxzy_92GiwLM5GRfhAVuaBs1XM4IJmm8uMOAtnzEN1J2Zlh19LVRs1dYVoi4sdT8UOcJes5gJOFqXdcS4Sn1fpl-pLaQxCxyqHiyiP6CqZ0eEL4X2cl5BB5_gYGF8wLEf3UPqIMY8OfXdPp58T7H9ZYCsbi7nGwB-z6s_hftiXM94B359hAYhS_eFS5qIF8smPVZmOROpK3"/>
+</div>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-6 py-12">
+<!-- Hero & Context -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<p class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest text-primary mb-2">Vault Access</p>
+<h1 class="font-['Manrope'] font-bold tracking-tight text-5xl text-on-surface">Documents &amp; Tax Center</h1>
+<p class="text-on-surface-variant max-w-2xl mt-4 text-lg">Secure architectural repository for your premium real estate holdings, tax compliances, and operational certificates.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg shadow-primary/10 hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined">cloud_upload</span>
+                    Upload Document
+                </button>
+</div>
+</section>
+<!-- Bento Grid for Categories -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+<!-- Insurance -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-full shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden flex flex-col justify-between aspect-square">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+<div class="relative z-10">
+<div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Insurance</h3>
+<p class="text-on-surface-variant text-sm mt-2">Active Policies &amp; Certificates of Liability</p>
+</div>
+<div class="relative z-10 flex items-center justify-between text-primary font-semibold text-sm">
+<span>12 Files</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Management Agreements -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-full shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden flex flex-col justify-between aspect-square">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-tertiary/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+<div class="relative z-10">
+<div class="w-14 h-14 bg-tertiary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">handshake</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Management Agreements</h3>
+<p class="text-on-surface-variant text-sm mt-2">Contractual mandates and operator terms</p>
+</div>
+<div class="relative z-10 flex items-center justify-between text-tertiary font-semibold text-sm">
+<span>4 Files</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Tax Form 1099 -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-full shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden flex flex-col justify-between aspect-square">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-error/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+<div class="relative z-10">
+<div class="w-14 h-14 bg-error/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-error text-3xl">receipt_long</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Tax Form 1099</h3>
+<p class="text-on-surface-variant text-sm mt-2">IRS distributions and annual yield reports</p>
+</div>
+<div class="relative z-10 flex items-center justify-between text-error font-semibold text-sm">
+<span>2023 Vault</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Inspection Reports -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-full shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden flex flex-col justify-between aspect-square">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+<div class="relative z-10">
+<div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">fact_check</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Inspection Reports</h3>
+<p class="text-on-surface-variant text-sm mt-2">Quarterly audit and structural assessments</p>
+</div>
+<div class="relative z-10 flex items-center justify-between text-secondary font-semibold text-sm">
+<span>8 Files</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- Recent Document Uploads - Editorial List Layout -->
+<section class="bg-surface-container-low rounded-xl p-8 mb-24">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-3xl font-bold tracking-tight">Recent Activity</h2>
+<div class="flex gap-4">
+<button class="bg-surface-container-lowest px-4 py-2 rounded-lg text-sm font-medium border border-outline-variant/10 hover:bg-white transition-colors">Filter</button>
+<button class="bg-surface-container-lowest px-4 py-2 rounded-lg text-sm font-medium border border-outline-variant/10 hover:bg-white transition-colors">Sort by Date</button>
+</div>
+</div>
+<div class="space-y-1">
+<!-- Document Row 1 -->
+<div class="group flex flex-wrap items-center justify-between p-6 bg-surface-container-lowest hover:bg-white transition-all border-b border-outline-variant/5">
+<div class="flex items-center gap-6 flex-1 min-w-[300px]">
+<div class="w-12 h-12 bg-primary/5 text-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div>
+<p class="font-bold text-lg text-on-surface">2024_Q1_Property_Assessment.pdf</p>
+<p class="text-sm text-on-surface-variant">Folder: Inspection Reports</p>
+</div>
+</div>
+<div class="flex items-center gap-12 text-sm font-medium text-on-surface-variant flex-none">
+<div class="flex flex-col items-end">
+<span class="text-on-surface">Mar 14, 2024</span>
+<span class="text-[10px] uppercase tracking-tighter opacity-50">Upload Date</span>
+</div>
+<div class="flex flex-col items-end w-20">
+<span class="text-on-surface">4.2 MB</span>
+<span class="text-[10px] uppercase tracking-tighter opacity-50">File Size</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+<button class="p-2 hover:bg-secondary/10 rounded-lg text-secondary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Document Row 2 -->
+<div class="group flex flex-wrap items-center justify-between p-6 bg-surface-container-lowest hover:bg-white transition-all border-b border-outline-variant/5">
+<div class="flex items-center gap-6 flex-1 min-w-[300px]">
+<div class="w-12 h-12 bg-primary/5 text-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
+</div>
+<div>
+<p class="font-bold text-lg text-on-surface">Liability_Renewal_Cert_2024.pdf</p>
+<p class="text-sm text-on-surface-variant">Folder: Insurance</p>
+</div>
+</div>
+<div class="flex items-center gap-12 text-sm font-medium text-on-surface-variant flex-none">
+<div class="flex flex-col items-end">
+<span class="text-on-surface">Mar 08, 2024</span>
+<span class="text-[10px] uppercase tracking-tighter opacity-50">Upload Date</span>
+</div>
+<div class="flex flex-col items-end w-20">
+<span class="text-on-surface">1.8 MB</span>
+<span class="text-[10px] uppercase tracking-tighter opacity-50">File Size</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+<button class="p-2 hover:bg-secondary/10 rounded-lg text-secondary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Document Row 3 -->
+<div class="group flex flex-wrap items-center justify-between p-6 bg-surface-container-lowest hover:bg-white transition-all border-b border-outline-variant/5">
+<div class="flex items-center gap-6 flex-1 min-w-[300px]">
+<div class="w-12 h-12 bg-primary/5 text-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">article</span>
+</div>
+<div>
+<p class="font-bold text-lg text-on-surface">Form_1099_DIV_Consolidated.pdf</p>
+<p class="text-sm text-on-surface-variant">Folder: Tax Form 1099</p>
+</div>
+</div>
+<div class="flex items-center gap-12 text-sm font-medium text-on-surface-variant flex-none">
+<div class="flex flex-col items-end">
+<span class="text-on-surface">Feb 28, 2024</span>
+<span class="text-[10px] uppercase tracking-tighter opacity-50">Upload Date</span>
+</div>
+<div class="flex flex-col items-end w-20">
+<span class="text-on-surface">850 KB</span>
+<span class="text-[10px] uppercase tracking-tighter opacity-50">File Size</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+<button class="p-2 hover:bg-secondary/10 rounded-lg text-secondary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10 flex justify-center">
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                    View Complete Archive
+                    <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-teal-500/10 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider">Overview</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider">Health</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-60 scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider">Properties</span>
+</a>
+<a class="flex flex-col items-center justify-center text-teal-700 dark:text-teal-300 bg-teal-50/50 dark:bg-teal-900/20 rounded-xl px-4 py-1.5 scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider">Docs</span>
+</a>
+</nav>
+<!-- Navigation Drawer (Conceptual Overlay Sidebar for Web) -->
+<aside class="hidden xl:flex fixed right-0 top-20 h-[calc(100vh-5rem)] w-80 bg-slate-50 dark:bg-slate-950 flex flex-col py-8 gap-4 shadow-2xl border-l border-teal-500/5 z-30">
+<div class="px-6 mb-4">
+<h4 class="font-headline font-bold text-on-surface-variant uppercase text-xs tracking-[0.2em] mb-6">Expert Services</h4>
+<div class="space-y-2">
+<div class="group flex items-center gap-4 p-3 bg-teal-600 text-white rounded-lg mx-2 cursor-pointer transition-transform duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="font-semibold">Investment Strategy</span>
+</div>
+<div class="group flex items-center gap-4 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 mx-2 rounded-lg cursor-pointer transition-transform duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-semibold">Tax Reports</span>
+</div>
+<div class="group flex items-center gap-4 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 mx-2 rounded-lg cursor-pointer transition-transform duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined">settings_suggest</span>
+<span class="font-semibold">Account Settings</span>
+</div>
+<div class="group flex items-center gap-4 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 mx-2 rounded-lg cursor-pointer transition-transform duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-semibold">Support</span>
+</div>
+</div>
+</div>
+<div class="mt-auto px-6 py-8 border-t border-teal-500/5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-600">person</span>
+</div>
+<div>
+<p class="font-bold text-sm leading-none">Estate Portfolio</p>
+<p class="text-xs text-on-surface-variant">Premium Tier</p>
+</div>
+</div>
+<button class="w-full mt-6 flex items-center justify-center gap-2 py-3 rounded-lg border border-outline-variant hover:bg-error/5 hover:text-error transition-colors text-sm font-bold">
+<span class="material-symbols-outlined text-sm">logout</span>
+                Logout
+            </button>
+</div>
+</aside>
+</body></html>

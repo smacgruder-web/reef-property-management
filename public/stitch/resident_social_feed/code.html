@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resident Social Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#545f73",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#bbcac6",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "surface-container-high": "#e3e7ff",
+                        "inverse-primary": "#4fdbc8",
+                        "background": "#faf8ff",
+                        "on-background": "#151b2d",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2a3043",
+                        "on-primary-fixed-variant": "#005048",
+                        "tertiary-fixed": "#6ef9e2",
+                        "primary-fixed": "#71f8e4",
+                        "on-primary-container": "#00423b",
+                        "surface-dim": "#d4d9f2",
+                        "on-surface-variant": "#3c4947",
+                        "surface-container-low": "#f2f3ff",
+                        "surface-container-highest": "#dce1fb",
+                        "on-secondary-fixed": "#111c2d",
+                        "secondary-container": "#d5e0f8",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-primary-fixed": "#00201c",
+                        "error-container": "#ffdad6",
+                        "surface": "#faf8ff",
+                        "on-surface": "#151b2d",
+                        "outline": "#6c7a77",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#006b5e",
+                        "primary-container": "#14b8a6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#586377",
+                        "surface-variant": "#dce1fb",
+                        "primary": "#006b5f",
+                        "tertiary-container": "#09b8a4",
+                        "surface-bright": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "surface-tint": "#006b5f",
+                        "on-tertiary-container": "#00423a",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "inverse-on-surface": "#eef0ff",
+                        "tertiary-fixed-dim": "#4ddcc6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(21,27,45,0.04)]">
+<div class="flex justify-between items-center w-full px-6 py-3">
+<div class="flex items-center gap-3">
+<img alt="Resident Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary-container" data-alt="Close-up portrait of a friendly man with a professional smile, warm natural lighting in a modern interior setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUrzY6oY-x_lrVdtnhrADvzDUMn5Y1vBQwwmDYmAB50Pg3hExBhbKw3Pp6G6ggd7BkbU6D9V1N84AtheMQqQhOT_32xBaYIKJ3roHDKZmp1W59JmcVQ_i4KG7QDUQMZbrEGW3wQ3luacxtWhzZTWxdI1swj30n01c1HJa5XZAwfbhPeB5OCZedzGP-iAAILCrs_z7huVfx3IcTSDVlW2eWP7_dX-dw0BT4vCnNfpjsrWvpP7kD7Guo2abbx0Ri68bo44lGiGHAvA7R"/>
+<h1 class="text-teal-700 font-manrope font-extrabold tracking-tighter text-xl">Reef Property</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100/50 transition-colors">
+<span class="material-symbols-outlined text-teal-600">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-4 mt-6">
+<!-- Post Something Section -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm mb-8 transition-transform active:scale-[0.98]">
+<div class="flex gap-4 items-start">
+<img alt="Profile" class="w-12 h-12 rounded-full object-cover" data-alt="Professional profile headshot of a resident in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2mKZce6aCb5tq50-ouURWxV59cVUVXos7f-4tA5E_s3rUTx5gnPIp9gBpxLTojb3A2XuyL4lLz2rcfTmUSONqUJGd-mNKK0FKBgARU0MrZ_B8qtMgMO2fSh4Cc4hINNTuPb1d0cdt2D8VtL50Ph_CB4wdXFbPjENNw03at62kfo7VXWt4p7QFOpwkBerVXKr0sfrJ5zRb1CT1ntUQwvHenVC4XYL-zvJpj09PuvhSu_Ff4C82o8Hwim_KQEgivxHyaBKB_Z6LLC8H"/>
+<div class="flex-grow">
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary-container resize-none placeholder:text-on-surface-variant/60" placeholder="What's happening in the community?" rows="2"></textarea>
+<div class="flex justify-between items-center mt-4">
+<div class="flex gap-2">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">image</span>
+</button>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg font-semibold text-sm shadow-md hover:opacity-90 transition-opacity">
+                            Post
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Feed Filter (Editorial Chips) -->
+<div class="flex gap-3 mb-6 overflow-x-auto pb-2">
+<span class="bg-primary text-on-primary px-4 py-1.5 rounded-full text-sm font-medium">All Posts</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary-container hover:text-on-primary-container transition-colors cursor-pointer">Events</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary-container hover:text-on-primary-container transition-colors cursor-pointer">Marketplace</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary-container hover:text-on-primary-container transition-colors cursor-pointer">Notices</span>
+</div>
+<!-- Feed Content -->
+<div class="space-y-6">
+<!-- Post 1: Image Focus -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(21,27,45,0.03)] border border-outline-variant/10">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Elena" class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a young woman with a warm expression, outdoor urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDia55PI8Vx13y3NeO4ghjMtJnziHSbbHHCR2Bn4B3wyQixa-xNNzn-1jUU5xPOUJ5Lt31pqJi2i-PtsVgaVPotIGr3WwYFLGHYbKOnJthFgyGWNXfyGzYg2it2r56YlzoYhJ_ZDUQOdznmcdxI7yFgG9quZewwJByxa3Gqlg-Kw-NHNGGbVAQAhkEaJASqHWaIrD9WT3cW0mignG0Il-ClJlVGuUGExQQlhxxZmsSgpEm6DEpteHaisk2r_6hxAfxhLAK2jrGvnyI9"/>
+<div>
+<h3 class="font-bold text-on-surface leading-tight">Elena Rodriguez</h3>
+<p class="text-xs text-on-surface-variant">Unit 402 • 2h ago</p>
+</div>
+</div>
+<p class="text-on-surface-variant mb-4 leading-relaxed">The sunset from the roof terrace tonight is absolutely breathtaking. Highly recommend heading up for the fresh air! 🌅</p>
+</div>
+<img alt="Sunset view" class="w-full aspect-video object-cover" data-alt="Stunning architectural view of a luxury building rooftop terrace at sunset with golden orange sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIfMyJCYBUiK_0TbTb2Bggb5ZQ-iYmzYgmQ0Jj3lGnyjG4Mj12DWS4Sn9Ms7oqZHJKYSvoqb60A7XB6GtepYG0cG6kTOsJWShOYdSou4lDhbuQEIkfgBTIIkdWTff4A0HyY3UVEZ8ydJ-7dKQrMJ1m7HpkjMNS8nNzMYKu5woBHh1nmoOAXs92NZxn7JwcNr4xjyyrhBw8m2XlYNyjDJGOR6YWLscL_2OSvsPfxJUF_2yKkZV0VXMSfPs6wHkCENssfSbLAtWKw64O"/>
+<div class="p-4 flex items-center justify-between border-t border-surface-container">
+<div class="flex gap-4">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-xs font-semibold">24</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+<span class="text-xs font-semibold">5</span>
+</button>
+</div>
+<button class="text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</article>
+<!-- Post 2: Announcement Focus -->
+<article class="bg-surface-container-low border-l-4 border-primary rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">campaign</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface leading-tight">Management Notice</h3>
+<p class="text-xs text-on-surface-variant">Admin • 5h ago</p>
+</div>
+</div>
+<h4 class="text-lg font-bold text-primary mb-2">Pool Maintenance Schedule</h4>
+<p class="text-on-surface-variant leading-relaxed mb-4">Please be advised that the main swimming pool will be closed for routine maintenance this coming Thursday from 8:00 AM to 4:00 PM. We apologize for any inconvenience.</p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/20">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="text-xs font-semibold">12</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+<span class="text-xs font-semibold">2</span>
+</button>
+</div>
+</article>
+<!-- Post 3: Community Event (Bento Style Card) -->
+<article class="relative bg-surface-container-highest rounded-xl overflow-hidden group">
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="relative h-48 md:h-full">
+<img alt="Yoga Class" class="absolute inset-0 w-full h-full object-cover" data-alt="Group of people practicing yoga in a sunlit community studio with large glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDODmEr_r5RcDXzJcQNGrP4LsQVWvih1Zk6VV5k-1cKx-T73lpgTMxjXpZEXRsVhtNDe91MDo7qZ5_48glIUx8Uo0ftzD49Exh2rYBkOpPvJi23c-pM4rz-DcqdEClNTFOeCHPu1A51cLmeNooC0PW6incTPIRcpOJAUQhRnLiTfrItLHDBoD4RruJbPwPJ9hRMGdRDyZuKifUKAiBmpfDHtTkpl_rmEQRk5EZujSGkldBTDy1olMUM9LMX8bA7WXQ0ugX0PnOFJvyt"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface-container-highest/10"></div>
+</div>
+<div class="p-6 flex flex-col justify-center">
+<div class="inline-block bg-tertiary-container/20 text-tertiary text-[10px] font-bold tracking-widest uppercase mb-3 px-2 py-1 rounded">Community Event</div>
+<h3 class="text-xl font-bold text-on-surface mb-2 tracking-tight leading-tight">Morning Zen: Weekend Yoga Session</h3>
+<p class="text-sm text-on-surface-variant mb-6">Join your neighbors this Saturday for a guided meditation and flow session. Open to all skill levels!</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="RSVP 1" class="w-6 h-6 rounded-full border-2 border-surface-container-highest object-cover" data-alt="Small avatar of a person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3S-_gfrdZG5IbBG30kir54pGFzBPKY3PPRAD7-Rp2aXZChh7J5Apfk1ze1W2yQZdoWufzJgp3-XUeqTNxJwmFDK5ERmMd4aDAvGg0vc8rglXPLqVdVCAs22yqNqUG_Lpgj4Q81Qr3OCpNsRoQHnzh0o18HzQEBmIKfQ3iWOK9He0oLTW-ybXuiN8gVAO5yf2ccMeATe1DUIZrLgRRW3YtBJ2Tr8JF3F61Xd_GJm__49S3O88IqWzmRkiYdU_4ZMbcDNZqy261tgM3"/>
+<img alt="RSVP 2" class="w-6 h-6 rounded-full border-2 border-surface-container-highest object-cover" data-alt="Small avatar of a person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG_KydYp7k5tQy5fPjy-_-WbjOTbKttkBAaFC4aO3yqNXmMLuBAabGfuaLFSCA-J2AT1pPtwq0ZXWBdXw0D36m4heXPkMhw0sjcTD0y62lVUETrtwHao5_vRmkEU7boZlDNTuzj5QUD83zRcLyfKeMVzriEJDjNGa52JXAtCt3kU1axcItZjyNWkOCX_NQZip8pU8mik2iywbztL-6O991xSWD1WG3-rZRIRh21zlzTbe7-v27GJwnI45I5Kkgudd7uU82XwsyZmLZ"/>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-highest bg-slate-200 flex items-center justify-center text-[8px] font-bold">+18</div>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">Register Now</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Post 4: Short Question -->
+<article class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Mark" class="w-10 h-10 rounded-full object-cover" data-alt="Candid portrait of a man in casual attire, blurred cafe background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3fool-CqQnAsO1BUh0T8RZxsNHiG9zNDpvhz4hgsxAFi2EFdbnQejfEqz0L1S5INjEmzoGcYNJ_QLoLKJ9SzGCNpyZapdYDnmFF3TeD6j_7of--SZenb6akekUEUJ3rS0cL1I6wZsLS_u_-hOSJzwwUVnQmNOVKOv-dJZq2hl_GdfbKheRGgwSWs6ydi_w-HMrT43ADJk1nvfvKoYFKo2njkPPE-iaLxvD87EyW6mFzeY2aCnv0Xt8OnqNCOSMyaiFRsw87V8cz2"/>
+<div>
+<h3 class="font-bold text-on-surface leading-tight">Mark Henderson</h3>
+<p class="text-xs text-on-surface-variant">Unit 115 • 1d ago</p>
+</div>
+</div>
+<p class="text-lg font-medium text-on-surface leading-snug">Does anyone know a good pet groomer nearby that handles large dogs? Max is looking like a rug! 🐕‍🦺</p>
+<div class="mt-6 pt-4 border-t border-surface-container flex gap-6">
+<button class="text-xs font-bold text-primary flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">reply</span>
+                        Answer
+                    </button>
+<button class="text-xs font-bold text-on-surface-variant flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+                        Helpful
+                    </button>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-3xl z-50 bg-white/90 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.05)] shadow-2xl">
+<div class="flex justify-around items-center w-full px-4 pt-3 pb-8">
+<a class="flex flex-col items-center justify-center text-teal-600 bg-teal-50/50 rounded-xl px-3 py-1 transform scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Booking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Payouts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Contextual FAB - suppressed for feed visibility preference, but included as per general relevance -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>
