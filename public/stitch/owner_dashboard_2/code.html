@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Owner Portfolio Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#006b5e",
+                      "surface-tint": "#006b5f",
+                      "tertiary-container": "#09b8a4",
+                      "surface-container": "#eaedff",
+                      "on-surface": "#151b2d",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#faf8ff",
+                      "secondary-container": "#d5e0f8",
+                      "tertiary-fixed": "#6ef9e2",
+                      "surface-container-highest": "#dce1fb",
+                      "on-secondary-fixed": "#111c2d",
+                      "on-tertiary-fixed": "#00201b",
+                      "on-secondary-container": "#586377",
+                      "on-secondary-fixed-variant": "#3c475a",
+                      "on-secondary": "#ffffff",
+                      "on-surface-variant": "#3c4947",
+                      "surface-variant": "#dce1fb",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed-variant": "#005047",
+                      "primary-fixed-dim": "#4fdbc8",
+                      "error-container": "#ffdad6",
+                      "primary": "#006b5f",
+                      "outline": "#6c7a77",
+                      "surface": "#faf8ff",
+                      "secondary-fixed": "#d8e3fb",
+                      "inverse-on-surface": "#eef0ff",
+                      "surface-dim": "#d4d9f2",
+                      "surface-container-low": "#f2f3ff",
+                      "on-primary-container": "#00423b",
+                      "on-primary-fixed-variant": "#005048",
+                      "background": "#faf8ff",
+                      "on-primary": "#ffffff",
+                      "secondary": "#545f73",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#71f8e4",
+                      "primary-container": "#14b8a6",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#bcc7de",
+                      "on-primary-fixed": "#00201c",
+                      "tertiary-fixed-dim": "#4ddcc6",
+                      "outline-variant": "#bbcac6",
+                      "on-tertiary-container": "#00423a",
+                      "inverse-primary": "#4fdbc8",
+                      "surface-container-high": "#e3e7ff",
+                      "inverse-surface": "#2a3043",
+                      "on-background": "#151b2d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm h-20 w-full max-w-screen-2xl mx-auto flex items-center justify-between px-6 docked full-width top-0 sticky z-40">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-700 dark:text-teal-400 text-3xl">analytics</span>
+<h1 class="font-['Manrope'] font-extrabold text-teal-800 dark:text-teal-300 text-xl">Portfolio</h1>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-teal-700 dark:text-teal-400 font-['Manrope'] font-bold tracking-tight text-lg hover:opacity-80 transition-opacity" href="#">Overview</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Manrope'] font-bold tracking-tight text-lg hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_33}}">Properties</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Manrope'] font-bold tracking-tight text-lg hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_45}}">Health</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:opacity-80">notifications</span>
+<div class="h-10 w-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img alt="Property Owner" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWjfRi0kDPcNTy3KJq5qaz0192MbJPf2lo-fCB3RYCpDAbrqrQujHa1fsajN1nIaPuF-jFPr7bn7_ZvdQCmsSD2b50VMeUywtNMZFZXdSVeblniknki0AzEpO4GxI7fRLiWP_5KGM5uKky_0p6nMvAIC8xTYmPsDyOdFvqKw09rjdGZ9Ip2yVBB9JF6CMNeTZL-o6sQ3leLcdLryYge-N88jwrhKJpMrS3f3elC7CDQcZDisvp0cJ2V2tdnpatBXnr32WCUTKqEvXf"/>
+</div>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-6 py-8 pb-32">
+<!-- Hero Summary / Dashboard Header -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<p class="font-label text-sm uppercase tracking-[0.2em] text-primary mb-2">Architectural Asset Management</p>
+<h2 class="font-headline font-extrabold text-4xl text-on-surface tracking-tight">Executive Summary</h2>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] transition-all" onclick="location.href='{{DATA:SCREEN:SCREEN_23}}'">
+<span class="material-symbols-outlined">add_home</span>
+            List New Property
+        </button>
+</div>
+<!-- Metrics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<!-- Total Portfolio Value -->
+<div class="cursor-pointer bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_-15px_rgba(0,107,95,0.08)] flex flex-col justify-between group hover:translate-y-[-4px] transition-all duration-300" onclick="location.href='{{DATA:SCREEN:SCREEN_61}}'">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Total Portfolio Value</p>
+</div>
+<div class="mt-4">
+<h3 class="font-headline font-bold text-3xl text-on-surface">$12.4M</h3>
+<p class="text-xs text-primary font-medium mt-1">+4.2% from last quarter</p>
+</div>
+</div>
+<!-- Net Cash Flow -->
+<div class="cursor-pointer bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_-15px_rgba(0,107,95,0.08)] flex flex-col justify-between group hover:translate-y-[-4px] transition-all duration-300" onclick="location.href='{{DATA:SCREEN:SCREEN_61}}'">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Net Cash Flow</p>
+</div>
+<div class="mt-4">
+<h3 class="font-headline font-bold text-3xl text-on-surface">$48,250</h3>
+<p class="text-xs text-on-surface-variant font-medium mt-1">Monthly average</p>
+</div>
+</div>
+<!-- Average Occupancy -->
+<div class="cursor-pointer bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_-15px_rgba(0,107,95,0.08)] flex flex-col justify-between group hover:translate-y-[-4px] transition-all duration-300" onclick="location.href='{{DATA:SCREEN:SCREEN_45}}'">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">meeting_room</span>
+</div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Avg. Occupancy</p>
+</div>
+<div class="mt-4">
+<h3 class="font-headline font-bold text-3xl text-on-surface">98.4%</h3>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2">
+<div class="bg-primary h-full rounded-full" style="width: 98.4%"></div>
+</div>
+</div>
+</div>
+<!-- Total ROI -->
+<div class="cursor-pointer bg-primary bg-gradient-to-br from-primary to-primary-container p-6 rounded-xl shadow-[0_20px_50px_-12px_rgba(0,107,95,0.3)] flex flex-col justify-between text-on-primary group hover:scale-[1.02] transition-all duration-300" onclick="location.href='{{DATA:SCREEN:SCREEN_45}}'">
+<div>
+<div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-white">trending_up</span>
+</div>
+<p class="font-label text-xs uppercase tracking-widest text-white/80 font-semibold">Total ROI</p>
+</div>
+<div class="mt-4">
+<h3 class="font-headline font-bold text-3xl">14.8%</h3>
+<p class="text-xs text-white/90 font-medium mt-1">Annualized Performance</p>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Monthly Net Income Chart Placeholder -->
+<div class="lg:col-span-2 bg-surface-container-low rounded-2xl p-8 overflow-hidden relative border border-outline-variant/10">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h4 class="font-headline font-bold text-2xl text-on-surface">Monthly Net Income</h4>
+<p class="text-on-surface-variant text-sm">Income distribution over the last 6 months</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full bg-white text-xs font-semibold shadow-sm border border-outline-variant/20 hover:bg-primary-container/10 transition-colors">6 Months</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-semibold text-on-surface-variant hover:bg-white transition-all">Yearly</button>
+</div>
+</div>
+<!-- Simple Vector Chart visualization -->
+<div class="relative h-64 flex items-end justify-between px-4">
+<div class="absolute inset-0 flex flex-col justify-between py-2 pointer-events-none">
+<div class="w-full border-t border-outline-variant/10"></div>
+<div class="w-full border-t border-outline-variant/10"></div>
+<div class="w-full border-t border-outline-variant/10"></div>
+<div class="w-full border-t border-outline-variant/10"></div>
+</div>
+<div class="relative group flex flex-col items-center gap-2 w-12">
+<div class="bg-primary/20 w-full rounded-t-lg transition-all duration-500 hover:bg-primary/40" style="height: 60%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Jul</span>
+</div>
+<div class="relative group flex flex-col items-center gap-2 w-12">
+<div class="bg-primary/30 w-full rounded-t-lg transition-all duration-500 hover:bg-primary/50" style="height: 75%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Aug</span>
+</div>
+<div class="relative group flex flex-col items-center gap-2 w-12">
+<div class="bg-primary/25 w-full rounded-t-lg transition-all duration-500 hover:bg-primary/45" style="height: 65%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Sep</span>
+</div>
+<div class="relative group flex flex-col items-center gap-2 w-12">
+<div class="bg-primary/40 w-full rounded-t-lg transition-all duration-500 hover:bg-primary/60" style="height: 85%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Oct</span>
+</div>
+<div class="relative group flex flex-col items-center gap-2 w-12">
+<div class="bg-primary/35 w-full rounded-t-lg transition-all duration-500 hover:bg-primary/55" style="height: 80%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Nov</span>
+</div>
+<div class="relative group flex flex-col items-center gap-2 w-12">
+<div class="bg-primary w-full rounded-t-lg shadow-[0_0_15px_rgba(0,107,95,0.2)]" style="height: 95%">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">$52.1k</div>
+</div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Dec</span>
+</div>
+</div>
+<!-- Risk Radar Inset -->
+<div class="mt-12 p-6 bg-error/5 rounded-2xl border border-error/10 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">priority_high</span>
+</div>
+<div>
+<h5 class="font-bold text-on-surface">Yield Risk Detected</h5>
+<p class="text-sm text-on-surface-variant">Competitor rates in Joshua Tree dropped by 8% this week.</p>
+</div>
+</div>
+<button class="bg-error text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-error/90 transition-colors" onclick="location.href='{{DATA:SCREEN:SCREEN_54}}'">Adjust Rates</button>
+</div>
+</div>
+<!-- Distribution Status Sidebar -->
+<div class="flex flex-col gap-6">
+<div class="cursor-pointer bg-surface-container-highest rounded-2xl p-6 relative overflow-hidden hover:shadow-lg transition-shadow group" onclick="location.href='{{DATA:SCREEN:SCREEN_70}}'">
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+<h4 class="font-headline font-bold text-lg text-on-surface">Distribution Status</h4>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="space-y-6">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-1">Next Payout</p>
+<p class="text-2xl font-headline font-bold text-on-surface">Dec 01, 2024</p>
+<p class="text-sm text-primary font-semibold mt-1">Estimated: $14,200.00</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Status Pipeline</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="flex-1">
+<p class="text-sm font-semibold">Ledger Audited</p>
+<p class="text-[10px] text-on-surface-variant">Completed Nov 20</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="flex-1">
+<p class="text-sm font-semibold">Funds Allocated</p>
+<p class="text-[10px] text-on-surface-variant">Completed Nov 24</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full border-2 border-primary/30 flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-primary/30 animate-pulse"></div>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-surface-variant">ACH Transfer</p>
+<p class="text-[10px] text-on-surface-variant italic">Processing in 4 days</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Aesthetic Gradient -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Secondary Action Card: Documents -->
+<div class="bg-secondary-container rounded-2xl p-6 hover:shadow-lg transition-shadow cursor-pointer group" onclick="location.href='{{DATA:SCREEN:SCREEN_88}}'">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-headline font-bold text-on-secondary-fixed text-lg">Tax Documents</h5>
+<p class="text-sm text-on-secondary-fixed-variant">Q3 2024 Statements Ready</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Property Section (Asymmetric Portfolio Card) -->
+<div class="mt-16">
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-8">Top Performer</h3>
+<div class="relative w-full h-[450px] rounded-2xl overflow-hidden group shadow-2xl">
+<img alt="Obsidian Heights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmLRGuHeHo5zDFze4s244GvOuKDyzHxQAndNEAwhgF9hJiEPpOcXbd6oKVmv5_fDqlO_84vU0zVm_MdHSm63veCEmZs-7UBGRrWaL1nxXhpWCvDen5bAUogPhtFTixCRjIYn386teVWzCZfkMOHGMkeP79gzeVF75bvu_36htiOsuKJS5P5oXozrzI9e6Od2C_ogH-tKIVRk_-CADJ0vtUBbM-KyOBFPowb86ECFdxBdwzI_EeyDaXgnzMni9R1qN2x3uKzpVuROLo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/20 to-transparent"></div>
+<!-- Floating Asymmetric Content Block -->
+<div class="absolute bottom-10 right-6 left-6 md:left-auto md:right-20 bg-surface-container-lowest glass-panel p-8 rounded-2xl max-w-md shadow-2xl border border-white/20">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">High Yield Asset</p>
+<h4 class="font-headline font-bold text-2xl text-on-surface">The Obsidian Heights</h4>
+</div>
+<div class="bg-primary/10 px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-primary">9.2% Cap Rate</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                    Located in the premium coastal district, this asset has maintained 100% occupancy since acquisition. Net operating income outperformed projections by 12% this quarter.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity flex-1" onclick="location.href='{{DATA:SCREEN:SCREEN_45}}'">Full Asset Report</button>
+<button class="border border-outline-variant px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-surface-container transition-colors flex-1" onclick="location.href='{{DATA:SCREEN:SCREEN_61}}'">Property Ledger</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl flex justify-around items-center px-4 py-3 pb-safe border-t border-teal-500/10 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] z-50 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-teal-700 dark:text-teal-300 bg-teal-50/50 dark:bg-teal-900/20 rounded-xl px-4 py-1.5 transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">dashboard</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider mt-0.5">Overview</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-all scale-95 active:scale-90" href="{{DATA:SCREEN:SCREEN_45}}">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider mt-0.5">Health</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-all scale-95 active:scale-90" href="{{DATA:SCREEN:SCREEN_33}}">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider mt-0.5">Properties</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-all scale-95 active:scale-90" href="{{DATA:SCREEN:SCREEN_88}}">
+<span class="material-symbols-outlined">folder_open</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider mt-0.5">Docs</span>
+</a>
+</nav>
+</body></html>

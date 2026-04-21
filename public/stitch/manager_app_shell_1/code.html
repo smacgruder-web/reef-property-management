@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Architectural Stay | Portfolio Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#09b8a4",
+                        "surface-bright": "#faf8ff",
+                        "on-primary-container": "#00423b",
+                        "surface-variant": "#dce1fb",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-error": "#ffffff",
+                        "secondary": "#545f73",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#d8e3fb",
+                        "inverse-on-surface": "#eef0ff",
+                        "tertiary-fixed": "#6ef9e2",
+                        "surface-container-high": "#e3e7ff",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#4fdbc8",
+                        "primary-container": "#14b8a6",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#d5e0f8",
+                        "outline-variant": "#bbcac6",
+                        "primary-fixed": "#71f8e4",
+                        "background": "#faf8ff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#6c7a77",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f3ff",
+                        "on-primary-fixed-variant": "#005048",
+                        "surface-dim": "#d4d9f2",
+                        "on-tertiary-container": "#00423a",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "surface-tint": "#006b5f",
+                        "primary": "#006b5f",
+                        "on-tertiary-fixed": "#00201b",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "surface": "#faf8ff",
+                        "on-surface-variant": "#3c4947",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "tertiary": "#006b5e",
+                        "surface-container-highest": "#dce1fb",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#111c2d",
+                        "inverse-surface": "#2a3043",
+                        "on-primary-fixed": "#00201c",
+                        "on-secondary-container": "#586377",
+                        "on-background": "#151b2d",
+                        "on-surface": "#151b2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Manrope', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm shadow-teal-900/5 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="p-2 text-teal-700 dark:text-teal-400 hover:bg-teal-50/50 dark:hover:bg-teal-900/20 transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+<h1 class="text-xl font-extrabold text-teal-800 dark:text-teal-200 font-manrope tracking-tight">Architectural Stay</h1>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-low">
+<img alt="Portfolio Manager" class="w-full h-full object-cover" data-alt="Professional headshot of a portfolio manager in a minimalist studio setting with soft natural lighting and neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtPLGWDabgSwn389NnovmIMHFX8jlpmHVd56ZM1Zv5kUatfztUjaeaf0zG6InQQBft8eCkS5YiKLauR8XoI8LQSKj7gsvpkxO3PrBICETLLjozdDpji9wHW0ERZ_crSG4FrvjGegIhtGXDmGRurM0oOAZ_LhNM5XRndbaFBq-yBavjBtOPCdU2hUpDSOs7DskdpakUOcwkvhf0OnpRVV-m0wzO5Jb9gngZ9LlI79tDRav7dPzrjsP6qZlrkhoI2FnhQEtmV6kOp2Io"/>
+</div>
+</div>
+</header>
+<div class="flex pt-20 pb-24 md:pb-0">
+<!-- NavigationDrawer (Web Sidebar) -->
+<aside class="hidden md:flex flex-col h-[calc(100vh-5rem)] w-80 bg-slate-50 dark:bg-slate-900 p-6 space-y-2 sticky top-20 border-r-0 tonal-shift bg-slate-100 dark:bg-slate-800/50">
+<div class="mb-8 px-2">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-lg shadow-teal-600/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">domain</span>
+</div>
+<div>
+<p class="font-manrope font-semibold text-teal-800 dark:text-teal-100">Portfolio Manager</p>
+<p class="text-xs text-slate-500">Global Operations</p>
+</div>
+</div>
+<span class="inline-block px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 text-[10px] font-bold tracking-widest uppercase">12 Properties</span>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-teal-600 text-white dark:bg-teal-500 rounded-lg shadow-lg shadow-teal-600/20 font-manrope font-semibold hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">domain</span>
+<span>Portfolio</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 rounded-lg font-manrope font-semibold hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span>Reservations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 rounded-lg font-manrope font-semibold hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">build</span>
+<span>Maintenance</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 rounded-lg font-manrope font-semibold hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 rounded-lg font-manrope font-semibold hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-6 py-8 max-w-7xl mx-auto w-full">
+<!-- Daily Summary / Greeting -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="space-y-2">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface tracking-tight font-headline">Good morning, Portfolio.</h2>
+<p class="text-on-surface-variant max-w-md font-medium">Your global portfolio is currently at 84% occupancy. Three urgent items require your attention before noon.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-full flex gap-8 items-center">
+<div class="text-center">
+<span class="block text-2xl font-bold text-teal-700">$42.8k</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Revenue MTD</span>
+</div>
+<div class="w-[1px] h-8 bg-outline-variant/30"></div>
+<div class="text-center">
+<span class="block text-2xl font-bold text-teal-700">14</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Check-ins Today</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Urgent Attention (Bento Grid) -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xs uppercase tracking-[0.2em] font-bold text-teal-600">Urgent Attention</h3>
+<span class="h-[1px] flex-1 mx-6 bg-outline-variant/20"></span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Maintenance Alert (Large Card) -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-xl shadow-on-surface/5 border-none p-8 flex flex-col justify-between min-h-[320px]">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-xs font-bold text-error uppercase tracking-widest">Critical Maintenance</span>
+</div>
+<h4 class="text-3xl font-bold text-on-surface mb-4 leading-tight">HVAC System Failure<br/>The Glass Penthouse, NY</h4>
+<p class="text-on-surface-variant max-w-sm mb-6">Immediate repair required. Guest checking in at 4:00 PM. Preferred technician notified but not confirmed.</p>
+</div>
+<div class="relative z-10 flex gap-4">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-md font-bold text-sm hover:opacity-90 transition-opacity">Dispatch Vendor</button>
+<button class="text-primary font-bold text-sm underline underline-offset-8 decoration-2 hover:translate-x-1 transition-transform">Notify Guest</button>
+</div>
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 group-hover:opacity-20 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Abstract architectural shot of modern silver ventilation systems against a dark moody background with sharp highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyRryBwRVipGtR5VJYjLgR4_AWCmUETyG0gN3Lb67zuOJhZY6Z7Xw7kPKqWTEoBEVlDU3-gVFgPlReuDfOk4pBExXSwbI5G27yxqbbZvG35M2WdJkRtkYzZFKJYX8bdciEyBvS9Zp3jLtt1MCYGZTTuWKh0bRqVl89hY09nOxaZ8iozka7nOGtX4h9CsNDmiI7BcOzPlhYJ4Ov4-9AqsdjPyWtbam51lOVW3LAxywL3K9BlB5WCRBzfiVNx-mOLnZ9ildccWiPBbfm"/>
+</div>
+</div>
+<!-- Overdue Check-in -->
+<div class="bg-tertiary-container text-on-tertiary-container rounded-xl p-8 flex flex-col justify-between shadow-xl shadow-tertiary-container/20">
+<div>
+<span class="material-symbols-outlined mb-6 text-4xl" style="font-variation-settings: 'FILL' 1;">person_alert</span>
+<h4 class="text-2xl font-bold mb-2">Overdue Check-in</h4>
+<p class="text-sm opacity-80">Villa Azure, Mykonos</p>
+</div>
+<div class="pt-6 border-t border-white/20">
+<p class="font-bold text-lg">2 Hours Late</p>
+<button class="mt-4 w-full bg-white/20 backdrop-blur-md py-3 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-white/30 transition-colors">Call Guest</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Property Portfolio Strip -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xs uppercase tracking-[0.2em] font-bold text-teal-600">Active Portfolio</h3>
+<button class="text-xs font-bold text-slate-500 hover:text-teal-600">View All Portfolio</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="relative group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Symmetrical minimalist concrete villa with floor to ceiling windows overlooking a calm infinity pool at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1djOhTg5bReZxSbWVNpuyTST0-Wn1gqLBZg73TtC07JdoqPTUO5Hp_Hfx32q_W_i0nXPPcBbYnAHc1J3mQLw6vDaJawXpXy9AJlLxLF2uYhYPMsBn5rfMgrLr8XIgdIq7ECpk2P0lDZKcLRG4Hgo8ctT6N1jl7GVWkIbrrna6QfvaXlXN9jk0eyOV6p4eX9sbZ8VVbp-ARWd7_Ys3hLqZsEUy66LtCxJNoNjFnA9f9eNMypCNFOS5wLEn5LaTjGTv-pyXNYIqHSJ1"/>
+</div>
+<div class="absolute bottom-6 left-[-1rem] bg-surface-container-lowest p-4 shadow-lg w-[calc(100%+1rem)] transition-transform group-hover:-translate-y-2">
+<p class="text-[10px] uppercase tracking-widest text-teal-600 font-bold mb-1">Stockholm, SE</p>
+<h5 class="text-lg font-bold text-on-surface">Concrete Sanctuary</h5>
+</div>
+</div>
+<div class="relative group cursor-pointer md:mt-8">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Interior of a luxury loft with high ceilings exposed brick and hanging designer lamps in soft evening light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPGTUkWgJ-hJ14ej222f6FLKVlT-zNRxPGTZZCyEA9u3aWx5bBxqlhi_whHF0CtLHXXemkkktaXDxAssLd6xgdb6hOurdMVDWvaIjW_KdY7RXDFfgJvqUTk4YYiciP_spdfGJlA2uw2grcEepRAl6Kwja3AKw0C3am7ESBY7vIjaXmpjj6uVSzQKhZ8U05Z2bFZo6gaUe53ppizBjnawmrbnjcMfJipej4jqCB9AoBsLwtZffsTNJYmK2VasokB0rR_mj_sYcKaYZf"/>
+</div>
+<div class="absolute bottom-6 left-[-1rem] bg-surface-container-lowest p-4 shadow-lg w-[calc(100%+1rem)] transition-transform group-hover:-translate-y-2">
+<p class="text-[10px] uppercase tracking-widest text-teal-600 font-bold mb-1">London, UK</p>
+<h5 class="text-lg font-bold text-on-surface">The Industrial Attic</h5>
+</div>
+</div>
+<div class="relative group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern geometric wooden cabin nestled in a snowy pine forest with warm orange light glowing from inside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXEejvDPsc2mBWkSMjpdzLB7C1GsVQryyOPOFrNveHbGW2ov6w0e9moatRRw_895horqLUBD6ysJZKFtJ2GZEgI3_x3oo6t7otnY_r2Y78bUH69vNLbojCAYx1PgqkuxHHL_I3qTlx0VN-aw0lBqY9zFCJNsJPYg9p5tJVLoyjnQrmt62OAJqNycKNHZjop0fq3PrBlkVIAxfboG9ftsPEebZABXnifETscUliZ4ZVlp4rs-LjmFit0HCS4RU3s-RH_-EO1Q0iwjYh"/>
+</div>
+<div class="absolute bottom-6 left-[-1rem] bg-surface-container-lowest p-4 shadow-lg w-[calc(100%+1rem)] transition-transform group-hover:-translate-y-2">
+<p class="text-[10px] uppercase tracking-widest text-teal-600 font-bold mb-1">Aspen, US</p>
+<h5 class="text-lg font-bold text-on-surface">Timberline Lodge</h5>
+</div>
+</div>
+<div class="relative group cursor-pointer md:mt-8">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Minimalist desert home with smooth terracotta walls and sharp shadow lines under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc-Z89j-an5fRnz3cvfzVVma4t51m8glp1fEv4hAFCl1VpKgIHpDG8zzL3Sy_FTQlEqEIKp9hylIL4lvMsFJ9rYwnJWY9xQV-QNevJYjpgOlKCl0UT0MMnlsSernLc_7mGDU1Ff0C2w_WAAMyfiotmuvTvdodpAkp76H8sXzDBqZ7a58xJrkjiXpBc6mvzcxHenfX3frgiMqpOewFL6p-4ZZe4BmKjmJwiUV4YM7aUnI8w6azbue0wf1NX1y1M8H-CZovErryscuj3"/>
+</div>
+<div class="absolute bottom-6 left-[-1rem] bg-surface-container-lowest p-4 shadow-lg w-[calc(100%+1rem)] transition-transform group-hover:-translate-y-2">
+<p class="text-[10px] uppercase tracking-widest text-teal-600 font-bold mb-1">Joshua Tree, US</p>
+<h5 class="text-lg font-bold text-on-surface">The Terra Retreat</h5>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg z-50 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-xl px-3 py-1 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">travel_explore</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider mt-1">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider mt-1">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+<!-- FAB for Task Creation -->
+<div class="fixed bottom-28 right-6 md:bottom-12 md:right-12 z-40">
+<button class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-2xl shadow-primary/40 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+</body></html>

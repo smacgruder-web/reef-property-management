@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Architectural Stay | Guest Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#09b8a4",
+                        "surface-bright": "#faf8ff",
+                        "on-primary-container": "#00423b",
+                        "surface-variant": "#dce1fb",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-error": "#ffffff",
+                        "secondary": "#545f73",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#d8e3fb",
+                        "inverse-on-surface": "#eef0ff",
+                        "tertiary-fixed": "#6ef9e2",
+                        "surface-container-high": "#e3e7ff",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#4fdbc8",
+                        "primary-container": "#14b8a6",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#d5e0f8",
+                        "outline-variant": "#bbcac6",
+                        "primary-fixed": "#71f8e4",
+                        "background": "#faf8ff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#6c7a77",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f3ff",
+                        "on-primary-fixed-variant": "#005048",
+                        "surface-dim": "#d4d9f2",
+                        "on-tertiary-container": "#00423a",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "surface-tint": "#006b5f",
+                        "primary": "#006b5f",
+                        "on-tertiary-fixed": "#00201b",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "surface": "#faf8ff",
+                        "on-surface-variant": "#3c4947",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "tertiary": "#006b5e",
+                        "surface-container-highest": "#dce1fb",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#111c2d",
+                        "inverse-surface": "#2a3043",
+                        "on-primary-fixed": "#00201c",
+                        "on-secondary-container": "#586377",
+                        "on-background": "#151b2d",
+                        "on-surface": "#151b2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf8ff;
+        }
+        .architectural-gradient {
+            background: linear-gradient(135deg, #006b5f 0%, #14b8a6 100%);
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.85);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm shadow-teal-900/5 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="p-2 hover:bg-teal-50/50 dark:hover:bg-teal-900/20 transition-colors scale-95 active:scale-90 transition-transform cursor-pointer rounded-full">
+<span class="material-symbols-outlined text-teal-700 dark:text-teal-400" data-icon="search">search</span>
+</div>
+</div>
+<h1 class="text-xl font-extrabold text-teal-800 dark:text-teal-200 font-manrope tracking-tight">Architectural Stay</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/30 scale-95 active:scale-90 transition-transform cursor-pointer">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with a friendly expression in soft natural studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD1bw3aRX0a-D-T_DYTdBgE5y-VQwGBfBcdck5yOqmsgWBOTRP_C1qYh0Ky-aYSSHcPOvh5mO9oMS2q4b4jVFsomXxBKx3XgWKLYc6gMKUuGdGy6ekm6K2kHygMp8KouOxSZ1fp1itc5Suap5TCU3FXgdYFIXv6_I6tfAevHhGSbHIlgj8A0sbBbq8AirCDLjESVHJoMAfRg73DxsHcAM7u4Y1lm-DTbm-UmBYHqzGvAIE0G5Zow2oFgA2EkPZIGgg1JjAtKM4HjKG"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto space-y-10">
+<!-- Welcoming Summary Section -->
+<section class="space-y-4">
+<div class="space-y-1">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold">Current Stay</span>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight">The Obsidian Villa</h2>
+</div>
+<div class="relative w-full aspect-[4/3] rounded-full overflow-hidden shadow-2xl group">
+<img alt="Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="modern minimalist black architectural villa with floor to ceiling glass windows nestled in a misty forest landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhnhW6S-fJMVDM3WMtUbmGDutZh2jZ_4sC2rPl5nNncX4ofCH-Yl2xOrJ7gRpzRIFd3w4-mqA8bI6VartJWfvEC9JYscRy6w--35yokeAXbeHmo0UNUmVLQSMoi3OGyIoBruFtiKoi240_kN65JEClvz1ChSQ9Oq7kbcgU3pVEw5w-A9Z1A6DmZ1NDx0hE1XxycHR_GRJCWXm6YIjmjrqXmOF6vSB340iaMoDrPE-WmEwK6Zxp7lTrHtWsHLYYe7R9Wh64rlvz4Zh2"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 architectural-gradient text-white flex justify-between items-center">
+<div>
+<p class="text-xs opacity-80 font-medium">Check-out</p>
+<p class="text-lg font-bold">Monday, Oct 24</p>
+</div>
+<div class="text-right">
+<p class="text-xs opacity-80 font-medium">Weather</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg" data-icon="cloudy">cloudy</span>
+<span class="text-lg font-bold">22°C</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions Bento Grid -->
+<section class="space-y-6">
+<h3 class="font-headline text-xl font-bold text-on-surface">Quick Actions</h3>
+<div class="grid grid-cols-2 gap-4">
+<a class="col-span-2 bg-primary-container p-6 rounded-full flex items-center justify-between shadow-lg shadow-primary/10 group cursor-pointer active:scale-95 transition-transform" href="{{DATA:SCREEN:SCREEN_33}}">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="key" style="font-variation-settings: 'FILL' 1;">key</span>
+</div>
+<div>
+<p class="text-on-primary font-bold">Digital Key</p>
+<p class="text-on-primary/70 text-xs">Tap to unlock entrance</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-white/50 group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="bg-surface-container-low p-5 rounded-full flex flex-col gap-3 hover:bg-surface-container-high transition-colors cursor-pointer" href="{{DATA:SCREEN:SCREEN_33}}">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_stories">auto_stories</span>
+<p class="font-bold text-sm text-on-surface">House Guide</p>
+</a>
+<div class="bg-surface-container-low p-5 rounded-full flex flex-col gap-3 hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="wifi">wifi</span>
+<p class="font-bold text-sm text-on-surface">WiFi Access</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-full flex flex-col gap-3 hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<p class="font-bold text-sm text-on-surface">Room Service</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-full flex flex-col gap-3 hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="support_agent">support_agent</span>
+<p class="font-bold text-sm text-on-surface">Concierge</p>
+</div>
+</div>
+</section>
+<!-- Local Discoveries Featured Section -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="font-headline text-xl font-bold text-on-surface">Local Discoveries</h3>
+<a class="text-primary text-sm font-bold cursor-pointer" href="{{DATA:SCREEN:SCREEN_43}}">View Map</a>
+</div>
+<div class="flex flex-col space-y-6">
+<!-- Discovery Card 1 -->
+<a class="relative block rounded-full overflow-hidden bg-white shadow-sm border border-outline-variant/10 group cursor-pointer" href="{{DATA:SCREEN:SCREEN_12}}">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Cafe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="interior of a high-end minimalist architectural cafe with brutalist concrete walls and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTfWoAZoUdNmwydbQ7U8RvqCgsGgiIn82oj4tQ5959HkvZtFNHwoN-n1FsuMx9wQgxXMhHqo5NqkZwcxmXMFqcjL56eSxWI05cTRkhW9NwfToBpO23URkLKwF7BCKDhlGKxiUJCaZ7H-DN6n_WhIAhUsklKOwIw9Va7eKQdOQnBQtkdicLupb3se2bjFc3Ksghj8aQ1VIUR9-NEwgNrL9X6tIfL6sMCyX7BtkE6Ewg9GJY-ZveWq9RWd6qq1dbnleYBQ0e04pq3u64"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
+                            4.9 ★
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg text-on-surface">The Concrete Brew</h4>
+<span class="text-xs text-on-surface-variant font-medium">0.4 miles away</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">Award-winning architecture meets artisanal roasting. Experience the best local espresso in a brutalist masterpiece.</p>
+</div>
+</a>
+<!-- Discovery Card 2 (Asymmetric Editorial Style) -->
+<div class="flex items-center gap-6 py-4">
+<div class="w-1/3 aspect-square rounded-full overflow-hidden shadow-lg">
+<img alt="Cocktail" class="w-full h-full object-cover" data-alt="close up of a sophisticated artisan cocktail with clear ice and citrus peel in a crystal glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNWwJ22XhdJ9ozkPO4P_jK6ll3do_awO5-cPm1HzeNydhPW8ihpAQaKCfFytfqh5oT9dN2KqrXWVMBCKmN0l-Xvd6_iGGOH9qriBeFXZ8aYG64d5ptugcZqovlBDiU3FV8QIZcfJBGRRNacKEs8pgql0GCiwwRtXyIR2uc5k8fcT1683akj6dmRQdgv2NXPIlmR2KQpHOSs4-SjQRaCDPmHU1p55ZualRn31AOZEhD3vdZFPXiPpq9NruLZgp3YEHOV0aryTYwOuvX"/>
+</div>
+<div class="w-2/3 space-y-2">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Curated Experience</span>
+<h4 class="font-bold text-lg leading-tight">Sunset Mixology at The Peak</h4>
+<p class="text-xs text-on-surface-variant">Exclusive table reservation for Architectural Stay guests.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg no-border shadow-[0_-4px_20px_rgba(0,0,0,0.04)] z-50 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 transition-colors tap-highlight-transparent" href="{{DATA:SCREEN:SCREEN_68}}">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="explore">explore</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-xl px-3 py-1 tap-highlight-transparent" href="{{DATA:SCREEN:SCREEN_26}}">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="travel_explore" style="font-variation-settings: 'FILL' 1;">travel_explore</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 transition-colors tap-highlight-transparent" href="{{DATA:SCREEN:SCREEN_77}}">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-teal-500 transition-colors tap-highlight-transparent" href="{{DATA:SCREEN:SCREEN_6}}">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

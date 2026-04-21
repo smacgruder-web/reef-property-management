@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reef Property - Resident Experience</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@300..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#bbcac6",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "on-primary-container": "#00423b",
+                        "on-background": "#151b2d",
+                        "surface-bright": "#faf8ff",
+                        "surface-dim": "#d4d9f2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f2f3ff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#00423a",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#14b8a6",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d8e3fb",
+                        "primary-fixed": "#71f8e4",
+                        "on-primary-fixed": "#00201c",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3c4947",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#4ddcc6",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "outline": "#6c7a77",
+                        "background": "#faf8ff",
+                        "surface-container-high": "#e3e7ff",
+                        "surface-container": "#eaedff",
+                        "inverse-primary": "#4fdbc8",
+                        "tertiary": "#006b5e",
+                        "surface": "#faf8ff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#dce1fb",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-surface": "#151b2d",
+                        "tertiary-fixed": "#6ef9e2",
+                        "on-tertiary-fixed": "#00201b",
+                        "inverse-surface": "#2a3043",
+                        "surface-container-highest": "#dce1fb",
+                        "secondary-container": "#d5e0f8",
+                        "secondary": "#545f73",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#586377",
+                        "tertiary-container": "#09b8a4",
+                        "surface-tint": "#006b5f",
+                        "primary": "#006b5f",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-primary-fixed-variant": "#005048",
+                        "inverse-on-surface": "#eef0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl bg-slate-200/20 shadow-sm flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-600 text-2xl" data-icon="domain">domain</span>
+<h1 class="text-teal-700 font-black tracking-tighter italic text-xl">Reef Property</h1>
+</div>
+<!-- Web Navigation -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-teal-700 font-manrope font-semibold tracking-tight" href="#">Home</a>
+<a class="text-slate-600 font-manrope font-semibold tracking-tight hover:text-teal-500 transition-colors" href="#">Payments</a>
+<a class="text-slate-600 font-manrope font-semibold tracking-tight hover:text-teal-500 transition-colors" href="#">Services</a>
+<a class="text-slate-600 font-manrope font-semibold tracking-tight hover:text-teal-500 transition-colors" href="#">More</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-teal-50/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-600" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container/20">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="portrait of a professional young man with a friendly smile, clean-cut with soft natural daylight lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXnlZDi0-D4mvxe83sI1xxPw--kJHdgxqPQbycgEPyYfVYggeJbG7iqXcevWBPcWIzN75XF9ZW2bP8JeZYxGrSsXPyUqMFKEQLtpxJg1WPfKQE4Z0tLx7QvhEGu3mTjHfCaQBk0pWRSd7jsZinkFxmfbGJn7MxIhcjVjt3UvDjOoLA4YL8jr_56g9agNzAdd-8BA8tD1KKKiXjJ6NLtCrznxZ_QoSIGEsbNogmyADA6dEp9XfQwC0HsmWn-IwOqrKwN6Hm7k5m6PGN"/>
+</div>
+</div>
+</header>
+<main class="min-h-screen pb-24 md:pb-12">
+<!-- Hero Section: Architectural Asymmetry -->
+<section class="relative px-6 pt-8 max-w-7xl mx-auto">
+<div class="relative w-full aspect-[21/9] rounded-full overflow-hidden bg-surface-container-low shadow-sm">
+<img alt="Luxury Penthouse" class="w-full h-full object-cover opacity-90" data-alt="ultra modern luxury penthouse apartment interior with floor to ceiling windows overlooking a tropical turquoise coast at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDue92KIixCVvaKvly2eNsPGOeI2LdlqwdLiU8B1ggKdJFAr5zY-ZWLJOE6VdLdKLANPiNvZhLXkDdlh6PCB9zgqOeGjHqj2o1mDAPRQEJ1JYg0Ur5nVHgJEZyiWNqcZltVMgKEP3pCShwu2vccan3Yd5GIEKrvJLtAoFIz49H0i9H-k5xVVbzVQlUSM10JFxrBXpXcLmGdaOwGiH3ZRg9r3iEKkRape-kGZ5NPjGyEPIMqXs0pPFTAo5k__UnZbv0Pl6mW-neot4U0"/>
+<div class="absolute inset-0 bg-gradient-to-r from-teal-950/40 to-transparent"></div>
+</div>
+<div class="mt-[-80px] md:mt-[-120px] ml-4 md:ml-12 relative z-10 max-w-md bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-2xl border-l-4 border-primary">
+<p class="text-primary font-bold uppercase tracking-[0.2em] text-[10px] mb-2">Resident Welcome</p>
+<h2 class="text-3xl md:text-4xl font-extrabold text-on-background tracking-tight mb-4 leading-tight">
+                    Welcome Home, <br/>Alex Rivera
+                </h2>
+<div class="flex items-center gap-2 text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span>Unit 402 - Reef Tower</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Management & Insights -->
+<section class="px-6 py-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Payment Card -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group hover:bg-surface-container transition-colors">
+<div>
+<h3 class="text-2xl font-bold text-on-background mb-1">Upcoming Payment</h3>
+<p class="text-on-surface-variant">Due on Oct 01, 2023</p>
+<div class="mt-6 flex items-baseline gap-2">
+<span class="text-4xl font-black text-primary">$4,250</span>
+<span class="text-on-surface-variant font-semibold">USD</span>
+</div>
+</div>
+<button class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-md shadow-lg shadow-primary/20 active:scale-95 transition-all w-full md:w-auto">
+                    Pay Now
+                </button>
+</div>
+<!-- Quick Stats -->
+<div class="md:col-span-4 bg-teal-600 rounded-xl p-8 text-white relative overflow-hidden">
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-white/10 text-[120px]" data-icon="water_drop">water_drop</span>
+<h4 class="text-white/80 font-semibold text-sm uppercase tracking-widest mb-4">Utility Usage</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-end border-b border-white/20 pb-2">
+<span class="text-lg">Water</span>
+<span class="text-2xl font-bold">12.4 kl</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/20 pb-2">
+<span class="text-lg">Electric</span>
+<span class="text-2xl font-bold">342 kwh</span>
+</div>
+</div>
+</div>
+<!-- Maintenance/Services Bento -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-background">Maintenance</h4>
+<p class="text-on-surface-variant text-sm mt-2">Request a repair or track existing service tickets for your unit.</p>
+</div>
+<div class="mt-auto pt-4 flex gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full">1 ACTIVE</span>
+</div>
+</div>
+<!-- Guest Access Bento -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="vpn_key">vpn_key</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-background">Guest Access</h4>
+<p class="text-on-surface-variant text-sm mt-2">Generate digital keys or schedule entry for visitors and deliveries.</p>
+</div>
+<button class="mt-auto flex items-center text-primary font-bold text-sm gap-2 hover:translate-x-1 transition-transform">
+                    Manage Access <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Community Bento -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-4">
+<div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-background">Community</h4>
+<p class="text-on-surface-variant text-sm mt-2">Connect with neighbors and explore events at the Reef Plaza.</p>
+</div>
+<div class="mt-auto flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-slate-200">
+<img alt="avatar" data-alt="portrait of a smiling woman in warm sunset light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-rYqJ3wVD2lEAPrRQ9_71nZD9FsaTIYIgP5ukaM_hlHRdKsvEecTgnrLQ0szvGPxVuXQkgrfsr1uaIkOWz2E4d-jUIOwMi3nJx7YcGkghpYvL2khl8PDhTmPjmunDKERTiNpUgQQbXtkI3MgRh6oFfL5SHI3wGPZYEN2j0GUcvZLezApK891ge8vlryv4L04lc6uRtJPuCm4RmSnxde4b6x0qnm8FdIKnetdTemOf0CjmUXFlN46XMvGvHq8Khtu8bur6ELsR_GG2"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-slate-200">
+<img alt="avatar" data-alt="portrait of a young professional man with dark hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuh03rDuvjj1V8nv1K5z9Eth31K76An69W6ubboo1YyNYHmm6651cMudSyUFEWPd0jfXUv6sjxmXw2dtxG0LIJqSqo8RT4Pyydsu6ZkNWSTdcpi_R-JKq8WgzJJQvtamZkbvfgVW2jR-PcVaqINpRfMIGVa2W7BAtyeWwiazoyWkCAbAQ6NutwID5jlLYlMI7PPy6aM0AZMeVukASyfbxMBuoabgQ4pNViNXohmT71MVWV8ttkAbSQLW94RV7qPHkloqiYWsq4_pPu"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-500">+12</div>
+</div>
+</div>
+</section>
+<!-- The Editorial Property Card Section -->
+<section class="px-6 pb-20 max-w-7xl mx-auto">
+<h3 class="text-primary font-bold uppercase tracking-[0.2em] text-[10px] mb-8 text-center">Featured Amenities</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<h2 class="text-4xl font-bold tracking-tighter mb-6">The Horizon Infinity Pool</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-8">
+                        Experience the ultimate relaxation with exclusive resident-only access to our heated infinity pool. Overlooking the azure coastline, it's a sanctuary designed for tranquility and refined leisure.
+                    </p>
+<button class="group flex items-center gap-3 text-on-background font-bold uppercase tracking-widest text-xs">
+                        Book a Cabana
+                        <span class="w-12 h-[1px] bg-outline-variant group-hover:w-20 group-hover:bg-primary transition-all duration-300"></span>
+</button>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Infinity Pool" class="w-full h-full object-cover" data-alt="minimalist architecture infinity pool merging with the ocean at dawn, clean lines and soft blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhyx76DT40xtTXRQRIFoq-SDoS2QF3fR7_NXqj-ymRG1Hhy_vKUUBHOmi_Zxb_gu-RuaiEUZMZOobTxmUvQ4w1LaBj6npmiWcpnExoJzc4Yx2nUCGsvfEc092BXI2e8zYZViL_ASFw-G0UuVZkNUYz7mFJy4lTAsf0qaIfNluplKO9CBb4vwlwU8_upNmoZ5z2MpOFeEmt__S8C0-uI-EkqYLrGzH8SRcBSXZdS0HTgPPlkqWA0OrCeD_XvZ5IMwqw-p9EfyhvPTPk"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-primary-container p-6 rounded-xl shadow-xl hidden md:block">
+<span class="material-symbols-outlined text-on-primary-container text-4xl" data-icon="pool">pool</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB (Suppressed on details but active on main shell) -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center active:scale-95 duration-200 z-40 md:hidden">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-2xl bg-white/90 backdrop-blur-lg border-t border-slate-100 shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] flex justify-around items-center px-2 pb-safe pt-2">
+<a class="flex flex-col items-center justify-center bg-teal-50 text-teal-700 rounded-xl px-4 py-1.5 scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Payments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="concierge">concierge</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-teal-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-manrope text-[10px] font-semibold uppercase tracking-widest mt-1">More</span>
+</a>
+</nav>
+</body></html>
