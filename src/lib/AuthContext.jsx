@@ -110,8 +110,22 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const login = async (email, password) => {
+  const login = async (email, password, role = 'resident') => {
     try {
+      // Demo credentials
+      if (email === 'demo@reef.com' && password === 'demo123') {
+        const demoUser = {
+          email: 'demo@reef.com',
+          role: role,
+          id: 'demo-user',
+          name: 'Demo User'
+        };
+        setUser(demoUser);
+        setIsAuthenticated(true);
+        return;
+      }
+
+      // Real Base44 login
       await base44.auth.loginViaEmailPassword(email, password);
       await checkUserAuth();
     } catch (error) {

@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '@/lib/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -9,6 +9,8 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const role = searchParams.get('role') || 'resident';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,8 +18,15 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      await login(email, password);
-      navigate('/');
+      await login(email, password, role);
+      // Navigate based on role
+      if (role === 'owner') {
+        navigate('/owner/dashboard');
+      } else if (role === 'resident') {
+        navigate('/resident/dashboard');
+      } else {
+        navigate('/');
+      }
     } catch (err) {
       setError(err.message || 'Login failed');
     } finally {
@@ -32,6 +41,16 @@ export default function Login() {
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Sign in to your account
           </h2>
+          <p className="mt-2 text-center text-sm text-gray-600">
+            Use demo credentials below to explore the {role} portal
+          </p>
+        </div>
+        <div className="bg-blue-50 p-4 rounded-md">
+          <h3 className="text-sm font-medium text-blue-800">Demo Credentials</h3>
+          <div className="mt-2 text-sm text-blue-700">
+            <p><strong>Email:</strong> demo@reef.com</p>
+            <p><strong>Password:</strong> <span className="text-gray-500">demo123</span></p>
+          </div>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm -space-y-px">
