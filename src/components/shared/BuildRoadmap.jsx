@@ -1,5 +1,4 @@
 import Panel from "./Panel";
-import GlassCard from "./GlassCard";
 
 const phases = [
   ["MVP release", ["Portfolio + unit directory", "Rent and guest payments", "Maintenance ticketing", "Owner statements", "Resident and guest mobile basics"]],

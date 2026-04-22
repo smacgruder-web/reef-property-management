@@ -11,6 +11,9 @@ import StitchScreen from './pages/StitchScreen';
 import StitchRenderer from './components/StitchRenderer';
 import StitchApp from './components/StitchApp';
 import RolePicker from './components/RolePicker';
+import Login from './pages/Login';
+import Logout from './pages/Logout';
+import ErrorBoundary from './components/ErrorBoundary';
 import { routeMapping } from './data/routeMapping';
 
 const AuthenticatedApp = () => {
@@ -30,15 +33,17 @@ const AuthenticatedApp = () => {
     if (authError.type === 'user_not_registered') {
       return <UserNotRegisteredError />;
     } else if (authError.type === 'auth_required') {
-      // Redirect to login automatically
-      navigateToLogin();
-      return null;
+      return <Login />;
     }
   }
 
   // Render the main app
   return (
     <Routes>
+      {/* Auth routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/logout" element={<Logout />} />
+
       {/* Role picker landing page - no layout */}
       <Route path="/" element={<RolePicker />} />
 
@@ -62,14 +67,16 @@ const AuthenticatedApp = () => {
 function App() {
 
   return (
-    <AuthProvider>
-      <QueryClientProvider client={queryClientInstance}>
-        <Router>
-          <AuthenticatedApp />
-        </Router>
-        <Toaster />
-      </QueryClientProvider>
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <QueryClientProvider client={queryClientInstance}>
+          <Router>
+            <AuthenticatedApp />
+          </Router>
+          <Toaster />
+        </QueryClientProvider>
+      </AuthProvider>
+    </ErrorBoundary>
   )
 }
 

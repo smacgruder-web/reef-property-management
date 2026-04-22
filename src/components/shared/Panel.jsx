@@ -1,4 +1,4 @@
-import GlassCard, { cx } from "./GlassCard";
+import GlassCard from "./GlassCard";
 
 export default function Panel({ title, subtitle, action, children, className = "" }) {
   return (
