@@ -1,25 +1,16 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import AppLayout from './components/layout/AppLayout';
-import Dashboard from './pages/Dashboard';
-import Portfolio from './pages/Portfolio';
-import Bookings from './pages/Bookings';
-import Leasing from './pages/Leasing';
-import Maintenance from './pages/Maintenance';
-import Hoa from './pages/Hoa';
-import PaymentsPage from './pages/Payments';
-import Owners from './pages/Owners';
-import Compliance from './pages/Compliance';
-import Reports from './pages/Reports';
-import Admin from './pages/Admin';
 import StitchGallery from './pages/StitchGallery';
 import StitchScreen from './pages/StitchScreen';
-import PaymentSuccessful from './pages/PaymentSuccessful';
+import StitchRenderer from './components/StitchRenderer';
+import StitchApp from './components/StitchApp';
+import { routeMapping } from './data/routeMapping';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -47,19 +38,17 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
+      {/* Stitch-based role apps - full UI from Stitch */}
+      <Route path="/resident/*" element={<StitchApp />} />
+      <Route path="/guest/*" element={<StitchApp />} />
+      <Route path="/owner/*" element={<StitchApp />} />
+      <Route path="/manager/*" element={<StitchApp />} />
+
       <Route element={<AppLayout />}>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/bookings" element={<Bookings />} />
-        <Route path="/leasing" element={<Leasing />} />
-        <Route path="/maintenance" element={<Maintenance />} />
-        <Route path="/hoa" element={<Hoa />} />
-        <Route path="/payments" element={<PaymentsPage />} />
-        <Route path="/owners" element={<Owners />} />
-        <Route path="/compliance" element={<Compliance />} />
-        <Route path="/reports" element={<Reports />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/payment-successful" element={<PaymentSuccessful />} />
+        {/* Root redirect to resident dashboard */}
+        <Route path="/" element={<Navigate to="/resident/dashboard" replace />} />
+
+        {/* Stitch development routes */}
         <Route path="/stitch" element={<StitchGallery />} />
         <Route path="/stitch/:screen" element={<StitchScreen />} />
         <Route path="*" element={<PageNotFound />} />

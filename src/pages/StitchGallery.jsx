@@ -4,12 +4,14 @@ import Panel from '../components/shared/Panel';
 import { stitchScreens } from '@/data/stitchScreens';
 
 export default function StitchGallery() {
+  const productionScreens = stitchScreens.filter(screen => !screen.slug.startsWith('demo'));
+
   return (
     <div className="space-y-6">
       <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <Panel title="Stitch screen library" subtitle="All screens exported from the Stitch design package."> 
+        <Panel title="Stitch screen library" subtitle="Production screens exported from the Stitch design package. Demo screens are isolated.">
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {stitchScreens.slice(0, 3).map((screen) => (
+            {productionScreens.slice(0, 3).map((screen) => (
               <Link key={screen.slug} to={`/stitch/${screen.slug}`}>
                 <GlassCard className="rounded-[28px] overflow-hidden transition hover:-translate-y-1 hover:shadow-xl">
                   <img src={screen.previewImage} alt={screen.title} className="h-52 w-full object-cover" />
@@ -30,7 +32,7 @@ export default function StitchGallery() {
             <p>Click any card to open the exact Stitch screen in the app shell.</p>
           </div>
           <div className="mt-5 grid gap-3">
-            {stitchScreens.slice(0, 6).map((screen) => (
+            {productionScreens.slice(0, 6).map((screen) => (
               <Link
                 key={screen.slug}
                 to={`/stitch/${screen.slug}`}
@@ -44,7 +46,7 @@ export default function StitchGallery() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {stitchScreens.map((screen) => (
+        {productionScreens.map((screen) => (
           <Link key={screen.slug} to={`/stitch/${screen.slug}`}>
             <GlassCard className="rounded-[28px] overflow-hidden shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
               <img src={screen.previewImage} alt={screen.title} className="h-48 w-full object-cover" />
