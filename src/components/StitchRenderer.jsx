@@ -1,11 +1,27 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { stitchScreens } from '@/data/stitchScreens';
 
 export default function StitchRenderer({ slug }) {
+  const navigate = useNavigate();
   const screenConfig = useMemo(
     () => stitchScreens.find((item) => item.slug === slug),
     [slug],
   );
+
+  useEffect(() => {
+    const handleMessage = (event) => {
+      // Allow messages from the same origin
+      if (event.origin !== window.location.origin) return;
+
+      if (event.data && event.data.path) {
+        navigate(event.data.path);
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, [navigate]);
 
   if (!screenConfig) {
     return (

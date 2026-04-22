@@ -262,4 +262,32 @@
 <button class="fixed right-6 bottom-24 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform">
 <span class="material-symbols-outlined text-3xl">add</span>
 </button>
-</body></html>
+</body></html> <script>
+  const buttonMappings = {
+    'view-radar': '/owner/radar',
+    'billing-link': '/resident/billing',
+    'maintenance-link': '/resident/maintenance',
+    'search-link': '/guest/search',
+    'booking-link': '/guest/book/dates',
+    'payment-link': '/resident/methods',
+  };
+  Object.keys(buttonMappings).forEach(id => {
+    const button = document.getElementById(id);
+    if (button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.parent.postMessage({ path: buttonMappings[id] }, '*');
+      });
+    }
+  });
+ document.addEventListener('DOMContentLoaded', function() {
+   document.querySelectorAll('[data-nav]').forEach(el => {
+     el.addEventListener('click', function(e) {
+       const path = this.getAttribute('data-nav');
+       if (path) {
+         window.parent.postMessage({ path }, '*');
+       }
+     });
+   });
+ });
+ </script>

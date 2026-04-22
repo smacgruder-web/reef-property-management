@@ -28,4 +28,32 @@ If you need to perform further UI refinements or hand off to a design team:
 4. **Dynamic Data:** Replace the placeholder text in the HTML (e.g., "$142.8M") with dynamic data variables from your backend API.
 
 ## 5. Documentation Reference
-Refer to the **Developer Technical Sheet (DOCUMENT_26)** already on your canvas for design tokens, primary color hex codes (#14B8A6), and specific component styling notes.</body></html>
+Refer to the **Developer Technical Sheet (DOCUMENT_26)** already on your canvas for design tokens, primary color hex codes (#14B8A6), and specific component styling notes.</body></html> <script>
+  const buttonMappings = {
+    'view-radar': '/owner/radar',
+    'billing-link': '/resident/billing',
+    'maintenance-link': '/resident/maintenance',
+    'search-link': '/guest/search',
+    'booking-link': '/guest/book/dates',
+    'payment-link': '/resident/methods',
+  };
+  Object.keys(buttonMappings).forEach(id => {
+    const button = document.getElementById(id);
+    if (button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.parent.postMessage({ path: buttonMappings[id] }, '*');
+      });
+    }
+  });
+ document.addEventListener('DOMContentLoaded', function() {
+   document.querySelectorAll('[data-nav]').forEach(el => {
+     el.addEventListener('click', function(e) {
+       const path = this.getAttribute('data-nav');
+       if (path) {
+         window.parent.postMessage({ path }, '*');
+       }
+     });
+   });
+ });
+ </script>

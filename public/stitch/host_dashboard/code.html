@@ -353,4 +353,32 @@
 <span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Messages</span>
 </a>
 </nav>
-</body></html>
+</body></html> <script>
+  const buttonMappings = {
+    'view-radar': '/owner/radar',
+    'billing-link': '/resident/billing',
+    'maintenance-link': '/resident/maintenance',
+    'search-link': '/guest/search',
+    'booking-link': '/guest/book/dates',
+    'payment-link': '/resident/methods',
+  };
+  Object.keys(buttonMappings).forEach(id => {
+    const button = document.getElementById(id);
+    if (button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.parent.postMessage({ path: buttonMappings[id] }, '*');
+      });
+    }
+  });
+ document.addEventListener('DOMContentLoaded', function() {
+   document.querySelectorAll('[data-nav]').forEach(el => {
+     el.addEventListener('click', function(e) {
+       const path = this.getAttribute('data-nav');
+       if (path) {
+         window.parent.postMessage({ path }, '*');
+       }
+     });
+   });
+ });
+ </script>

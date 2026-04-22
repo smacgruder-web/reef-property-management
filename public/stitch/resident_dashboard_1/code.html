@@ -136,10 +136,10 @@
 <p class="text-xl font-bold text-on-surface">$3,450.00</p>
 </div>
 </div>
-<button class="mt-4 px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-md shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity flex items-center gap-2">
-<span>Pay Rent Now</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
+  <button id="billing-link" data-nav="/resident/billing" class="mt-4 px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-md shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity flex items-center gap-2">
+ <span>Pay Rent Now</span>
+ <span class="material-symbols-outlined text-sm">arrow_forward</span>
+ </button>
 </div>
 </div>
 <!-- Service Request Quick Access -->
@@ -151,9 +151,9 @@
 <h3 class="text-2xl font-bold mb-2">Something need fixing?</h3>
 <p class="text-white/80 text-sm leading-relaxed">Our maintenance team is on standby 24/7 for your comfort.</p>
 </div>
-<button class="relative z-10 w-full py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-md font-bold hover:bg-white/20 transition-all text-center">
-                    Request Service
-                </button>
+ <button id="maintenance-link" data-nav="/resident/maintenance" class="relative z-10 w-full py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-md font-bold hover:bg-white/20 transition-all text-center">
+                     Request Service
+                 </button>
 </div>
 <!-- Active Tickets -->
 <div class="bg-surface-container-low rounded-xl p-8 space-y-6">
@@ -319,5 +319,62 @@
 <span class="material-symbols-outlined text-xl">description</span>
             Lease
         </a>
-</div>
-</body></html>
+ </div>
+ <script>
+  const buttonMappings = {
+    'view-radar': '/owner/radar',
+    'billing-link': '/resident/billing',
+    'maintenance-link': '/resident/maintenance',
+    'search-link': '/guest/search',
+    'booking-link': '/guest/book/dates',
+    'payment-link': '/resident/methods',
+  };
+  Object.keys(buttonMappings).forEach(id => {
+    const button = document.getElementById(id);
+    if (button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.parent.postMessage({ path: buttonMappings[id] }, '*');
+      });
+    }
+  });
+ document.addEventListener('DOMContentLoaded', function() {
+   document.querySelectorAll('[data-nav]').forEach(el => {
+     el.addEventListener('click', function(e) {
+       const path = this.getAttribute('data-nav');
+       if (path) {
+         window.parent.postMessage({ path }, '*');
+       }
+     });
+   });
+ });
+ </script>
+ </body></html> <script>
+  const buttonMappings = {
+    'view-radar': '/owner/radar',
+    'billing-link': '/resident/billing',
+    'maintenance-link': '/resident/maintenance',
+    'search-link': '/guest/search',
+    'booking-link': '/guest/book/dates',
+    'payment-link': '/resident/methods',
+  };
+  Object.keys(buttonMappings).forEach(id => {
+    const button = document.getElementById(id);
+    if (button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.parent.postMessage({ path: buttonMappings[id] }, '*');
+      });
+    }
+  });
+ document.addEventListener('DOMContentLoaded', function() {
+   document.querySelectorAll('[data-nav]').forEach(el => {
+     el.addEventListener('click', function(e) {
+       const path = this.getAttribute('data-nav');
+       if (path) {
+         window.parent.postMessage({ path }, '*');
+       }
+     });
+   });
+ });
+ </script>
