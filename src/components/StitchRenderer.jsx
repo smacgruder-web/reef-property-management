@@ -1,11 +1,10 @@
-import { useMemo, useEffect, useState } from 'react';
+import { useMemo, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { stitchScreens } from '@/data/stitchScreens';
 
 export default function StitchRenderer({ slug }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
   const screenConfig = useMemo(
     () => stitchScreens.find((item) => item.slug === slug),
     [slug],
@@ -70,64 +69,52 @@ export default function StitchRenderer({ slug }) {
   const navItems = getNavItems(role);
 
   return (
-    <div className="w-full h-full relative">
-      {/* Back Button */}
-      <button
-        onClick={() => navigate(-1)}
-        className="fixed top-4 left-4 z-50 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full p-3 shadow-lg hover:bg-white transition-colors"
-        title="Go Back"
-      >
-        <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-
-      {/* Hamburger Menu */}
+    <div className="w-full h-full flex flex-col">
+      {/* Navigation Tabs */}
       {navItems.length > 0 && (
-        <div className="fixed top-4 right-4 z-50">
-          <div className="relative">
+        <div className="bg-white border-b border-gray-200 shadow-sm">
+          <div className="flex overflow-x-auto scrollbar-hide">
+            {navItems.map((item) => (
+              <button
+                key={item.path}
+                onClick={() => navigate(item.path)}
+                className={`flex-shrink-0 px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
+                  location.pathname === item.path
+                    ? 'text-primary border-primary'
+                    : 'text-gray-500 border-transparent hover:text-gray-700 hover:border-gray-300'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
             <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full p-3 shadow-lg hover:bg-white transition-colors"
-              title="Menu"
+              onClick={() => navigate('/')}
+              className="flex-shrink-0 px-4 py-3 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:text-gray-700 hover:border-gray-300 whitespace-nowrap"
             >
-              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              Home
             </button>
-
-            {menuOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1">
-                {navItems.map((item) => (
-                  <button
-                    key={item.path}
-                    onClick={() => {
-                      navigate(item.path);
-                      setMenuOpen(false);
-                    }}
-                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-                <div className="border-t border-gray-200 my-1"></div>
-                <button
-                  onClick={() => navigate('/')}
-                  className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Home
-                </button>
-              </div>
-            )}
           </div>
         </div>
       )}
 
-      <iframe
-        src={screenConfig.codeUrl}
-        title={`Stitch screen ${screenConfig.title}`}
-        className="w-full h-[100vh] border-0"
-      />
+      {/* Back Button - now positioned relative to the iframe */}
+      <div className="relative flex-1">
+        <button
+          onClick={() => navigate(-1)}
+          className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full p-3 shadow-lg hover:bg-white transition-colors"
+          title="Go Back"
+        >
+          <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <iframe
+          src={screenConfig.codeUrl}
+          title={`Stitch screen ${screenConfig.title}`}
+          className="w-full h-full border-0"
+        />
+      </div>
     </div>
   );
 }
