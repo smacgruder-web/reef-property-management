@@ -112,7 +112,7 @@ export default function StitchRenderer({ slug }) {
         <iframe
           src={screenConfig.codeUrl}
           title={`Stitch screen ${screenConfig.title}`}
-          className="w-full h-full border-0"
+          className="w-full h-[calc(100vh-3rem)] border-0"
         />
       </div>
     </div>
