@@ -10,6 +10,7 @@ import StitchGallery from './pages/StitchGallery';
 import StitchScreen from './pages/StitchScreen';
 import StitchRenderer from './components/StitchRenderer';
 import StitchApp from './components/StitchApp';
+import RolePicker from './components/RolePicker';
 import { routeMapping } from './data/routeMapping';
 
 const AuthenticatedApp = () => {
@@ -38,6 +39,9 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
+      {/* Role picker landing page - no layout */}
+      <Route path="/" element={<RolePicker />} />
+
       {/* Stitch-based role apps - full UI from Stitch */}
       <Route path="/resident/*" element={<StitchApp />} />
       <Route path="/guest/*" element={<StitchApp />} />
@@ -45,9 +49,6 @@ const AuthenticatedApp = () => {
       <Route path="/manager/*" element={<StitchApp />} />
 
       <Route element={<AppLayout />}>
-        {/* Root redirect to resident dashboard */}
-        <Route path="/" element={<Navigate to="/resident/dashboard" replace />} />
-
         {/* Stitch development routes */}
         <Route path="/stitch" element={<StitchGallery />} />
         <Route path="/stitch/:screen" element={<StitchScreen />} />
